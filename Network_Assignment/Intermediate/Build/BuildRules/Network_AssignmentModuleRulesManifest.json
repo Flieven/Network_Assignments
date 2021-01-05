@@ -1,0 +1,8 @@
+{
+	"SourceFiles": [
+		"D:\\Unreal Engine\\Network_Assignment\\Network_Assignment\\Source\\Network_Assignment\\Network_Assignment.Build.cs",
+		"D:\\Unreal Engine\\Network_Assignment\\Network_Assignment\\Source\\Network_Assignment.Target.cs",
+		"D:\\Unreal Engine\\Network_Assignment\\Network_Assignment\\Source\\Network_AssignmentEditor.Target.cs"
+	],
+	"EngineVersion": "4.25.4"
+}

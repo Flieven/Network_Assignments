@@ -1,0 +1,21 @@
+/NOLOGO
+/errorReport:prompt
+/MACHINE:x64
+/SUBSYSTEM:WINDOWS
+/DEF
+/NAME:"UE4Editor-Network_Assignment-3285.dll"
+/IGNORE:4221
+/NODEFAULTLIB
+"D:\Unreal Engine\Network_Assignment\Network_Assignment\Intermediate\Build\Win64\Network_AssignmentEditor\Development\Engine\SharedPCH.Engine.ShadowErrors.h.obj"
+"D:\Unreal Engine\Network_Assignment\Network_Assignment\Intermediate\Build\Win64\UE4Editor\Development\Network_Assignment\MovementStatics.cpp.obj"
+"D:\Unreal Engine\Network_Assignment\Network_Assignment\Intermediate\Build\Win64\UE4Editor\Development\Network_Assignment\MyMovementComponent.cpp.obj"
+"D:\Unreal Engine\Network_Assignment\Network_Assignment\Intermediate\Build\Win64\UE4Editor\Development\Network_Assignment\MyPlayer.cpp.obj"
+"D:\Unreal Engine\Network_Assignment\Network_Assignment\Intermediate\Build\Win64\UE4Editor\Development\Network_Assignment\Network_Assignment.cpp.obj"
+"D:\Unreal Engine\Network_Assignment\Network_Assignment\Intermediate\Build\Win64\UE4Editor\Development\Network_Assignment\Network_AssignmentGameModeBase.cpp.obj"
+"D:\Unreal Engine\Network_Assignment\Network_Assignment\Intermediate\Build\Win64\UE4Editor\Development\Network_Assignment\MyMovementComponent.gen.cpp.obj"
+"D:\Unreal Engine\Network_Assignment\Network_Assignment\Intermediate\Build\Win64\UE4Editor\Development\Network_Assignment\MyPlayer.gen.cpp.obj"
+"D:\Unreal Engine\Network_Assignment\Network_Assignment\Intermediate\Build\Win64\UE4Editor\Development\Network_Assignment\Network_Assignment.init.gen.cpp.obj"
+"D:\Unreal Engine\Network_Assignment\Network_Assignment\Intermediate\Build\Win64\UE4Editor\Development\Network_Assignment\Network_AssignmentGameModeBase.gen.cpp.obj"
+"D:\Unreal Engine\Network_Assignment\Network_Assignment\Intermediate\Build\Win64\UE4Editor\Development\Network_Assignment\Default.rc2.res"
+/OUT:"D:\Unreal Engine\Network_Assignment\Network_Assignment\Intermediate\Build\Win64\UE4Editor\Development\Network_Assignment\UE4Editor-Network_Assignment-3285.lib"
+/INCLUDE:IMPLEMENT_MODULE_Network_Assignment

@@ -1,0 +1,12 @@
+﻿  Using 'git status' to determine working set for adaptive non-unity build (D:\Unreal Engine\Network_Assignment).
+  Building Network_AssignmentEditor...
+  Using Visual Studio 2019 14.25.28611 toolchain (C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.25.28610) and Windows 10.0.18362.0 SDK (C:\Program Files (x86)\Windows Kits\10).
+  Building 4 actions with 4 processes...
+    [1/4] MyPlayer.cpp
+    [2/4] UE4Editor-Network_Assignment-0051.lib
+       Creating library D:\Unreal Engine\Network_Assignment\Network_Assignment\Intermediate\Build\Win64\UE4Editor\Development\Network_Assignment\UE4Editor-Network_Assignment-0051.lib and object D:\Unreal Engine\Network_Assignment\Network_Assignment\Intermediate\Build\Win64\UE4Editor\Development\Network_Assignment\UE4Editor-Network_Assignment-0051.exp
+    [3/4] UE4Editor-Network_Assignment-0051.dll
+       Creating library D:\Unreal Engine\Network_Assignment\Network_Assignment\Intermediate\Build\Win64\UE4Editor\Development\Network_Assignment\UE4Editor-Network_Assignment-0051.suppressed.lib and object D:\Unreal Engine\Network_Assignment\Network_Assignment\Intermediate\Build\Win64\UE4Editor\Development\Network_Assignment\UE4Editor-Network_Assignment-0051.suppressed.exp
+    [4/4] Network_AssignmentEditor.target
+  Total time in Parallel executor: 4,13 seconds
+  Total execution time: 6,26 seconds
