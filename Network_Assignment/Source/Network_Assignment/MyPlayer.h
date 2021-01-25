@@ -9,6 +9,11 @@ class UMyMovementComponent;
 class UStaticMeshComponent;
 class USphereComponent;
 
+class UMyPlayerSettings;
+class UMyNetDebugWidget;
+class AMyPickup;
+class AMyRocket;
+
 UCLASS()
 class NETWORK_ASSIGNMENT_API AMyPlayer : public APawn
 {
@@ -23,6 +28,8 @@ public:
 
 	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
 
+	UPROPERTY(EditAnywhere, Category = Settings)
+		UMyPlayerSettings* PlayerSettings = nullptr;
 
 	UPROPERTY(EditAnywhere, Category = Movement)
 		float Acceleration = 500.0f;
@@ -45,27 +52,49 @@ public:
 	UFUNCTION(BlueprintPure)
 		int32 GetPing() const;
 
+	void OnPickup(AMyPickup* pickup);
+
+	UFUNCTION(Server, Reliable)
+		void Server_OnPickup(AMyPickup* pickup);
+
+	UFUNCTION(Client, Reliable)
+		void Client_OnPickupRockets(int32 pickedupRockets);
+
+	UPROPERTY(EditAnywhere, Category = Debug)
+		TSubclassOf<UMyNetDebugWidget> DebugMenuClass;
+
 	UFUNCTION(Server, Unreliable)
-	void Server_SendLocation(const FVector& location, float deltaTime);
-
-	UFUNCTION(NetMulticast, Unreliable)
-	void Multicast_SendLocation(const FVector& location, float deltaTime);
+	void Server_SyncLocation(const FVector& location);
 
 	UFUNCTION(Server, Unreliable)
-	void Server_SyncRotation(const FRotator& rotation, float deltaTime);
+	void Server_SyncRotation(const FRotator& rotation);
 
-	UFUNCTION(NetMulticast, Unreliable)
-	void Multicast_SyncRotation(const FRotator& rotation, float deltaTime);
+	void ShowDebugMenu();
+	void HideDebugMenu();
+
+	UFUNCTION(BlueprintPure)
+		int32 GetNumRockets() const { return numRockets; }
+
+	UFUNCTION(BlueprintImplementableEvent, Category = Player, meta = (DisplayName = "On Num Rockets Changed"))
+		void BP_OnNumRocketsChanged(int32 newNumRockets);
+
+	UFUNCTION(BlueprintImplementableEvent, Category = Player, meta = (DisplayName = "On Health Changed"))
+		void BP_OnHealthChanged(float newHealth);
+
+	int32 GetNumActiveRockets() const;
+
+	void FireRocket();
+
+	void SpawnRockets();
 
 private:
 
-	void Handle_Accelerate(float value);
-	void Handle_Turn(float value);
-	void Handle_BrakePressed();
-	void Handle_BrakeReleased();
+	bool bShowDebugMenu = false;
+	bool bBreak = false;
 
-	//void Handle_DebugMenuPressed();
-	//void Handle_DebugMenuReleased();
+	float currentHealth = 0.0f;
+
+	float fireCooldownElapsed = 3;
 
 	float forward = 0.0f;
 	float turn = 0.0f;
@@ -73,12 +102,55 @@ private:
 	float MovementVelocity = 0.0f;
 	float Yaw = 0.0f;
 
-	FVector newLoc = FVector::ZeroVector;
-	FRotator newRot = FRotator::ZeroRotator;
-	float newDelta = 0.0f;
-	float transitionTime = 2.5f;
+	int32 serverNumRockets = 0;
+	int32 numRockets = 0;
 
-	bool bBreak = false;
+	int32 maxActiveRockets = 3;
+
+	FVector GetRocketStartLocation() const;
+	AMyRocket* GetFreeRocket() const;
+
+	void Handle_Accelerate(float value);
+	void Handle_Turn(float value);
+	void Handle_BrakePressed();
+	void Handle_BrakeReleased();
+
+	void Handle_DebugMenuPressed();
+	//void Handle_DebugMenuReleased();
+
+	void Handle_FirePressed();
+
+	void CreateDebugWidget();
+
+	UFUNCTION(Server, Reliable)
+		void Server_FireRocket(AMyRocket* NewRocket, const FVector& RocketStartLocation, const FRotator& RocketFacingRotation);
+
+	UFUNCTION(NetMulticast, Reliable)
+		void Multicast_FireRocket(AMyRocket* NewRocket, const FVector& RocketStartLocation, const FRotator& RocketFacingRotation);
+
+	UFUNCTION(Client, Reliable)
+		void Client_RemoveRocket(AMyRocket* RocketToRemove);
+
+	UFUNCTION(BlueprintCallable)
+		void Cheat_IncreaseRocket(int32 InNumRockets);
+
+	UPROPERTY(Replicated, Transient)
+		TArray<AMyRocket*> rocketInstances;
+
+	UPROPERTY(EditAnywhere, Category = "Weapon")
+		TSubclassOf<AMyRocket> rocketClass;
+
+	UPROPERTY(EditAnywhere, Category = "Weapon")
+		bool bUnlimitedRockets = false;
+
+	UPROPERTY(Transient)
+		UMyNetDebugWidget* DebugMenuInstance = nullptr;
+
+	UPROPERTY(Replicated)
+		float replicatedYaw = 0.0f;
+
+	UPROPERTY(Replicated)
+		FVector replicatedLocation;
 
 	UPROPERTY(VisibleDefaultsOnly, Category = Collision)
 		USphereComponent* CollisionComponent;

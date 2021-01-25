@@ -8,6 +8,11 @@
 #include "GameFramework/PlayerState.h"
 #include "MyMovementComponent.h"
 #include "MovementStatics.h"
+#include "Net/UnrealNetwork.h"
+#include "MyPlayerSettings.h"
+#include "MyPickup.h"
+#include "MyRocket.h"
+#include "MyNetDebugWidget.h"
 
 AMyPlayer::AMyPlayer()
 {
@@ -36,46 +41,58 @@ void AMyPlayer::BeginPlay()
 	Super::BeginPlay();
 
 	MovementComponent->SetUpdatedComponent(CollisionComponent);
+
+	CreateDebugWidget();
+	if (DebugMenuInstance != nullptr)
+	{
+		DebugMenuInstance->SetVisibility(ESlateVisibility::Collapsed);
+	}
+
+	currentHealth = PlayerSettings->Health;
+	BP_OnHealthChanged(currentHealth);
+	SpawnRockets();
 }
 
 void AMyPlayer::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
 
+	fireCooldownElapsed -= DeltaTime;
+
+	if (!ensure(PlayerSettings != nullptr)) return;
+
 	if(IsLocallyControlled())
 	{
-		const float Friction = IsBraking() ? BrakingFriction : DefaultFriction;
-		const float Alpha = FMath::Clamp(FMath::Abs(MovementVelocity / (MaxVelocity * 0.75f)), 0.0f, 1.0f);
-		const float TurnSpeed = FMath::InterpEaseOut(0.0f, TurnSpeedDefault, Alpha, 5.0f);
-		const float MovementDirection = MovementVelocity > 0.0f ? turn : -turn;
+		const float maxVelocity = PlayerSettings->MaxVelocity;
+		const float acceleration = PlayerSettings->Acceleration;
+		const float friction = IsBraking() ? PlayerSettings->BrakingFriction : PlayerSettings->Friction;
+		const float alpha = FMath::Clamp(FMath::Abs(MovementVelocity / (PlayerSettings->MaxVelocity * 0.75f)), 0.0f, 1.0f);
+		const float turnSpeed = FMath::InterpEaseOut(0.0f, PlayerSettings->TurnSpeedDefault, alpha, 5.0f);
+		const float movementDirection = MovementVelocity > 0.0f ? turn : -turn;
 
-		Yaw += (MovementDirection * TurnSpeed) * DeltaTime;
+		Yaw += (movementDirection * turnSpeed) * DeltaTime;
 		FQuat WantedFacingDirection = FQuat(FVector::UpVector, FMath::DegreesToRadians(Yaw));
 		MovementComponent->SetFacingRotation(WantedFacingDirection);
 
 		FFrameMovement FrameMovement = MovementComponent->CreateFrameMovement();
 
-		MovementVelocity += forward * Acceleration * DeltaTime;
-		MovementVelocity = FMath::Clamp(MovementVelocity, -MaxVelocity, MaxVelocity);
-		MovementVelocity *= FMath::Pow(Friction, DeltaTime);
+		MovementVelocity += forward * acceleration * DeltaTime;
+		MovementVelocity = FMath::Clamp(MovementVelocity, -maxVelocity, maxVelocity);
+		MovementVelocity *= FMath::Pow(friction, DeltaTime);
 
 		MovementComponent->ApplyGravity();
 		FrameMovement.AddDelta(GetActorForwardVector() * MovementVelocity * DeltaTime);
 		MovementComponent->Move(FrameMovement);
 
-		Server_SendLocation(GetActorLocation(), DeltaTime);
-		Server_SyncRotation(GetActorRotation(), DeltaTime);
+		Server_SyncLocation(GetActorLocation());
+		Server_SyncRotation(MovementComponent->GetFacingRotation());
 	}
 	else
 	{
-		if (GetActorLocation() != newLoc)
-		{
-			SetActorLocation(FMath::VInterpTo(GetActorLocation(), newLoc, newDelta, transitionTime));
-		}
-		if (GetActorRotation() != newRot)
-		{
-			SetActorRotation(FMath::RInterpTo(GetActorRotation(), newRot, newDelta, transitionTime));
-		}
+		const FVector newLocation = FMath::VInterpTo(GetActorLocation(), replicatedLocation, DeltaTime, 10.f);
+		SetActorLocation(newLocation);
+		MovementComponent->SetFacingRotation(FRotator(0.0f, replicatedYaw, 0.0f), 7.0f);
+		SetActorRotation(MovementComponent->GetFacingRotation());
 	}
 }
 
@@ -89,7 +106,9 @@ void AMyPlayer::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
 	PlayerInputComponent->BindAction(TEXT("Brake"), IE_Pressed, this, &AMyPlayer::Handle_BrakePressed);
 	PlayerInputComponent->BindAction(TEXT("Brake"), IE_Released, this, &AMyPlayer::Handle_BrakeReleased);
 
-	//PlayerInputComponent->BindAction(TEXT("DebugMenu"), IE_Pressed, this, &AMyPlayer::Handle_DebugMenuPressed);
+	PlayerInputComponent->BindAction(TEXT("DebugMenu"), IE_Pressed, this, &AMyPlayer::Handle_DebugMenuPressed);
+
+	PlayerInputComponent->BindAction(TEXT("Fire"), IE_Pressed, this, &AMyPlayer::Handle_FirePressed);
 
 }
 
@@ -103,40 +122,49 @@ int32 AMyPlayer::GetPing() const
 	return 0;
 }
 
-void AMyPlayer::Server_SendLocation_Implementation(const FVector& location, float deltaTime)
+void AMyPlayer::OnPickup(AMyPickup* pickup)
 {
-	Multicast_SendLocation(location, deltaTime);
+	if (IsLocallyControlled()) { Server_OnPickup(pickup); }
 }
 
 
-void AMyPlayer::Multicast_SendLocation_Implementation(const FVector& location, float deltaTime)
+void AMyPlayer::Server_OnPickup_Implementation(AMyPickup* pickup)
 {
-	if(!IsLocallyControlled())
-	{ 
-		if (!IsLocallyControlled())
-		{
-			newLoc = location;
-			newDelta = deltaTime;
-		}
-	}
+	serverNumRockets += pickup->NumRockets;
+	Client_OnPickupRockets(pickup->NumRockets);
+}
+
+void AMyPlayer::Client_OnPickupRockets_Implementation(int32 pickedupRockets)
+{
+	numRockets += pickedupRockets;
+	BP_OnNumRocketsChanged(numRockets);
+}
+
+void AMyPlayer::ShowDebugMenu()
+{
+	CreateDebugWidget();
+
+	DebugMenuInstance->SetVisibility(ESlateVisibility::Visible);
+	DebugMenuInstance->BP_OnShowWidget();
+}
+
+void AMyPlayer::HideDebugMenu()
+{
+	if (DebugMenuInstance == nullptr) { return; }
+
+	DebugMenuInstance->SetVisibility(ESlateVisibility::Collapsed);
+	DebugMenuInstance->BP_OnHideWidget();
+}
+
+void AMyPlayer::Server_SyncLocation_Implementation(const FVector& location)
+{
+	replicatedLocation = location;
 }
 
 
-void AMyPlayer::Server_SyncRotation_Implementation(const FRotator& rotation, float deltaTime)
+void AMyPlayer::Server_SyncRotation_Implementation(const FRotator& rotation)
 {
-	Multicast_SyncRotation(rotation, deltaTime);
-}
-
-void AMyPlayer::Multicast_SyncRotation_Implementation(const FRotator& rotation, float deltaTime)
-{
-	if (!IsLocallyControlled())
-	{
-		if (!IsLocallyControlled())
-		{
-			newRot = rotation;
-			newDelta = deltaTime;
-		}
-	}
+	replicatedYaw = rotation.Yaw;
 }
 
 void AMyPlayer::Handle_Accelerate(float value)
@@ -159,3 +187,147 @@ void AMyPlayer::Handle_BrakeReleased()
 	bBreak = false;
 }
 
+void AMyPlayer::Handle_DebugMenuPressed()
+{
+	bShowDebugMenu = !bShowDebugMenu;
+
+	if (bShowDebugMenu) { ShowDebugMenu(); }
+	else { HideDebugMenu(); }
+}
+
+void AMyPlayer::Handle_FirePressed()
+{
+	FireRocket();
+}
+
+int32 AMyPlayer::GetNumActiveRockets() const
+{
+	int32 NumActive = 0;
+	for (AMyRocket* Rocket : rocketInstances)
+	{
+		if (!Rocket->IsFree()) { NumActive++; }
+	}
+	return NumActive;
+}
+
+void AMyPlayer::FireRocket()
+{
+	if (fireCooldownElapsed > 0.0f) { return; }
+	if (numRockets <= 0 && !bUnlimitedRockets) { return; }
+	if (GetNumActiveRockets() >= maxActiveRockets) { return; }
+
+	AMyRocket* newRocket = GetFreeRocket();
+
+	if(!ensure(newRocket != nullptr)) { return; }
+
+	fireCooldownElapsed = PlayerSettings->FireCooldown;
+
+	if (GetLocalRole() >= ROLE_AutonomousProxy)
+	{
+		if (HasAuthority())
+		{
+			Server_FireRocket(newRocket, GetRocketStartLocation(), GetActorRotation());
+		}
+		else
+		{
+			numRockets--;
+			newRocket->StartMoving(GetActorForwardVector(), GetRocketStartLocation());
+			Server_FireRocket(newRocket, GetRocketStartLocation(), GetActorRotation());
+		}
+	}
+}
+
+void AMyPlayer::SpawnRockets()
+{
+	if (HasAuthority() && rocketClass != nullptr)
+	{
+		const int32 rocketCache = 8;
+
+		for (int32 index = 0; index < rocketCache; ++index)
+		{
+			FActorSpawnParameters SpawnParams;
+			SpawnParams.SpawnCollisionHandlingOverride = ESpawnActorCollisionHandlingMethod::AdjustIfPossibleButAlwaysSpawn;
+			SpawnParams.ObjectFlags = RF_Transient;
+			SpawnParams.Instigator = this;
+			SpawnParams.Owner = this;
+			AMyRocket* newRocketInstance = GetWorld()->SpawnActor<AMyRocket>(rocketClass, GetActorLocation(), GetActorRotation(), SpawnParams);
+			rocketInstances.Add(newRocketInstance);
+		}
+	}
+}
+
+FVector AMyPlayer::GetRocketStartLocation() const
+{
+	const FVector startLoc = GetActorLocation() + GetActorForwardVector() * 100.0f;
+	return startLoc;
+}
+
+AMyRocket* AMyPlayer::GetFreeRocket() const
+{
+	for (AMyRocket* rocket : rocketInstances)
+	{
+		if (rocket == nullptr) { continue; }
+		if (rocket->IsFree()) { return rocket;}
+	}
+	return nullptr;
+}
+
+void AMyPlayer::Server_FireRocket_Implementation(AMyRocket* newRocket, const FVector& rocketStartLocation, const FRotator& rocketFacingRotation)
+{
+	if ((serverNumRockets - 1) < 0 && !bUnlimitedRockets)
+	{
+		Client_RemoveRocket(newRocket);
+	}
+	else
+	{
+		const float DeltaYaw = FMath::FindDeltaAngleDegrees(rocketFacingRotation.Yaw, GetActorForwardVector().Rotation().Yaw) * 0.5f;
+		const FRotator NewFacingRotation = rocketFacingRotation + FRotator(0.0f, DeltaYaw, 0.0f);
+		serverNumRockets--;
+		Multicast_FireRocket(newRocket, rocketStartLocation, NewFacingRotation);
+	}
+}
+
+void AMyPlayer::Multicast_FireRocket_Implementation(AMyRocket* newRocket, const FVector& rocketStartLocation, const FRotator& rocketFacingRotation)
+{
+	if (!ensure(newRocket != nullptr)) { return; }
+
+	if (GetLocalRole() == ROLE_AutonomousProxy)
+	{
+		newRocket->ApplyCorrection(rocketFacingRotation.Vector());
+	}
+	else
+	{
+		numRockets--;
+		newRocket->StartMoving(rocketFacingRotation.Vector(), rocketStartLocation);
+	}
+}
+
+void AMyPlayer::Client_RemoveRocket_Implementation(AMyRocket* rocketToRemove)
+{
+	rocketToRemove->MakeFree();
+}
+
+void AMyPlayer::Cheat_IncreaseRocket(int32 inNumRockets)
+{
+	if (IsLocallyControlled()) { numRockets += inNumRockets; }
+}
+
+void AMyPlayer::CreateDebugWidget()
+{
+	if (DebugMenuClass == nullptr) { return; }
+	if (!IsLocallyControlled()) { return; }
+
+	if (DebugMenuInstance == nullptr)
+	{
+		DebugMenuInstance = CreateWidget<UMyNetDebugWidget>(GetWorld(), DebugMenuClass);
+		DebugMenuInstance->AddToViewport();
+	}
+}
+
+void AMyPlayer ::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const
+{
+	Super::GetLifetimeReplicatedProps(OutLifetimeProps);
+
+	DOREPLIFETIME(AMyPlayer, replicatedYaw);
+	DOREPLIFETIME(AMyPlayer, replicatedLocation);
+}

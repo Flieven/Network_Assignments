@@ -3,7 +3,7 @@
   <ItemGroup>
     <None Include="..\..\Network_Assignment.uproject" />
     <Filter Include="Source">
-      <UniqueIdentifier>{14B45231-326C-435B-A6FC-EEDAA8B605B1}</UniqueIdentifier>
+      <UniqueIdentifier>{E66802A4-37B0-43FF-9CFD-86E63CD5DAEE}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Source\Network_Assignment.Target.cs">
       <Filter>Source</Filter>
@@ -12,7 +12,7 @@
       <Filter>Source</Filter>
     </None>
     <Filter Include="Config">
-      <UniqueIdentifier>{7636C931-F295-4253-AE4D-7F52B3397837}</UniqueIdentifier>
+      <UniqueIdentifier>{EA04E2FE-1A1E-49CD-BB1B-DEBAEAAC18C6}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Config\DefaultEditor.ini">
       <Filter>Config</Filter>
@@ -27,7 +27,7 @@
       <Filter>Config</Filter>
     </None>
     <Filter Include="Source\Network_Assignment">
-      <UniqueIdentifier>{BE0071BE-C811-47D9-B3EB-6AEDD615D63E}</UniqueIdentifier>
+      <UniqueIdentifier>{DB7B0309-1A62-4A96-8016-09FC7827C516}</UniqueIdentifier>
     </Filter>
     <ClCompile Include="..\..\Source\Network_Assignment\MovementStatics.cpp">
       <Filter>Source\Network_Assignment</Filter>
@@ -41,10 +41,34 @@
     <ClInclude Include="..\..\Source\Network_Assignment\MyMovementComponent.h">
       <Filter>Source\Network_Assignment</Filter>
     </ClInclude>
+    <ClCompile Include="..\..\Source\Network_Assignment\MyNetDebugWidget.cpp">
+      <Filter>Source\Network_Assignment</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Network_Assignment\MyNetDebugWidget.h">
+      <Filter>Source\Network_Assignment</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\Network_Assignment\MyPickup.cpp">
+      <Filter>Source\Network_Assignment</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Network_Assignment\MyPickup.h">
+      <Filter>Source\Network_Assignment</Filter>
+    </ClInclude>
     <ClCompile Include="..\..\Source\Network_Assignment\MyPlayer.cpp">
       <Filter>Source\Network_Assignment</Filter>
     </ClCompile>
     <ClInclude Include="..\..\Source\Network_Assignment\MyPlayer.h">
+      <Filter>Source\Network_Assignment</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\Network_Assignment\MyPlayerSettings.cpp">
+      <Filter>Source\Network_Assignment</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Network_Assignment\MyPlayerSettings.h">
+      <Filter>Source\Network_Assignment</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\Network_Assignment\MyRocket.cpp">
+      <Filter>Source\Network_Assignment</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Network_Assignment\MyRocket.h">
       <Filter>Source\Network_Assignment</Filter>
     </ClInclude>
     <None Include="..\..\Source\Network_Assignment\Network_Assignment.Build.cs">

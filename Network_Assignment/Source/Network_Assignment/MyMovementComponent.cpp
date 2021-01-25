@@ -72,7 +72,11 @@ void UMyMovementComponent::Internal_SetFacingRotation(const FRotator& InFacingRo
 		FacingRotationCurrent = NewRotation;
 		SetComponentTickEnabled(false);
 	}
-	else { SetComponentTickEnabled(true); }
+	else 
+	{ 
+		SetComponentTickEnabled(true); 
+		FacingRotationSpeed = InRotationSpeed;
+	}
 }
 
 FVector UMyMovementComponent::GetMovementDelta(const FFrameMovement& FrameMovement) const

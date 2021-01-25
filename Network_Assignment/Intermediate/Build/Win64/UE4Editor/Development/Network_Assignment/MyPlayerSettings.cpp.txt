@@ -1,0 +1,3 @@
+D:\Unreal Engine\Network_Assignment\Network_Assignment\Intermediate\Build\Win64\UE4Editor\Development\Network_Assignment\Definitions.Network_Assignment.h
+D:\Unreal Engine\Network_Assignment\Network_Assignment\Source\Network_Assignment\MyPlayerSettings.h
+D:\Unreal Engine\Network_Assignment\Network_Assignment\Intermediate\Build\Win64\UE4Editor\Inc\Network_Assignment\MyPlayerSettings.generated.h
