@@ -30,6 +30,14 @@ void EmptyLinkFunctionForGeneratedCodeMyPlayer() {}
 	COREUOBJECT_API UClass* Z_Construct_UClass_UClass();
 	NETWORK_ASSIGNMENT_API UClass* Z_Construct_UClass_UMyPlayerSettings_NoRegister();
 // End Cross Module References
+	DEFINE_FUNCTION(AMyPlayer::execCheat_ChangeHealth)
+	{
+		P_GET_PROPERTY(FFloatProperty,Z_Param_amount);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		P_THIS->Cheat_ChangeHealth(Z_Param_amount);
+		P_NATIVE_END;
+	}
 	DEFINE_FUNCTION(AMyPlayer::execCheat_IncreaseRocket)
 	{
 		P_GET_PROPERTY(FIntProperty,Z_Param_InNumRockets);
@@ -71,6 +79,38 @@ void EmptyLinkFunctionForGeneratedCodeMyPlayer() {}
 		P_FINISH;
 		P_NATIVE_BEGIN;
 		*(int32*)Z_Param__Result=P_THIS->GetNumRockets();
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(AMyPlayer::execMulticast_SyncRockets)
+	{
+		P_GET_PROPERTY(FIntProperty,Z_Param_rockets);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		P_THIS->Multicast_SyncRockets_Implementation(Z_Param_rockets);
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(AMyPlayer::execServer_SyncRockets)
+	{
+		P_GET_PROPERTY(FIntProperty,Z_Param_rockets);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		P_THIS->Server_SyncRockets_Implementation(Z_Param_rockets);
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(AMyPlayer::execMulticast_SyncHealth)
+	{
+		P_GET_PROPERTY(FFloatProperty,Z_Param_health);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		P_THIS->Multicast_SyncHealth_Implementation(Z_Param_health);
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(AMyPlayer::execServer_SyncHealth)
+	{
+		P_GET_PROPERTY(FFloatProperty,Z_Param_health);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		P_THIS->Server_SyncHealth_Implementation(Z_Param_health);
 		P_NATIVE_END;
 	}
 	DEFINE_FUNCTION(AMyPlayer::execServer_SyncRotation)
@@ -156,6 +196,20 @@ void EmptyLinkFunctionForGeneratedCodeMyPlayer() {}
 		Parms.RocketFacingRotation=RocketFacingRotation;
 		ProcessEvent(FindFunctionChecked(NAME_AMyPlayer_Multicast_FireRocket),&Parms);
 	}
+	static FName NAME_AMyPlayer_Multicast_SyncHealth = FName(TEXT("Multicast_SyncHealth"));
+	void AMyPlayer::Multicast_SyncHealth(float const& health)
+	{
+		MyPlayer_eventMulticast_SyncHealth_Parms Parms;
+		Parms.health=health;
+		ProcessEvent(FindFunctionChecked(NAME_AMyPlayer_Multicast_SyncHealth),&Parms);
+	}
+	static FName NAME_AMyPlayer_Multicast_SyncRockets = FName(TEXT("Multicast_SyncRockets"));
+	void AMyPlayer::Multicast_SyncRockets(int32 const& rockets)
+	{
+		MyPlayer_eventMulticast_SyncRockets_Parms Parms;
+		Parms.rockets=rockets;
+		ProcessEvent(FindFunctionChecked(NAME_AMyPlayer_Multicast_SyncRockets),&Parms);
+	}
 	static FName NAME_AMyPlayer_Server_FireRocket = FName(TEXT("Server_FireRocket"));
 	void AMyPlayer::Server_FireRocket(AMyRocket* NewRocket, FVector const& RocketStartLocation, FRotator const& RocketFacingRotation)
 	{
@@ -172,12 +226,26 @@ void EmptyLinkFunctionForGeneratedCodeMyPlayer() {}
 		Parms.pickup=pickup;
 		ProcessEvent(FindFunctionChecked(NAME_AMyPlayer_Server_OnPickup),&Parms);
 	}
+	static FName NAME_AMyPlayer_Server_SyncHealth = FName(TEXT("Server_SyncHealth"));
+	void AMyPlayer::Server_SyncHealth(float const& health)
+	{
+		MyPlayer_eventServer_SyncHealth_Parms Parms;
+		Parms.health=health;
+		ProcessEvent(FindFunctionChecked(NAME_AMyPlayer_Server_SyncHealth),&Parms);
+	}
 	static FName NAME_AMyPlayer_Server_SyncLocation = FName(TEXT("Server_SyncLocation"));
 	void AMyPlayer::Server_SyncLocation(FVector const& location)
 	{
 		MyPlayer_eventServer_SyncLocation_Parms Parms;
 		Parms.location=location;
 		ProcessEvent(FindFunctionChecked(NAME_AMyPlayer_Server_SyncLocation),&Parms);
+	}
+	static FName NAME_AMyPlayer_Server_SyncRockets = FName(TEXT("Server_SyncRockets"));
+	void AMyPlayer::Server_SyncRockets(int32 const& rockets)
+	{
+		MyPlayer_eventServer_SyncRockets_Parms Parms;
+		Parms.rockets=rockets;
+		ProcessEvent(FindFunctionChecked(NAME_AMyPlayer_Server_SyncRockets),&Parms);
 	}
 	static FName NAME_AMyPlayer_Server_SyncRotation = FName(TEXT("Server_SyncRotation"));
 	void AMyPlayer::Server_SyncRotation(FRotator const& rotation)
@@ -190,6 +258,7 @@ void EmptyLinkFunctionForGeneratedCodeMyPlayer() {}
 	{
 		UClass* Class = AMyPlayer::StaticClass();
 		static const FNameNativePtrPair Funcs[] = {
+			{ "Cheat_ChangeHealth", &AMyPlayer::execCheat_ChangeHealth },
 			{ "Cheat_IncreaseRocket", &AMyPlayer::execCheat_IncreaseRocket },
 			{ "Client_OnPickupRockets", &AMyPlayer::execClient_OnPickupRockets },
 			{ "Client_RemoveRocket", &AMyPlayer::execClient_RemoveRocket },
@@ -197,9 +266,13 @@ void EmptyLinkFunctionForGeneratedCodeMyPlayer() {}
 			{ "GetPing", &AMyPlayer::execGetPing },
 			{ "IsBraking", &AMyPlayer::execIsBraking },
 			{ "Multicast_FireRocket", &AMyPlayer::execMulticast_FireRocket },
+			{ "Multicast_SyncHealth", &AMyPlayer::execMulticast_SyncHealth },
+			{ "Multicast_SyncRockets", &AMyPlayer::execMulticast_SyncRockets },
 			{ "Server_FireRocket", &AMyPlayer::execServer_FireRocket },
 			{ "Server_OnPickup", &AMyPlayer::execServer_OnPickup },
+			{ "Server_SyncHealth", &AMyPlayer::execServer_SyncHealth },
 			{ "Server_SyncLocation", &AMyPlayer::execServer_SyncLocation },
+			{ "Server_SyncRockets", &AMyPlayer::execServer_SyncRockets },
 			{ "Server_SyncRotation", &AMyPlayer::execServer_SyncRotation },
 		};
 		FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, UE_ARRAY_COUNT(Funcs));
@@ -261,6 +334,38 @@ void EmptyLinkFunctionForGeneratedCodeMyPlayer() {}
 		if (!ReturnFunction)
 		{
 			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AMyPlayer_BP_OnNumRocketsChanged_Statics::FuncParams);
+		}
+		return ReturnFunction;
+	}
+	struct Z_Construct_UFunction_AMyPlayer_Cheat_ChangeHealth_Statics
+	{
+		struct MyPlayer_eventCheat_ChangeHealth_Parms
+		{
+			float amount;
+		};
+		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_amount;
+		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UE4CodeGen_Private::FFunctionParams FuncParams;
+	};
+	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UFunction_AMyPlayer_Cheat_ChangeHealth_Statics::NewProp_amount = { "amount", nullptr, (EPropertyFlags)0x0010000000000080, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(MyPlayer_eventCheat_ChangeHealth_Parms, amount), METADATA_PARAMS(nullptr, 0) };
+	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_AMyPlayer_Cheat_ChangeHealth_Statics::PropPointers[] = {
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_AMyPlayer_Cheat_ChangeHealth_Statics::NewProp_amount,
+	};
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_AMyPlayer_Cheat_ChangeHealth_Statics::Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "MyPlayer.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_AMyPlayer_Cheat_ChangeHealth_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AMyPlayer, nullptr, "Cheat_ChangeHealth", nullptr, nullptr, sizeof(MyPlayer_eventCheat_ChangeHealth_Parms), Z_Construct_UFunction_AMyPlayer_Cheat_ChangeHealth_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_AMyPlayer_Cheat_ChangeHealth_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04040401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_AMyPlayer_Cheat_ChangeHealth_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_AMyPlayer_Cheat_ChangeHealth_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UFunction_AMyPlayer_Cheat_ChangeHealth()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AMyPlayer_Cheat_ChangeHealth_Statics::FuncParams);
 		}
 		return ReturnFunction;
 	}
@@ -503,6 +608,78 @@ void EmptyLinkFunctionForGeneratedCodeMyPlayer() {}
 		}
 		return ReturnFunction;
 	}
+	struct Z_Construct_UFunction_AMyPlayer_Multicast_SyncHealth_Statics
+	{
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_health_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_health;
+		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UE4CodeGen_Private::FFunctionParams FuncParams;
+	};
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_AMyPlayer_Multicast_SyncHealth_Statics::NewProp_health_MetaData[] = {
+		{ "NativeConst", "" },
+	};
+#endif
+	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UFunction_AMyPlayer_Multicast_SyncHealth_Statics::NewProp_health = { "health", nullptr, (EPropertyFlags)0x0010000008000082, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(MyPlayer_eventMulticast_SyncHealth_Parms, health), METADATA_PARAMS(Z_Construct_UFunction_AMyPlayer_Multicast_SyncHealth_Statics::NewProp_health_MetaData, UE_ARRAY_COUNT(Z_Construct_UFunction_AMyPlayer_Multicast_SyncHealth_Statics::NewProp_health_MetaData)) };
+	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_AMyPlayer_Multicast_SyncHealth_Statics::PropPointers[] = {
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_AMyPlayer_Multicast_SyncHealth_Statics::NewProp_health,
+	};
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_AMyPlayer_Multicast_SyncHealth_Statics::Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "MyPlayer.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_AMyPlayer_Multicast_SyncHealth_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AMyPlayer, nullptr, "Multicast_SyncHealth", nullptr, nullptr, sizeof(MyPlayer_eventMulticast_SyncHealth_Parms), Z_Construct_UFunction_AMyPlayer_Multicast_SyncHealth_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_AMyPlayer_Multicast_SyncHealth_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00024CC0, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_AMyPlayer_Multicast_SyncHealth_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_AMyPlayer_Multicast_SyncHealth_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UFunction_AMyPlayer_Multicast_SyncHealth()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AMyPlayer_Multicast_SyncHealth_Statics::FuncParams);
+		}
+		return ReturnFunction;
+	}
+	struct Z_Construct_UFunction_AMyPlayer_Multicast_SyncRockets_Statics
+	{
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_rockets_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FIntPropertyParams NewProp_rockets;
+		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UE4CodeGen_Private::FFunctionParams FuncParams;
+	};
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_AMyPlayer_Multicast_SyncRockets_Statics::NewProp_rockets_MetaData[] = {
+		{ "NativeConst", "" },
+	};
+#endif
+	const UE4CodeGen_Private::FIntPropertyParams Z_Construct_UFunction_AMyPlayer_Multicast_SyncRockets_Statics::NewProp_rockets = { "rockets", nullptr, (EPropertyFlags)0x0010000008000082, UE4CodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(MyPlayer_eventMulticast_SyncRockets_Parms, rockets), METADATA_PARAMS(Z_Construct_UFunction_AMyPlayer_Multicast_SyncRockets_Statics::NewProp_rockets_MetaData, UE_ARRAY_COUNT(Z_Construct_UFunction_AMyPlayer_Multicast_SyncRockets_Statics::NewProp_rockets_MetaData)) };
+	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_AMyPlayer_Multicast_SyncRockets_Statics::PropPointers[] = {
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_AMyPlayer_Multicast_SyncRockets_Statics::NewProp_rockets,
+	};
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_AMyPlayer_Multicast_SyncRockets_Statics::Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "MyPlayer.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_AMyPlayer_Multicast_SyncRockets_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AMyPlayer, nullptr, "Multicast_SyncRockets", nullptr, nullptr, sizeof(MyPlayer_eventMulticast_SyncRockets_Parms), Z_Construct_UFunction_AMyPlayer_Multicast_SyncRockets_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_AMyPlayer_Multicast_SyncRockets_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00024C40, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_AMyPlayer_Multicast_SyncRockets_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_AMyPlayer_Multicast_SyncRockets_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UFunction_AMyPlayer_Multicast_SyncRockets()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AMyPlayer_Multicast_SyncRockets_Statics::FuncParams);
+		}
+		return ReturnFunction;
+	}
 	struct Z_Construct_UFunction_AMyPlayer_Server_FireRocket_Statics
 	{
 #if WITH_METADATA
@@ -581,6 +758,42 @@ void EmptyLinkFunctionForGeneratedCodeMyPlayer() {}
 		}
 		return ReturnFunction;
 	}
+	struct Z_Construct_UFunction_AMyPlayer_Server_SyncHealth_Statics
+	{
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_health_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_health;
+		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UE4CodeGen_Private::FFunctionParams FuncParams;
+	};
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_AMyPlayer_Server_SyncHealth_Statics::NewProp_health_MetaData[] = {
+		{ "NativeConst", "" },
+	};
+#endif
+	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UFunction_AMyPlayer_Server_SyncHealth_Statics::NewProp_health = { "health", nullptr, (EPropertyFlags)0x0010000008000082, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(MyPlayer_eventServer_SyncHealth_Parms, health), METADATA_PARAMS(Z_Construct_UFunction_AMyPlayer_Server_SyncHealth_Statics::NewProp_health_MetaData, UE_ARRAY_COUNT(Z_Construct_UFunction_AMyPlayer_Server_SyncHealth_Statics::NewProp_health_MetaData)) };
+	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_AMyPlayer_Server_SyncHealth_Statics::PropPointers[] = {
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_AMyPlayer_Server_SyncHealth_Statics::NewProp_health,
+	};
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_AMyPlayer_Server_SyncHealth_Statics::Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "MyPlayer.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_AMyPlayer_Server_SyncHealth_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AMyPlayer, nullptr, "Server_SyncHealth", nullptr, nullptr, sizeof(MyPlayer_eventServer_SyncHealth_Parms), Z_Construct_UFunction_AMyPlayer_Server_SyncHealth_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_AMyPlayer_Server_SyncHealth_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00220CC0, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_AMyPlayer_Server_SyncHealth_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_AMyPlayer_Server_SyncHealth_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UFunction_AMyPlayer_Server_SyncHealth()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AMyPlayer_Server_SyncHealth_Statics::FuncParams);
+		}
+		return ReturnFunction;
+	}
 	struct Z_Construct_UFunction_AMyPlayer_Server_SyncLocation_Statics
 	{
 #if WITH_METADATA
@@ -614,6 +827,42 @@ void EmptyLinkFunctionForGeneratedCodeMyPlayer() {}
 		if (!ReturnFunction)
 		{
 			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AMyPlayer_Server_SyncLocation_Statics::FuncParams);
+		}
+		return ReturnFunction;
+	}
+	struct Z_Construct_UFunction_AMyPlayer_Server_SyncRockets_Statics
+	{
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_rockets_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FIntPropertyParams NewProp_rockets;
+		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UE4CodeGen_Private::FFunctionParams FuncParams;
+	};
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_AMyPlayer_Server_SyncRockets_Statics::NewProp_rockets_MetaData[] = {
+		{ "NativeConst", "" },
+	};
+#endif
+	const UE4CodeGen_Private::FIntPropertyParams Z_Construct_UFunction_AMyPlayer_Server_SyncRockets_Statics::NewProp_rockets = { "rockets", nullptr, (EPropertyFlags)0x0010000008000082, UE4CodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(MyPlayer_eventServer_SyncRockets_Parms, rockets), METADATA_PARAMS(Z_Construct_UFunction_AMyPlayer_Server_SyncRockets_Statics::NewProp_rockets_MetaData, UE_ARRAY_COUNT(Z_Construct_UFunction_AMyPlayer_Server_SyncRockets_Statics::NewProp_rockets_MetaData)) };
+	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_AMyPlayer_Server_SyncRockets_Statics::PropPointers[] = {
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_AMyPlayer_Server_SyncRockets_Statics::NewProp_rockets,
+	};
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_AMyPlayer_Server_SyncRockets_Statics::Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "MyPlayer.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_AMyPlayer_Server_SyncRockets_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AMyPlayer, nullptr, "Server_SyncRockets", nullptr, nullptr, sizeof(MyPlayer_eventServer_SyncRockets_Parms), Z_Construct_UFunction_AMyPlayer_Server_SyncRockets_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_AMyPlayer_Server_SyncRockets_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00220C40, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_AMyPlayer_Server_SyncRockets_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_AMyPlayer_Server_SyncRockets_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UFunction_AMyPlayer_Server_SyncRockets()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AMyPlayer_Server_SyncRockets_Statics::FuncParams);
 		}
 		return ReturnFunction;
 	}
@@ -697,6 +946,11 @@ void EmptyLinkFunctionForGeneratedCodeMyPlayer() {}
 #endif
 		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_DebugMenuInstance;
 #if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_bUnlimitedHealth_MetaData[];
+#endif
+		static void NewProp_bUnlimitedHealth_SetBit(void* Obj);
+		static const UE4CodeGen_Private::FBoolPropertyParams NewProp_bUnlimitedHealth;
+#if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_bUnlimitedRockets_MetaData[];
 #endif
 		static void NewProp_bUnlimitedRockets_SetBit(void* Obj);
@@ -710,6 +964,14 @@ void EmptyLinkFunctionForGeneratedCodeMyPlayer() {}
 #endif
 		static const UE4CodeGen_Private::FArrayPropertyParams NewProp_rocketInstances;
 		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_rocketInstances_Inner;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_numRockets_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FIntPropertyParams NewProp_numRockets;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_currentHealth_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_currentHealth;
 #if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_DebugMenuClass_MetaData[];
 #endif
@@ -749,6 +1011,7 @@ void EmptyLinkFunctionForGeneratedCodeMyPlayer() {}
 	const FClassFunctionLinkInfo Z_Construct_UClass_AMyPlayer_Statics::FuncInfo[] = {
 		{ &Z_Construct_UFunction_AMyPlayer_BP_OnHealthChanged, "BP_OnHealthChanged" }, // 2121820089
 		{ &Z_Construct_UFunction_AMyPlayer_BP_OnNumRocketsChanged, "BP_OnNumRocketsChanged" }, // 3064034800
+		{ &Z_Construct_UFunction_AMyPlayer_Cheat_ChangeHealth, "Cheat_ChangeHealth" }, // 3874242538
 		{ &Z_Construct_UFunction_AMyPlayer_Cheat_IncreaseRocket, "Cheat_IncreaseRocket" }, // 3234199174
 		{ &Z_Construct_UFunction_AMyPlayer_Client_OnPickupRockets, "Client_OnPickupRockets" }, // 745334112
 		{ &Z_Construct_UFunction_AMyPlayer_Client_RemoveRocket, "Client_RemoveRocket" }, // 3007209674
@@ -756,9 +1019,13 @@ void EmptyLinkFunctionForGeneratedCodeMyPlayer() {}
 		{ &Z_Construct_UFunction_AMyPlayer_GetPing, "GetPing" }, // 1306242325
 		{ &Z_Construct_UFunction_AMyPlayer_IsBraking, "IsBraking" }, // 494724785
 		{ &Z_Construct_UFunction_AMyPlayer_Multicast_FireRocket, "Multicast_FireRocket" }, // 575034206
+		{ &Z_Construct_UFunction_AMyPlayer_Multicast_SyncHealth, "Multicast_SyncHealth" }, // 557643936
+		{ &Z_Construct_UFunction_AMyPlayer_Multicast_SyncRockets, "Multicast_SyncRockets" }, // 578060923
 		{ &Z_Construct_UFunction_AMyPlayer_Server_FireRocket, "Server_FireRocket" }, // 172238461
 		{ &Z_Construct_UFunction_AMyPlayer_Server_OnPickup, "Server_OnPickup" }, // 3797793517
+		{ &Z_Construct_UFunction_AMyPlayer_Server_SyncHealth, "Server_SyncHealth" }, // 1487911139
 		{ &Z_Construct_UFunction_AMyPlayer_Server_SyncLocation, "Server_SyncLocation" }, // 2170578161
+		{ &Z_Construct_UFunction_AMyPlayer_Server_SyncRockets, "Server_SyncRockets" }, // 3880847750
 		{ &Z_Construct_UFunction_AMyPlayer_Server_SyncRotation, "Server_SyncRotation" }, // 1664267912
 	};
 #if WITH_METADATA
@@ -828,6 +1095,17 @@ void EmptyLinkFunctionForGeneratedCodeMyPlayer() {}
 #endif
 	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AMyPlayer_Statics::NewProp_DebugMenuInstance = { "DebugMenuInstance", nullptr, (EPropertyFlags)0x0040000000082008, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AMyPlayer, DebugMenuInstance), Z_Construct_UClass_UMyNetDebugWidget_NoRegister, METADATA_PARAMS(Z_Construct_UClass_AMyPlayer_Statics::NewProp_DebugMenuInstance_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AMyPlayer_Statics::NewProp_DebugMenuInstance_MetaData)) };
 #if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AMyPlayer_Statics::NewProp_bUnlimitedHealth_MetaData[] = {
+		{ "Category", "Player" },
+		{ "ModuleRelativePath", "MyPlayer.h" },
+	};
+#endif
+	void Z_Construct_UClass_AMyPlayer_Statics::NewProp_bUnlimitedHealth_SetBit(void* Obj)
+	{
+		((AMyPlayer*)Obj)->bUnlimitedHealth = 1;
+	}
+	const UE4CodeGen_Private::FBoolPropertyParams Z_Construct_UClass_AMyPlayer_Statics::NewProp_bUnlimitedHealth = { "bUnlimitedHealth", nullptr, (EPropertyFlags)0x0040000000000001, UE4CodeGen_Private::EPropertyGenFlags::Bool | UE4CodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, 1, sizeof(bool), sizeof(AMyPlayer), &Z_Construct_UClass_AMyPlayer_Statics::NewProp_bUnlimitedHealth_SetBit, METADATA_PARAMS(Z_Construct_UClass_AMyPlayer_Statics::NewProp_bUnlimitedHealth_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AMyPlayer_Statics::NewProp_bUnlimitedHealth_MetaData)) };
+#if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AMyPlayer_Statics::NewProp_bUnlimitedRockets_MetaData[] = {
 		{ "Category", "Weapon" },
 		{ "ModuleRelativePath", "MyPlayer.h" },
@@ -852,6 +1130,18 @@ void EmptyLinkFunctionForGeneratedCodeMyPlayer() {}
 #endif
 	const UE4CodeGen_Private::FArrayPropertyParams Z_Construct_UClass_AMyPlayer_Statics::NewProp_rocketInstances = { "rocketInstances", nullptr, (EPropertyFlags)0x0040000000002020, UE4CodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AMyPlayer, rocketInstances), EArrayPropertyFlags::None, METADATA_PARAMS(Z_Construct_UClass_AMyPlayer_Statics::NewProp_rocketInstances_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AMyPlayer_Statics::NewProp_rocketInstances_MetaData)) };
 	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AMyPlayer_Statics::NewProp_rocketInstances_Inner = { "rocketInstances", nullptr, (EPropertyFlags)0x0000000000000000, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, 0, Z_Construct_UClass_AMyRocket_NoRegister, METADATA_PARAMS(nullptr, 0) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AMyPlayer_Statics::NewProp_numRockets_MetaData[] = {
+		{ "ModuleRelativePath", "MyPlayer.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FIntPropertyParams Z_Construct_UClass_AMyPlayer_Statics::NewProp_numRockets = { "numRockets", nullptr, (EPropertyFlags)0x0040000000002020, UE4CodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AMyPlayer, numRockets), METADATA_PARAMS(Z_Construct_UClass_AMyPlayer_Statics::NewProp_numRockets_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AMyPlayer_Statics::NewProp_numRockets_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AMyPlayer_Statics::NewProp_currentHealth_MetaData[] = {
+		{ "ModuleRelativePath", "MyPlayer.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UClass_AMyPlayer_Statics::NewProp_currentHealth = { "currentHealth", nullptr, (EPropertyFlags)0x0040000000000020, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AMyPlayer, currentHealth), METADATA_PARAMS(Z_Construct_UClass_AMyPlayer_Statics::NewProp_currentHealth_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AMyPlayer_Statics::NewProp_currentHealth_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AMyPlayer_Statics::NewProp_DebugMenuClass_MetaData[] = {
 		{ "Category", "Debug" },
@@ -915,10 +1205,13 @@ void EmptyLinkFunctionForGeneratedCodeMyPlayer() {}
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AMyPlayer_Statics::NewProp_replicatedLocation,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AMyPlayer_Statics::NewProp_replicatedYaw,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AMyPlayer_Statics::NewProp_DebugMenuInstance,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AMyPlayer_Statics::NewProp_bUnlimitedHealth,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AMyPlayer_Statics::NewProp_bUnlimitedRockets,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AMyPlayer_Statics::NewProp_rocketClass,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AMyPlayer_Statics::NewProp_rocketInstances,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AMyPlayer_Statics::NewProp_rocketInstances_Inner,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AMyPlayer_Statics::NewProp_numRockets,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AMyPlayer_Statics::NewProp_currentHealth,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AMyPlayer_Statics::NewProp_DebugMenuClass,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AMyPlayer_Statics::NewProp_BrakingFriction,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AMyPlayer_Statics::NewProp_DefaultFriction,
@@ -954,7 +1247,7 @@ void EmptyLinkFunctionForGeneratedCodeMyPlayer() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(AMyPlayer, 239162532);
+	IMPLEMENT_CLASS(AMyPlayer, 3424749104);
 	template<> NETWORK_ASSIGNMENT_API UClass* StaticClass<AMyPlayer>()
 	{
 		return AMyPlayer::StaticClass();
@@ -963,11 +1256,15 @@ void EmptyLinkFunctionForGeneratedCodeMyPlayer() {}
 
 	void AMyPlayer::ValidateGeneratedRepEnums(const TArray<struct FRepRecord>& ClassReps) const
 	{
+		static const FName Name_currentHealth(TEXT("currentHealth"));
+		static const FName Name_numRockets(TEXT("numRockets"));
 		static const FName Name_rocketInstances(TEXT("rocketInstances"));
 		static const FName Name_replicatedYaw(TEXT("replicatedYaw"));
 		static const FName Name_replicatedLocation(TEXT("replicatedLocation"));
 
 		const bool bIsValid = true
+			&& Name_currentHealth == ClassReps[(int32)ENetFields_Private::currentHealth].Property->GetFName()
+			&& Name_numRockets == ClassReps[(int32)ENetFields_Private::numRockets].Property->GetFName()
 			&& Name_rocketInstances == ClassReps[(int32)ENetFields_Private::rocketInstances].Property->GetFName()
 			&& Name_replicatedYaw == ClassReps[(int32)ENetFields_Private::replicatedYaw].Property->GetFName()
 			&& Name_replicatedLocation == ClassReps[(int32)ENetFields_Private::replicatedLocation].Property->GetFName();

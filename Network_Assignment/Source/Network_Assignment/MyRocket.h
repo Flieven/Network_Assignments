@@ -5,6 +5,8 @@
 #include "MyRocket.generated.h"
 
 class UStaticMeshComponent;
+class USphereComponent;
+class AMyPlayer;
 
 UCLASS()
 class NETWORK_ASSIGNMENT_API AMyRocket : public AActor
@@ -24,6 +26,9 @@ public:
 	void MakeFree();
 
 	bool IsFree() const { return bIsFree; }
+
+	UPROPERTY(VisibleDefaultsOnly, Category = "Explosion")
+		USphereComponent* SphereComponent;
 
 private:
 
@@ -46,10 +51,15 @@ private:
 
 	FVector RocketStartLocation = FVector::ZeroVector;
 
+	TArray<AActor*> OverlappingPlayers;
+
 	float LifeTime = 2.0f;
 	float LifeTimeElapsed = 0.0f;
 
 	float DistanceMoved = 0.0f;
+
+	UPROPERTY(EditAnywhere, Category = "Explosion")
+	float DamageDone = 5.0f;
 
 	UPROPERTY(EditAnywhere)
 		float MovementVelocity = 1300.0f;

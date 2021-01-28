@@ -6,9 +6,10 @@
 #include "Camera/CameraComponent.h"
 #include "Engine/NetDriver.h"
 #include "GameFramework/PlayerState.h"
+#include "Net/UnrealNetwork.h"
+
 #include "MyMovementComponent.h"
 #include "MovementStatics.h"
-#include "Net/UnrealNetwork.h"
 #include "MyPlayerSettings.h"
 #include "MyPickup.h"
 #include "MyRocket.h"
@@ -41,6 +42,7 @@ void AMyPlayer::BeginPlay()
 	Super::BeginPlay();
 
 	MovementComponent->SetUpdatedComponent(CollisionComponent);
+	currentHealth = PlayerSettings->Health;
 
 	CreateDebugWidget();
 	if (DebugMenuInstance != nullptr)
@@ -48,9 +50,8 @@ void AMyPlayer::BeginPlay()
 		DebugMenuInstance->SetVisibility(ESlateVisibility::Collapsed);
 	}
 
-	currentHealth = PlayerSettings->Health;
-	BP_OnHealthChanged(currentHealth);
 	SpawnRockets();
+	BP_OnHealthChanged(currentHealth);
 }
 
 void AMyPlayer::Tick(float DeltaTime)
@@ -127,7 +128,6 @@ void AMyPlayer::OnPickup(AMyPickup* pickup)
 	if (IsLocallyControlled()) { Server_OnPickup(pickup); }
 }
 
-
 void AMyPlayer::Server_OnPickup_Implementation(AMyPickup* pickup)
 {
 	serverNumRockets += pickup->NumRockets;
@@ -138,6 +138,7 @@ void AMyPlayer::Client_OnPickupRockets_Implementation(int32 pickedupRockets)
 {
 	numRockets += pickedupRockets;
 	BP_OnNumRocketsChanged(numRockets);
+	Server_SyncRockets(numRockets);
 }
 
 void AMyPlayer::ShowDebugMenu()
@@ -161,11 +162,33 @@ void AMyPlayer::Server_SyncLocation_Implementation(const FVector& location)
 	replicatedLocation = location;
 }
 
-
 void AMyPlayer::Server_SyncRotation_Implementation(const FRotator& rotation)
 {
 	replicatedYaw = rotation.Yaw;
 }
+
+void AMyPlayer::Server_SyncHealth_Implementation(const float& health)
+{
+	BP_OnHealthChanged(health);
+	Multicast_SyncHealth(health);
+}
+
+void AMyPlayer::Multicast_SyncHealth_Implementation(const float& health)
+{
+	BP_OnHealthChanged(health);
+}
+
+void AMyPlayer::Server_SyncRockets_Implementation(const int32& rockets)
+{
+	BP_OnNumRocketsChanged(rockets);
+	Multicast_SyncRockets(rockets);
+}
+
+void AMyPlayer::Multicast_SyncRockets_Implementation(const int32& rockets)
+{
+	BP_OnNumRocketsChanged(rockets);
+}
+
 
 void AMyPlayer::Handle_Accelerate(float value)
 {
@@ -209,6 +232,7 @@ int32 AMyPlayer::GetNumActiveRockets() const
 	}
 	return NumActive;
 }
+
 
 void AMyPlayer::FireRocket()
 {
@@ -256,6 +280,12 @@ void AMyPlayer::SpawnRockets()
 	}
 }
 
+void AMyPlayer::TakeDamage(float amount)
+{
+	currentHealth -= amount;
+	BP_OnHealthChanged(currentHealth);
+}
+
 FVector AMyPlayer::GetRocketStartLocation() const
 {
 	const FVector startLoc = GetActorLocation() + GetActorForwardVector() * 100.0f;
@@ -285,6 +315,7 @@ void AMyPlayer::Server_FireRocket_Implementation(AMyRocket* newRocket, const FVe
 		serverNumRockets--;
 		Multicast_FireRocket(newRocket, rocketStartLocation, NewFacingRotation);
 	}
+	Server_SyncRockets(numRockets);
 }
 
 void AMyPlayer::Multicast_FireRocket_Implementation(AMyRocket* newRocket, const FVector& rocketStartLocation, const FRotator& rocketFacingRotation)
@@ -312,6 +343,12 @@ void AMyPlayer::Cheat_IncreaseRocket(int32 inNumRockets)
 	if (IsLocallyControlled()) { numRockets += inNumRockets; }
 }
 
+void AMyPlayer::Cheat_ChangeHealth(float amount)
+{
+	currentHealth += amount;
+	if (IsLocallyControlled()) { Server_SyncHealth(currentHealth); }
+}
+
 void AMyPlayer::CreateDebugWidget()
 {
 	if (DebugMenuClass == nullptr) { return; }
@@ -330,4 +367,7 @@ void AMyPlayer ::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifeti
 
 	DOREPLIFETIME(AMyPlayer, replicatedYaw);
 	DOREPLIFETIME(AMyPlayer, replicatedLocation);
+	DOREPLIFETIME(AMyPlayer, currentHealth);
+	DOREPLIFETIME(AMyPlayer, rocketInstances);
+	DOREPLIFETIME(AMyPlayer, numRockets);
 }

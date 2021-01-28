@@ -64,10 +64,22 @@ public:
 		TSubclassOf<UMyNetDebugWidget> DebugMenuClass;
 
 	UFUNCTION(Server, Unreliable)
-	void Server_SyncLocation(const FVector& location);
+		void Server_SyncLocation(const FVector& location);
 
 	UFUNCTION(Server, Unreliable)
-	void Server_SyncRotation(const FRotator& rotation);
+		void Server_SyncRotation(const FRotator& rotation);
+
+	UFUNCTION(Server, Reliable)
+		void Server_SyncHealth(const float& health);
+
+	UFUNCTION(NetMulticast, Reliable)
+		void Multicast_SyncHealth(const float& health);
+
+	UFUNCTION(Server, Unreliable)
+		void Server_SyncRockets(const int32& rockets);
+
+	UFUNCTION(NetMulticast, Unreliable)
+		void Multicast_SyncRockets(const int32& rockets);
 
 	void ShowDebugMenu();
 	void HideDebugMenu();
@@ -87,11 +99,14 @@ public:
 
 	void SpawnRockets();
 
+	void TakeDamage(float amount);
+
 private:
 
 	bool bShowDebugMenu = false;
 	bool bBreak = false;
 
+	UPROPERTY(Replicated)
 	float currentHealth = 0.0f;
 
 	float fireCooldownElapsed = 3;
@@ -103,6 +118,8 @@ private:
 	float Yaw = 0.0f;
 
 	int32 serverNumRockets = 0;
+
+	UPROPERTY(Replicated, Transient)
 	int32 numRockets = 0;
 
 	int32 maxActiveRockets = 3;
@@ -134,6 +151,9 @@ private:
 	UFUNCTION(BlueprintCallable)
 		void Cheat_IncreaseRocket(int32 InNumRockets);
 
+	UFUNCTION(BlueprintCallable)
+		void Cheat_ChangeHealth(float amount);
+
 	UPROPERTY(Replicated, Transient)
 		TArray<AMyRocket*> rocketInstances;
 
@@ -142,6 +162,9 @@ private:
 
 	UPROPERTY(EditAnywhere, Category = "Weapon")
 		bool bUnlimitedRockets = false;
+
+	UPROPERTY(EditAnywhere, Category = "Player")
+		bool bUnlimitedHealth = false;
 
 	UPROPERTY(Transient)
 		UMyNetDebugWidget* DebugMenuInstance = nullptr;

@@ -13,10 +13,10 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #endif
 #define NETWORK_ASSIGNMENT_MyRocket_generated_h
 
-#define Network_Assignment_Source_Network_Assignment_MyRocket_h_12_SPARSE_DATA
-#define Network_Assignment_Source_Network_Assignment_MyRocket_h_12_RPC_WRAPPERS
-#define Network_Assignment_Source_Network_Assignment_MyRocket_h_12_RPC_WRAPPERS_NO_PURE_DECLS
-#define Network_Assignment_Source_Network_Assignment_MyRocket_h_12_INCLASS_NO_PURE_DECLS \
+#define Network_Assignment_Source_Network_Assignment_MyRocket_h_14_SPARSE_DATA
+#define Network_Assignment_Source_Network_Assignment_MyRocket_h_14_RPC_WRAPPERS
+#define Network_Assignment_Source_Network_Assignment_MyRocket_h_14_RPC_WRAPPERS_NO_PURE_DECLS
+#define Network_Assignment_Source_Network_Assignment_MyRocket_h_14_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesAMyRocket(); \
 	friend struct Z_Construct_UClass_AMyRocket_Statics; \
@@ -25,7 +25,7 @@ public: \
 	DECLARE_SERIALIZER(AMyRocket)
 
 
-#define Network_Assignment_Source_Network_Assignment_MyRocket_h_12_INCLASS \
+#define Network_Assignment_Source_Network_Assignment_MyRocket_h_14_INCLASS \
 private: \
 	static void StaticRegisterNativesAMyRocket(); \
 	friend struct Z_Construct_UClass_AMyRocket_Statics; \
@@ -34,7 +34,7 @@ public: \
 	DECLARE_SERIALIZER(AMyRocket)
 
 
-#define Network_Assignment_Source_Network_Assignment_MyRocket_h_12_STANDARD_CONSTRUCTORS \
+#define Network_Assignment_Source_Network_Assignment_MyRocket_h_14_STANDARD_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
 	NO_API AMyRocket(const FObjectInitializer& ObjectInitializer); \
 	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(AMyRocket) \
@@ -47,7 +47,7 @@ private: \
 public:
 
 
-#define Network_Assignment_Source_Network_Assignment_MyRocket_h_12_ENHANCED_CONSTRUCTORS \
+#define Network_Assignment_Source_Network_Assignment_MyRocket_h_14_ENHANCED_CONSTRUCTORS \
 private: \
 	/** Private move- and copy-constructors, should never be used */ \
 	NO_API AMyRocket(AMyRocket&&); \
@@ -58,34 +58,35 @@ DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(AMyRocket); \
 	DEFINE_DEFAULT_CONSTRUCTOR_CALL(AMyRocket)
 
 
-#define Network_Assignment_Source_Network_Assignment_MyRocket_h_12_PRIVATE_PROPERTY_OFFSET \
+#define Network_Assignment_Source_Network_Assignment_MyRocket_h_14_PRIVATE_PROPERTY_OFFSET \
 	FORCEINLINE static uint32 __PPO__Explosion() { return STRUCT_OFFSET(AMyRocket, Explosion); } \
 	FORCEINLINE static uint32 __PPO__MeshComponent() { return STRUCT_OFFSET(AMyRocket, MeshComponent); } \
 	FORCEINLINE static uint32 __PPO__bDebugDrawCorrection() { return STRUCT_OFFSET(AMyRocket, bDebugDrawCorrection); } \
+	FORCEINLINE static uint32 __PPO__DamageDone() { return STRUCT_OFFSET(AMyRocket, DamageDone); } \
 	FORCEINLINE static uint32 __PPO__MovementVelocity() { return STRUCT_OFFSET(AMyRocket, MovementVelocity); }
 
 
-#define Network_Assignment_Source_Network_Assignment_MyRocket_h_9_PROLOG
-#define Network_Assignment_Source_Network_Assignment_MyRocket_h_12_GENERATED_BODY_LEGACY \
+#define Network_Assignment_Source_Network_Assignment_MyRocket_h_11_PROLOG
+#define Network_Assignment_Source_Network_Assignment_MyRocket_h_14_GENERATED_BODY_LEGACY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	Network_Assignment_Source_Network_Assignment_MyRocket_h_12_PRIVATE_PROPERTY_OFFSET \
-	Network_Assignment_Source_Network_Assignment_MyRocket_h_12_SPARSE_DATA \
-	Network_Assignment_Source_Network_Assignment_MyRocket_h_12_RPC_WRAPPERS \
-	Network_Assignment_Source_Network_Assignment_MyRocket_h_12_INCLASS \
-	Network_Assignment_Source_Network_Assignment_MyRocket_h_12_STANDARD_CONSTRUCTORS \
+	Network_Assignment_Source_Network_Assignment_MyRocket_h_14_PRIVATE_PROPERTY_OFFSET \
+	Network_Assignment_Source_Network_Assignment_MyRocket_h_14_SPARSE_DATA \
+	Network_Assignment_Source_Network_Assignment_MyRocket_h_14_RPC_WRAPPERS \
+	Network_Assignment_Source_Network_Assignment_MyRocket_h_14_INCLASS \
+	Network_Assignment_Source_Network_Assignment_MyRocket_h_14_STANDARD_CONSTRUCTORS \
 public: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
 
-#define Network_Assignment_Source_Network_Assignment_MyRocket_h_12_GENERATED_BODY \
+#define Network_Assignment_Source_Network_Assignment_MyRocket_h_14_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	Network_Assignment_Source_Network_Assignment_MyRocket_h_12_PRIVATE_PROPERTY_OFFSET \
-	Network_Assignment_Source_Network_Assignment_MyRocket_h_12_SPARSE_DATA \
-	Network_Assignment_Source_Network_Assignment_MyRocket_h_12_RPC_WRAPPERS_NO_PURE_DECLS \
-	Network_Assignment_Source_Network_Assignment_MyRocket_h_12_INCLASS_NO_PURE_DECLS \
-	Network_Assignment_Source_Network_Assignment_MyRocket_h_12_ENHANCED_CONSTRUCTORS \
+	Network_Assignment_Source_Network_Assignment_MyRocket_h_14_PRIVATE_PROPERTY_OFFSET \
+	Network_Assignment_Source_Network_Assignment_MyRocket_h_14_SPARSE_DATA \
+	Network_Assignment_Source_Network_Assignment_MyRocket_h_14_RPC_WRAPPERS_NO_PURE_DECLS \
+	Network_Assignment_Source_Network_Assignment_MyRocket_h_14_INCLASS_NO_PURE_DECLS \
+	Network_Assignment_Source_Network_Assignment_MyRocket_h_14_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 

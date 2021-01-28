@@ -22,16 +22,25 @@ class AMyPickup;
 	virtual void Client_RemoveRocket_Implementation(AMyRocket* RocketToRemove); \
 	virtual void Multicast_FireRocket_Implementation(AMyRocket* NewRocket, FVector const& RocketStartLocation, FRotator const& RocketFacingRotation); \
 	virtual void Server_FireRocket_Implementation(AMyRocket* NewRocket, FVector const& RocketStartLocation, FRotator const& RocketFacingRotation); \
+	virtual void Multicast_SyncRockets_Implementation(int32 const& rockets); \
+	virtual void Server_SyncRockets_Implementation(int32 const& rockets); \
+	virtual void Multicast_SyncHealth_Implementation(float const& health); \
+	virtual void Server_SyncHealth_Implementation(float const& health); \
 	virtual void Server_SyncRotation_Implementation(FRotator const& rotation); \
 	virtual void Server_SyncLocation_Implementation(FVector const& location); \
 	virtual void Client_OnPickupRockets_Implementation(int32 pickedupRockets); \
 	virtual void Server_OnPickup_Implementation(AMyPickup* pickup); \
  \
+	DECLARE_FUNCTION(execCheat_ChangeHealth); \
 	DECLARE_FUNCTION(execCheat_IncreaseRocket); \
 	DECLARE_FUNCTION(execClient_RemoveRocket); \
 	DECLARE_FUNCTION(execMulticast_FireRocket); \
 	DECLARE_FUNCTION(execServer_FireRocket); \
 	DECLARE_FUNCTION(execGetNumRockets); \
+	DECLARE_FUNCTION(execMulticast_SyncRockets); \
+	DECLARE_FUNCTION(execServer_SyncRockets); \
+	DECLARE_FUNCTION(execMulticast_SyncHealth); \
+	DECLARE_FUNCTION(execServer_SyncHealth); \
 	DECLARE_FUNCTION(execServer_SyncRotation); \
 	DECLARE_FUNCTION(execServer_SyncLocation); \
 	DECLARE_FUNCTION(execClient_OnPickupRockets); \
@@ -44,16 +53,25 @@ class AMyPickup;
 	virtual void Client_RemoveRocket_Implementation(AMyRocket* RocketToRemove); \
 	virtual void Multicast_FireRocket_Implementation(AMyRocket* NewRocket, FVector const& RocketStartLocation, FRotator const& RocketFacingRotation); \
 	virtual void Server_FireRocket_Implementation(AMyRocket* NewRocket, FVector const& RocketStartLocation, FRotator const& RocketFacingRotation); \
+	virtual void Multicast_SyncRockets_Implementation(int32 const& rockets); \
+	virtual void Server_SyncRockets_Implementation(int32 const& rockets); \
+	virtual void Multicast_SyncHealth_Implementation(float const& health); \
+	virtual void Server_SyncHealth_Implementation(float const& health); \
 	virtual void Server_SyncRotation_Implementation(FRotator const& rotation); \
 	virtual void Server_SyncLocation_Implementation(FVector const& location); \
 	virtual void Client_OnPickupRockets_Implementation(int32 pickedupRockets); \
 	virtual void Server_OnPickup_Implementation(AMyPickup* pickup); \
  \
+	DECLARE_FUNCTION(execCheat_ChangeHealth); \
 	DECLARE_FUNCTION(execCheat_IncreaseRocket); \
 	DECLARE_FUNCTION(execClient_RemoveRocket); \
 	DECLARE_FUNCTION(execMulticast_FireRocket); \
 	DECLARE_FUNCTION(execServer_FireRocket); \
 	DECLARE_FUNCTION(execGetNumRockets); \
+	DECLARE_FUNCTION(execMulticast_SyncRockets); \
+	DECLARE_FUNCTION(execServer_SyncRockets); \
+	DECLARE_FUNCTION(execMulticast_SyncHealth); \
+	DECLARE_FUNCTION(execServer_SyncHealth); \
 	DECLARE_FUNCTION(execServer_SyncRotation); \
 	DECLARE_FUNCTION(execServer_SyncLocation); \
 	DECLARE_FUNCTION(execClient_OnPickupRockets); \
@@ -85,6 +103,14 @@ class AMyPickup;
 		FVector RocketStartLocation; \
 		FRotator RocketFacingRotation; \
 	}; \
+	struct MyPlayer_eventMulticast_SyncHealth_Parms \
+	{ \
+		float health; \
+	}; \
+	struct MyPlayer_eventMulticast_SyncRockets_Parms \
+	{ \
+		int32 rockets; \
+	}; \
 	struct MyPlayer_eventServer_FireRocket_Parms \
 	{ \
 		AMyRocket* NewRocket; \
@@ -95,9 +121,17 @@ class AMyPickup;
 	{ \
 		AMyPickup* pickup; \
 	}; \
+	struct MyPlayer_eventServer_SyncHealth_Parms \
+	{ \
+		float health; \
+	}; \
 	struct MyPlayer_eventServer_SyncLocation_Parms \
 	{ \
 		FVector location; \
+	}; \
+	struct MyPlayer_eventServer_SyncRockets_Parms \
+	{ \
+		int32 rockets; \
 	}; \
 	struct MyPlayer_eventServer_SyncRotation_Parms \
 	{ \
@@ -117,7 +151,9 @@ public: \
 	enum class ENetFields_Private : uint16 \
 	{ \
 		NETFIELD_REP_START=(uint16)((int32)Super::ENetFields_Private::NETFIELD_REP_END + (int32)1), \
-		rocketInstances=NETFIELD_REP_START, \
+		currentHealth=NETFIELD_REP_START, \
+		numRockets, \
+		rocketInstances, \
 		replicatedYaw, \
 		replicatedLocation, \
 		NETFIELD_REP_END=replicatedLocation	}; \
@@ -135,7 +171,9 @@ public: \
 	enum class ENetFields_Private : uint16 \
 	{ \
 		NETFIELD_REP_START=(uint16)((int32)Super::ENetFields_Private::NETFIELD_REP_END + (int32)1), \
-		rocketInstances=NETFIELD_REP_START, \
+		currentHealth=NETFIELD_REP_START, \
+		numRockets, \
+		rocketInstances, \
 		replicatedYaw, \
 		replicatedLocation, \
 		NETFIELD_REP_END=replicatedLocation	}; \
@@ -167,9 +205,12 @@ DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(AMyPlayer); \
 
 
 #define Network_Assignment_Source_Network_Assignment_MyPlayer_h_20_PRIVATE_PROPERTY_OFFSET \
+	FORCEINLINE static uint32 __PPO__currentHealth() { return STRUCT_OFFSET(AMyPlayer, currentHealth); } \
+	FORCEINLINE static uint32 __PPO__numRockets() { return STRUCT_OFFSET(AMyPlayer, numRockets); } \
 	FORCEINLINE static uint32 __PPO__rocketInstances() { return STRUCT_OFFSET(AMyPlayer, rocketInstances); } \
 	FORCEINLINE static uint32 __PPO__rocketClass() { return STRUCT_OFFSET(AMyPlayer, rocketClass); } \
 	FORCEINLINE static uint32 __PPO__bUnlimitedRockets() { return STRUCT_OFFSET(AMyPlayer, bUnlimitedRockets); } \
+	FORCEINLINE static uint32 __PPO__bUnlimitedHealth() { return STRUCT_OFFSET(AMyPlayer, bUnlimitedHealth); } \
 	FORCEINLINE static uint32 __PPO__DebugMenuInstance() { return STRUCT_OFFSET(AMyPlayer, DebugMenuInstance); } \
 	FORCEINLINE static uint32 __PPO__replicatedYaw() { return STRUCT_OFFSET(AMyPlayer, replicatedYaw); } \
 	FORCEINLINE static uint32 __PPO__replicatedLocation() { return STRUCT_OFFSET(AMyPlayer, replicatedLocation); } \

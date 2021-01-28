@@ -1,8 +1,11 @@
 #include "MyRocket.h"
 
 #include "Components/StaticMeshComponent.h"
+#include "Components/SphereComponent.h"
+#include "GameFramework/Character.h"
 #include "Engine/World.h"
 #include "Kismet//GameplayStatics.h"
+#include "MyPlayer.h"
 #include "DrawDebugHelpers.h"
 
 AMyRocket::AMyRocket()
@@ -16,6 +19,9 @@ AMyRocket::AMyRocket()
 	MeshComponent->SetupAttachment(RootComponent);
 	MeshComponent->SetGenerateOverlapEvents(false);
 	MeshComponent->SetCollisionProfileName(TEXT("NoCollision"));
+
+	SphereComponent = CreateDefaultSubobject<USphereComponent>(TEXT("ExplosionRadius"));
+	SphereComponent->SetupAttachment(RootComponent);
 
 	SetReplicates(true);
 }
@@ -89,10 +95,22 @@ void AMyRocket::Explode()
 {
 	if (Explosion != nullptr)
 	{
+		SphereComponent->GetOverlappingActors(OverlappingPlayers);
+
+		for(AActor* actor : OverlappingPlayers)
+		{
+			//Could probably just change the collision preset to make it only overlap player actors...
+			if (AMyPlayer* playerActor = Cast<AMyPlayer>(actor))
+			{
+				playerActor->TakeDamage(DamageDone);
+			}
+		}
+
 		UGameplayStatics::SpawnEmitterAtLocation(GetWorld(), Explosion, GetActorLocation(), GetActorRotation(), true);
 	}
 	MakeFree();
 }
+
 
 void AMyRocket::MakeFree()
 {
