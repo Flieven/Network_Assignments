@@ -99,7 +99,8 @@ void AMyRocket::Explode()
 
 		for(AActor* actor : OverlappingPlayers)
 		{
-			//Could probably just change the collision preset to make it only overlap player actors...
+			//The collider only overlaps Player channel but as a failsafe if something gets the wrong channel.
+			//And because GetOverlappingActors didn't want to just get TSubclassOf<AMyPlayer> for some reason and only took AActor arrays.
 			if (AMyPlayer* playerActor = Cast<AMyPlayer>(actor))
 			{
 				playerActor->TakeDamage(DamageDone);
