@@ -62,8 +62,9 @@ DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(AMyRocket); \
 	FORCEINLINE static uint32 __PPO__Explosion() { return STRUCT_OFFSET(AMyRocket, Explosion); } \
 	FORCEINLINE static uint32 __PPO__MeshComponent() { return STRUCT_OFFSET(AMyRocket, MeshComponent); } \
 	FORCEINLINE static uint32 __PPO__bDebugDrawCorrection() { return STRUCT_OFFSET(AMyRocket, bDebugDrawCorrection); } \
-	FORCEINLINE static uint32 __PPO__DamageDone() { return STRUCT_OFFSET(AMyRocket, DamageDone); } \
-	FORCEINLINE static uint32 __PPO__MovementVelocity() { return STRUCT_OFFSET(AMyRocket, MovementVelocity); }
+	FORCEINLINE static uint32 __PPO__explosionRadius() { return STRUCT_OFFSET(AMyRocket, explosionRadius); } \
+	FORCEINLINE static uint32 __PPO__damageDone() { return STRUCT_OFFSET(AMyRocket, damageDone); } \
+	FORCEINLINE static uint32 __PPO__movementVelocity() { return STRUCT_OFFSET(AMyRocket, movementVelocity); }
 
 
 #define Network_Assignment_Source_Network_Assignment_MyRocket_h_11_PROLOG

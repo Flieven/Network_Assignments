@@ -245,6 +245,8 @@ void AMyPlayer::FireRocket()
 	if(!ensure(newRocket != nullptr)) { return; }
 
 	fireCooldownElapsed = PlayerSettings->FireCooldown;
+	numRockets--;
+	Server_SyncRockets(numRockets);
 
 	if (GetLocalRole() >= ROLE_AutonomousProxy)
 	{
@@ -254,7 +256,6 @@ void AMyPlayer::FireRocket()
 		}
 		else
 		{
-			numRockets--;
 			newRocket->StartMoving(GetActorForwardVector(), GetRocketStartLocation());
 			Server_FireRocket(newRocket, GetRocketStartLocation(), GetActorRotation());
 		}
@@ -284,6 +285,7 @@ void AMyPlayer::TakeDamage(float amount)
 {
 	currentHealth -= amount;
 	BP_OnHealthChanged(currentHealth);
+	Server_SyncHealth(currentHealth);
 }
 
 FVector AMyPlayer::GetRocketStartLocation() const
@@ -312,10 +314,8 @@ void AMyPlayer::Server_FireRocket_Implementation(AMyRocket* newRocket, const FVe
 	{
 		const float DeltaYaw = FMath::FindDeltaAngleDegrees(rocketFacingRotation.Yaw, GetActorForwardVector().Rotation().Yaw) * 0.5f;
 		const FRotator NewFacingRotation = rocketFacingRotation + FRotator(0.0f, DeltaYaw, 0.0f);
-		serverNumRockets--;
 		Multicast_FireRocket(newRocket, rocketStartLocation, NewFacingRotation);
 	}
-	Server_SyncRockets(numRockets);
 }
 
 void AMyPlayer::Multicast_FireRocket_Implementation(AMyRocket* newRocket, const FVector& rocketStartLocation, const FRotator& rocketFacingRotation)
@@ -328,7 +328,6 @@ void AMyPlayer::Multicast_FireRocket_Implementation(AMyRocket* newRocket, const 
 	}
 	else
 	{
-		numRockets--;
 		newRocket->StartMoving(rocketFacingRotation.Vector(), rocketStartLocation);
 	}
 }

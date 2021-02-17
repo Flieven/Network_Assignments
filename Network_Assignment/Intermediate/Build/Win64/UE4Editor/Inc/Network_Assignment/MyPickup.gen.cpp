@@ -18,11 +18,11 @@ void EmptyLinkFunctionForGeneratedCodeMyPickup() {}
 	NETWORK_ASSIGNMENT_API UClass* Z_Construct_UClass_AMyPickup_NoRegister();
 	NETWORK_ASSIGNMENT_API UClass* Z_Construct_UClass_AMyPickup();
 	ENGINE_API UClass* Z_Construct_UClass_AActor();
-	ENGINE_API UScriptStruct* Z_Construct_UScriptStruct_FHitResult();
 	ENGINE_API UClass* Z_Construct_UClass_UPrimitiveComponent_NoRegister();
 	ENGINE_API UClass* Z_Construct_UClass_AActor_NoRegister();
-	ENGINE_API UClass* Z_Construct_UClass_UStaticMeshComponent_NoRegister();
+	ENGINE_API UScriptStruct* Z_Construct_UScriptStruct_FHitResult();
 	ENGINE_API UClass* Z_Construct_UClass_USphereComponent_NoRegister();
+	ENGINE_API UClass* Z_Construct_UClass_UStaticMeshComponent_NoRegister();
 // End Cross Module References
 	static UEnum* EMyPickupType_StaticEnum()
 	{
@@ -38,7 +38,7 @@ void EmptyLinkFunctionForGeneratedCodeMyPickup() {}
 		return EMyPickupType_StaticEnum();
 	}
 	static FCompiledInDeferEnum Z_CompiledInDeferEnum_UEnum_EMyPickupType(EMyPickupType_StaticEnum, TEXT("/Script/Network_Assignment"), TEXT("EMyPickupType"), false, nullptr, nullptr);
-	uint32 Get_Z_Construct_UEnum_Network_Assignment_EMyPickupType_Hash() { return 1366809365U; }
+	uint32 Get_Z_Construct_UEnum_Network_Assignment_EMyPickupType_Hash() { return 2701130297U; }
 	UEnum* Z_Construct_UEnum_Network_Assignment_EMyPickupType()
 	{
 #if WITH_HOT_RELOAD
@@ -69,6 +69,7 @@ void EmptyLinkFunctionForGeneratedCodeMyPickup() {}
 				Enumerators,
 				UE_ARRAY_COUNT(Enumerators),
 				RF_Public|RF_Transient|RF_MarkAsNative,
+				EEnumFlags::None,
 				UE4CodeGen_Private::EDynamicType::NotDynamic,
 				(uint8)UEnum::ECppForm::EnumClass,
 				METADATA_PARAMS(Enum_MetaDataParams, UE_ARRAY_COUNT(Enum_MetaDataParams))
@@ -118,21 +119,21 @@ void EmptyLinkFunctionForGeneratedCodeMyPickup() {}
 			FHitResult SweepResult;
 		};
 #if WITH_METADATA
-		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_SweepResult_MetaData[];
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_OverlappedComponet_MetaData[];
 #endif
-		static const UE4CodeGen_Private::FStructPropertyParams NewProp_SweepResult;
-		static void NewProp_bFromSweep_SetBit(void* Obj);
-		static const UE4CodeGen_Private::FBoolPropertyParams NewProp_bFromSweep;
-		static const UE4CodeGen_Private::FIntPropertyParams NewProp_OtherBodyIndex;
+		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_OverlappedComponet;
+		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_OtherActor;
 #if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_OtherComp_MetaData[];
 #endif
 		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_OtherComp;
-		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_OtherActor;
+		static const UE4CodeGen_Private::FIntPropertyParams NewProp_OtherBodyIndex;
+		static void NewProp_bFromSweep_SetBit(void* Obj);
+		static const UE4CodeGen_Private::FBoolPropertyParams NewProp_bFromSweep;
 #if WITH_METADATA
-		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_OverlappedComponet_MetaData[];
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_SweepResult_MetaData[];
 #endif
-		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_OverlappedComponet;
+		static const UE4CodeGen_Private::FStructPropertyParams NewProp_SweepResult;
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
 #if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
@@ -140,37 +141,37 @@ void EmptyLinkFunctionForGeneratedCodeMyPickup() {}
 		static const UE4CodeGen_Private::FFunctionParams FuncParams;
 	};
 #if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_AMyPickup_OverlapBegin_Statics::NewProp_SweepResult_MetaData[] = {
-		{ "NativeConst", "" },
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_AMyPickup_OverlapBegin_Statics::NewProp_OverlappedComponet_MetaData[] = {
+		{ "EditInline", "true" },
 	};
 #endif
-	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UFunction_AMyPickup_OverlapBegin_Statics::NewProp_SweepResult = { "SweepResult", nullptr, (EPropertyFlags)0x0010008008000182, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(MyPickup_eventOverlapBegin_Parms, SweepResult), Z_Construct_UScriptStruct_FHitResult, METADATA_PARAMS(Z_Construct_UFunction_AMyPickup_OverlapBegin_Statics::NewProp_SweepResult_MetaData, UE_ARRAY_COUNT(Z_Construct_UFunction_AMyPickup_OverlapBegin_Statics::NewProp_SweepResult_MetaData)) };
-	void Z_Construct_UFunction_AMyPickup_OverlapBegin_Statics::NewProp_bFromSweep_SetBit(void* Obj)
-	{
-		((MyPickup_eventOverlapBegin_Parms*)Obj)->bFromSweep = 1;
-	}
-	const UE4CodeGen_Private::FBoolPropertyParams Z_Construct_UFunction_AMyPickup_OverlapBegin_Statics::NewProp_bFromSweep = { "bFromSweep", nullptr, (EPropertyFlags)0x0010000000000080, UE4CodeGen_Private::EPropertyGenFlags::Bool | UE4CodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, 1, sizeof(bool), sizeof(MyPickup_eventOverlapBegin_Parms), &Z_Construct_UFunction_AMyPickup_OverlapBegin_Statics::NewProp_bFromSweep_SetBit, METADATA_PARAMS(nullptr, 0) };
-	const UE4CodeGen_Private::FIntPropertyParams Z_Construct_UFunction_AMyPickup_OverlapBegin_Statics::NewProp_OtherBodyIndex = { "OtherBodyIndex", nullptr, (EPropertyFlags)0x0010000000000080, UE4CodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(MyPickup_eventOverlapBegin_Parms, OtherBodyIndex), METADATA_PARAMS(nullptr, 0) };
+	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_AMyPickup_OverlapBegin_Statics::NewProp_OverlappedComponet = { "OverlappedComponet", nullptr, (EPropertyFlags)0x0010000000080080, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(MyPickup_eventOverlapBegin_Parms, OverlappedComponet), Z_Construct_UClass_UPrimitiveComponent_NoRegister, METADATA_PARAMS(Z_Construct_UFunction_AMyPickup_OverlapBegin_Statics::NewProp_OverlappedComponet_MetaData, UE_ARRAY_COUNT(Z_Construct_UFunction_AMyPickup_OverlapBegin_Statics::NewProp_OverlappedComponet_MetaData)) };
+	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_AMyPickup_OverlapBegin_Statics::NewProp_OtherActor = { "OtherActor", nullptr, (EPropertyFlags)0x0010000000000080, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(MyPickup_eventOverlapBegin_Parms, OtherActor), Z_Construct_UClass_AActor_NoRegister, METADATA_PARAMS(nullptr, 0) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_AMyPickup_OverlapBegin_Statics::NewProp_OtherComp_MetaData[] = {
 		{ "EditInline", "true" },
 	};
 #endif
 	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_AMyPickup_OverlapBegin_Statics::NewProp_OtherComp = { "OtherComp", nullptr, (EPropertyFlags)0x0010000000080080, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(MyPickup_eventOverlapBegin_Parms, OtherComp), Z_Construct_UClass_UPrimitiveComponent_NoRegister, METADATA_PARAMS(Z_Construct_UFunction_AMyPickup_OverlapBegin_Statics::NewProp_OtherComp_MetaData, UE_ARRAY_COUNT(Z_Construct_UFunction_AMyPickup_OverlapBegin_Statics::NewProp_OtherComp_MetaData)) };
-	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_AMyPickup_OverlapBegin_Statics::NewProp_OtherActor = { "OtherActor", nullptr, (EPropertyFlags)0x0010000000000080, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(MyPickup_eventOverlapBegin_Parms, OtherActor), Z_Construct_UClass_AActor_NoRegister, METADATA_PARAMS(nullptr, 0) };
+	const UE4CodeGen_Private::FIntPropertyParams Z_Construct_UFunction_AMyPickup_OverlapBegin_Statics::NewProp_OtherBodyIndex = { "OtherBodyIndex", nullptr, (EPropertyFlags)0x0010000000000080, UE4CodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(MyPickup_eventOverlapBegin_Parms, OtherBodyIndex), METADATA_PARAMS(nullptr, 0) };
+	void Z_Construct_UFunction_AMyPickup_OverlapBegin_Statics::NewProp_bFromSweep_SetBit(void* Obj)
+	{
+		((MyPickup_eventOverlapBegin_Parms*)Obj)->bFromSweep = 1;
+	}
+	const UE4CodeGen_Private::FBoolPropertyParams Z_Construct_UFunction_AMyPickup_OverlapBegin_Statics::NewProp_bFromSweep = { "bFromSweep", nullptr, (EPropertyFlags)0x0010000000000080, UE4CodeGen_Private::EPropertyGenFlags::Bool | UE4CodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, 1, sizeof(bool), sizeof(MyPickup_eventOverlapBegin_Parms), &Z_Construct_UFunction_AMyPickup_OverlapBegin_Statics::NewProp_bFromSweep_SetBit, METADATA_PARAMS(nullptr, 0) };
 #if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_AMyPickup_OverlapBegin_Statics::NewProp_OverlappedComponet_MetaData[] = {
-		{ "EditInline", "true" },
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_AMyPickup_OverlapBegin_Statics::NewProp_SweepResult_MetaData[] = {
+		{ "NativeConst", "" },
 	};
 #endif
-	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_AMyPickup_OverlapBegin_Statics::NewProp_OverlappedComponet = { "OverlappedComponet", nullptr, (EPropertyFlags)0x0010000000080080, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(MyPickup_eventOverlapBegin_Parms, OverlappedComponet), Z_Construct_UClass_UPrimitiveComponent_NoRegister, METADATA_PARAMS(Z_Construct_UFunction_AMyPickup_OverlapBegin_Statics::NewProp_OverlappedComponet_MetaData, UE_ARRAY_COUNT(Z_Construct_UFunction_AMyPickup_OverlapBegin_Statics::NewProp_OverlappedComponet_MetaData)) };
+	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UFunction_AMyPickup_OverlapBegin_Statics::NewProp_SweepResult = { "SweepResult", nullptr, (EPropertyFlags)0x0010008008000182, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(MyPickup_eventOverlapBegin_Parms, SweepResult), Z_Construct_UScriptStruct_FHitResult, METADATA_PARAMS(Z_Construct_UFunction_AMyPickup_OverlapBegin_Statics::NewProp_SweepResult_MetaData, UE_ARRAY_COUNT(Z_Construct_UFunction_AMyPickup_OverlapBegin_Statics::NewProp_SweepResult_MetaData)) };
 	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_AMyPickup_OverlapBegin_Statics::PropPointers[] = {
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_AMyPickup_OverlapBegin_Statics::NewProp_SweepResult,
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_AMyPickup_OverlapBegin_Statics::NewProp_bFromSweep,
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_AMyPickup_OverlapBegin_Statics::NewProp_OtherBodyIndex,
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_AMyPickup_OverlapBegin_Statics::NewProp_OtherComp,
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_AMyPickup_OverlapBegin_Statics::NewProp_OtherActor,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_AMyPickup_OverlapBegin_Statics::NewProp_OverlappedComponet,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_AMyPickup_OverlapBegin_Statics::NewProp_OtherActor,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_AMyPickup_OverlapBegin_Statics::NewProp_OtherComp,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_AMyPickup_OverlapBegin_Statics::NewProp_OtherBodyIndex,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_AMyPickup_OverlapBegin_Statics::NewProp_bFromSweep,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_AMyPickup_OverlapBegin_Statics::NewProp_SweepResult,
 	};
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_AMyPickup_OverlapBegin_Statics::Function_MetaDataParams[] = {
@@ -221,26 +222,26 @@ void EmptyLinkFunctionForGeneratedCodeMyPickup() {}
 		static const UE4CodeGen_Private::FMetaDataPairParam Class_MetaDataParams[];
 #endif
 #if WITH_METADATA
-		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_ReActivateTime_MetaData[];
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_SphereComponent_MetaData[];
 #endif
-		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_ReActivateTime;
+		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_SphereComponent;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_MeshComponent_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_MeshComponent;
+		static const UE4CodeGen_Private::FBytePropertyParams NewProp_PickupType_Underlying;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_PickupType_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FEnumPropertyParams NewProp_PickupType;
 #if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_NumRockets_MetaData[];
 #endif
 		static const UE4CodeGen_Private::FIntPropertyParams NewProp_NumRockets;
 #if WITH_METADATA
-		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_PickupType_MetaData[];
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_ReActivateTime_MetaData[];
 #endif
-		static const UE4CodeGen_Private::FEnumPropertyParams NewProp_PickupType;
-		static const UE4CodeGen_Private::FBytePropertyParams NewProp_PickupType_Underlying;
-#if WITH_METADATA
-		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_MeshComponent_MetaData[];
-#endif
-		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_MeshComponent;
-#if WITH_METADATA
-		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_SphereComponent_MetaData[];
-#endif
-		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_SphereComponent;
+		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_ReActivateTime;
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
 		static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
 		static const UE4CodeGen_Private::FClassParams ClassParams;
@@ -250,7 +251,7 @@ void EmptyLinkFunctionForGeneratedCodeMyPickup() {}
 		(UObject* (*)())Z_Construct_UPackage__Script_Network_Assignment,
 	};
 	const FClassFunctionLinkInfo Z_Construct_UClass_AMyPickup_Statics::FuncInfo[] = {
-		{ &Z_Construct_UFunction_AMyPickup_OverlapBegin, "OverlapBegin" }, // 687144060
+		{ &Z_Construct_UFunction_AMyPickup_OverlapBegin, "OverlapBegin" }, // 1374972633
 		{ &Z_Construct_UFunction_AMyPickup_ReActivatePickup, "ReActivatePickup" }, // 2560498997
 	};
 #if WITH_METADATA
@@ -260,27 +261,13 @@ void EmptyLinkFunctionForGeneratedCodeMyPickup() {}
 	};
 #endif
 #if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AMyPickup_Statics::NewProp_ReActivateTime_MetaData[] = {
-		{ "Category", "MyPickup" },
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AMyPickup_Statics::NewProp_SphereComponent_MetaData[] = {
+		{ "Category", "Collision" },
+		{ "EditInline", "true" },
 		{ "ModuleRelativePath", "MyPickup.h" },
 	};
 #endif
-	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UClass_AMyPickup_Statics::NewProp_ReActivateTime = { "ReActivateTime", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AMyPickup, ReActivateTime), METADATA_PARAMS(Z_Construct_UClass_AMyPickup_Statics::NewProp_ReActivateTime_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AMyPickup_Statics::NewProp_ReActivateTime_MetaData)) };
-#if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AMyPickup_Statics::NewProp_NumRockets_MetaData[] = {
-		{ "Category", "MyPickup" },
-		{ "ModuleRelativePath", "MyPickup.h" },
-	};
-#endif
-	const UE4CodeGen_Private::FIntPropertyParams Z_Construct_UClass_AMyPickup_Statics::NewProp_NumRockets = { "NumRockets", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AMyPickup, NumRockets), METADATA_PARAMS(Z_Construct_UClass_AMyPickup_Statics::NewProp_NumRockets_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AMyPickup_Statics::NewProp_NumRockets_MetaData)) };
-#if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AMyPickup_Statics::NewProp_PickupType_MetaData[] = {
-		{ "Category", "MyPickup" },
-		{ "ModuleRelativePath", "MyPickup.h" },
-	};
-#endif
-	const UE4CodeGen_Private::FEnumPropertyParams Z_Construct_UClass_AMyPickup_Statics::NewProp_PickupType = { "PickupType", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AMyPickup, PickupType), Z_Construct_UEnum_Network_Assignment_EMyPickupType, METADATA_PARAMS(Z_Construct_UClass_AMyPickup_Statics::NewProp_PickupType_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AMyPickup_Statics::NewProp_PickupType_MetaData)) };
-	const UE4CodeGen_Private::FBytePropertyParams Z_Construct_UClass_AMyPickup_Statics::NewProp_PickupType_Underlying = { "UnderlyingType", nullptr, (EPropertyFlags)0x0000000000000000, UE4CodeGen_Private::EPropertyGenFlags::Byte, RF_Public|RF_Transient|RF_MarkAsNative, 1, 0, nullptr, METADATA_PARAMS(nullptr, 0) };
+	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AMyPickup_Statics::NewProp_SphereComponent = { "SphereComponent", nullptr, (EPropertyFlags)0x00100000000b0009, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AMyPickup, SphereComponent), Z_Construct_UClass_USphereComponent_NoRegister, METADATA_PARAMS(Z_Construct_UClass_AMyPickup_Statics::NewProp_SphereComponent_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AMyPickup_Statics::NewProp_SphereComponent_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AMyPickup_Statics::NewProp_MeshComponent_MetaData[] = {
 		{ "Category", "Mesh" },
@@ -289,21 +276,35 @@ void EmptyLinkFunctionForGeneratedCodeMyPickup() {}
 	};
 #endif
 	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AMyPickup_Statics::NewProp_MeshComponent = { "MeshComponent", nullptr, (EPropertyFlags)0x00100000000b0009, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AMyPickup, MeshComponent), Z_Construct_UClass_UStaticMeshComponent_NoRegister, METADATA_PARAMS(Z_Construct_UClass_AMyPickup_Statics::NewProp_MeshComponent_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AMyPickup_Statics::NewProp_MeshComponent_MetaData)) };
+	const UE4CodeGen_Private::FBytePropertyParams Z_Construct_UClass_AMyPickup_Statics::NewProp_PickupType_Underlying = { "UnderlyingType", nullptr, (EPropertyFlags)0x0000000000000000, UE4CodeGen_Private::EPropertyGenFlags::Byte, RF_Public|RF_Transient|RF_MarkAsNative, 1, 0, nullptr, METADATA_PARAMS(nullptr, 0) };
 #if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AMyPickup_Statics::NewProp_SphereComponent_MetaData[] = {
-		{ "Category", "Collision" },
-		{ "EditInline", "true" },
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AMyPickup_Statics::NewProp_PickupType_MetaData[] = {
+		{ "Category", "MyPickup" },
 		{ "ModuleRelativePath", "MyPickup.h" },
 	};
 #endif
-	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AMyPickup_Statics::NewProp_SphereComponent = { "SphereComponent", nullptr, (EPropertyFlags)0x00100000000b0009, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AMyPickup, SphereComponent), Z_Construct_UClass_USphereComponent_NoRegister, METADATA_PARAMS(Z_Construct_UClass_AMyPickup_Statics::NewProp_SphereComponent_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AMyPickup_Statics::NewProp_SphereComponent_MetaData)) };
+	const UE4CodeGen_Private::FEnumPropertyParams Z_Construct_UClass_AMyPickup_Statics::NewProp_PickupType = { "PickupType", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AMyPickup, PickupType), Z_Construct_UEnum_Network_Assignment_EMyPickupType, METADATA_PARAMS(Z_Construct_UClass_AMyPickup_Statics::NewProp_PickupType_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AMyPickup_Statics::NewProp_PickupType_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AMyPickup_Statics::NewProp_NumRockets_MetaData[] = {
+		{ "Category", "MyPickup" },
+		{ "ModuleRelativePath", "MyPickup.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FIntPropertyParams Z_Construct_UClass_AMyPickup_Statics::NewProp_NumRockets = { "NumRockets", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AMyPickup, NumRockets), METADATA_PARAMS(Z_Construct_UClass_AMyPickup_Statics::NewProp_NumRockets_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AMyPickup_Statics::NewProp_NumRockets_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AMyPickup_Statics::NewProp_ReActivateTime_MetaData[] = {
+		{ "Category", "MyPickup" },
+		{ "ModuleRelativePath", "MyPickup.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UClass_AMyPickup_Statics::NewProp_ReActivateTime = { "ReActivateTime", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AMyPickup, ReActivateTime), METADATA_PARAMS(Z_Construct_UClass_AMyPickup_Statics::NewProp_ReActivateTime_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AMyPickup_Statics::NewProp_ReActivateTime_MetaData)) };
 	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_AMyPickup_Statics::PropPointers[] = {
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AMyPickup_Statics::NewProp_ReActivateTime,
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AMyPickup_Statics::NewProp_NumRockets,
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AMyPickup_Statics::NewProp_PickupType,
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AMyPickup_Statics::NewProp_PickupType_Underlying,
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AMyPickup_Statics::NewProp_MeshComponent,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AMyPickup_Statics::NewProp_SphereComponent,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AMyPickup_Statics::NewProp_MeshComponent,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AMyPickup_Statics::NewProp_PickupType_Underlying,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AMyPickup_Statics::NewProp_PickupType,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AMyPickup_Statics::NewProp_NumRockets,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AMyPickup_Statics::NewProp_ReActivateTime,
 	};
 	const FCppClassTypeInfoStatic Z_Construct_UClass_AMyPickup_Statics::StaticCppClassTypeInfo = {
 		TCppClassTypeTraits<AMyPickup>::IsAbstract,
@@ -332,7 +333,7 @@ void EmptyLinkFunctionForGeneratedCodeMyPickup() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(AMyPickup, 1475678343);
+	IMPLEMENT_CLASS(AMyPickup, 548482545);
 	template<> NETWORK_ASSIGNMENT_API UClass* StaticClass<AMyPickup>()
 	{
 		return AMyPickup::StaticClass();

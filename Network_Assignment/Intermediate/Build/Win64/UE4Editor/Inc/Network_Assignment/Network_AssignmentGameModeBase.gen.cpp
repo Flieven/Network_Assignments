@@ -74,7 +74,7 @@ void EmptyLinkFunctionForGeneratedCodeNetwork_AssignmentGameModeBase() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(ANetwork_AssignmentGameModeBase, 4044395433);
+	IMPLEMENT_CLASS(ANetwork_AssignmentGameModeBase, 963805470);
 	template<> NETWORK_ASSIGNMENT_API UClass* StaticClass<ANetwork_AssignmentGameModeBase>()
 	{
 		return ANetwork_AssignmentGameModeBase::StaticClass();

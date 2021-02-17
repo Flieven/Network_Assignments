@@ -49,17 +49,17 @@ static struct FScriptStruct_Network_Assignment_StaticRegisterNativesFMyBPNetwork
 #endif
 		static void* NewStructOps();
 #if WITH_METADATA
-		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_PacketLossPercentage_MetaData[];
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_MinLatency_MetaData[];
 #endif
-		static const UE4CodeGen_Private::FTextPropertyParams NewProp_PacketLossPercentage;
+		static const UE4CodeGen_Private::FTextPropertyParams NewProp_MinLatency;
 #if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_MaxLatency_MetaData[];
 #endif
 		static const UE4CodeGen_Private::FTextPropertyParams NewProp_MaxLatency;
 #if WITH_METADATA
-		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_MinLatency_MetaData[];
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_PacketLossPercentage_MetaData[];
 #endif
-		static const UE4CodeGen_Private::FTextPropertyParams NewProp_MinLatency;
+		static const UE4CodeGen_Private::FTextPropertyParams NewProp_PacketLossPercentage;
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
 		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
@@ -74,12 +74,13 @@ static struct FScriptStruct_Network_Assignment_StaticRegisterNativesFMyBPNetwork
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FMyBPNetworkSimulationSettingsText>();
 	}
 #if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FMyBPNetworkSimulationSettingsText_Statics::NewProp_PacketLossPercentage_MetaData[] = {
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FMyBPNetworkSimulationSettingsText_Statics::NewProp_MinLatency_MetaData[] = {
 		{ "Category", "Network Settings" },
+		{ "DisplayName", "Minimum Latency" },
 		{ "ModuleRelativePath", "MyNetDebugWidget.h" },
 	};
 #endif
-	const UE4CodeGen_Private::FTextPropertyParams Z_Construct_UScriptStruct_FMyBPNetworkSimulationSettingsText_Statics::NewProp_PacketLossPercentage = { "PacketLossPercentage", nullptr, (EPropertyFlags)0x0010000000000015, UE4CodeGen_Private::EPropertyGenFlags::Text, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FMyBPNetworkSimulationSettingsText, PacketLossPercentage), METADATA_PARAMS(Z_Construct_UScriptStruct_FMyBPNetworkSimulationSettingsText_Statics::NewProp_PacketLossPercentage_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FMyBPNetworkSimulationSettingsText_Statics::NewProp_PacketLossPercentage_MetaData)) };
+	const UE4CodeGen_Private::FTextPropertyParams Z_Construct_UScriptStruct_FMyBPNetworkSimulationSettingsText_Statics::NewProp_MinLatency = { "MinLatency", nullptr, (EPropertyFlags)0x0010000000000015, UE4CodeGen_Private::EPropertyGenFlags::Text, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FMyBPNetworkSimulationSettingsText, MinLatency), METADATA_PARAMS(Z_Construct_UScriptStruct_FMyBPNetworkSimulationSettingsText_Statics::NewProp_MinLatency_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FMyBPNetworkSimulationSettingsText_Statics::NewProp_MinLatency_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FMyBPNetworkSimulationSettingsText_Statics::NewProp_MaxLatency_MetaData[] = {
 		{ "Category", "Network Settings" },
@@ -89,17 +90,16 @@ static struct FScriptStruct_Network_Assignment_StaticRegisterNativesFMyBPNetwork
 #endif
 	const UE4CodeGen_Private::FTextPropertyParams Z_Construct_UScriptStruct_FMyBPNetworkSimulationSettingsText_Statics::NewProp_MaxLatency = { "MaxLatency", nullptr, (EPropertyFlags)0x0010000000000015, UE4CodeGen_Private::EPropertyGenFlags::Text, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FMyBPNetworkSimulationSettingsText, MaxLatency), METADATA_PARAMS(Z_Construct_UScriptStruct_FMyBPNetworkSimulationSettingsText_Statics::NewProp_MaxLatency_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FMyBPNetworkSimulationSettingsText_Statics::NewProp_MaxLatency_MetaData)) };
 #if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FMyBPNetworkSimulationSettingsText_Statics::NewProp_MinLatency_MetaData[] = {
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FMyBPNetworkSimulationSettingsText_Statics::NewProp_PacketLossPercentage_MetaData[] = {
 		{ "Category", "Network Settings" },
-		{ "DisplayName", "Minimum Latency" },
 		{ "ModuleRelativePath", "MyNetDebugWidget.h" },
 	};
 #endif
-	const UE4CodeGen_Private::FTextPropertyParams Z_Construct_UScriptStruct_FMyBPNetworkSimulationSettingsText_Statics::NewProp_MinLatency = { "MinLatency", nullptr, (EPropertyFlags)0x0010000000000015, UE4CodeGen_Private::EPropertyGenFlags::Text, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FMyBPNetworkSimulationSettingsText, MinLatency), METADATA_PARAMS(Z_Construct_UScriptStruct_FMyBPNetworkSimulationSettingsText_Statics::NewProp_MinLatency_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FMyBPNetworkSimulationSettingsText_Statics::NewProp_MinLatency_MetaData)) };
+	const UE4CodeGen_Private::FTextPropertyParams Z_Construct_UScriptStruct_FMyBPNetworkSimulationSettingsText_Statics::NewProp_PacketLossPercentage = { "PacketLossPercentage", nullptr, (EPropertyFlags)0x0010000000000015, UE4CodeGen_Private::EPropertyGenFlags::Text, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FMyBPNetworkSimulationSettingsText, PacketLossPercentage), METADATA_PARAMS(Z_Construct_UScriptStruct_FMyBPNetworkSimulationSettingsText_Statics::NewProp_PacketLossPercentage_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FMyBPNetworkSimulationSettingsText_Statics::NewProp_PacketLossPercentage_MetaData)) };
 	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UScriptStruct_FMyBPNetworkSimulationSettingsText_Statics::PropPointers[] = {
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FMyBPNetworkSimulationSettingsText_Statics::NewProp_PacketLossPercentage,
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FMyBPNetworkSimulationSettingsText_Statics::NewProp_MaxLatency,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FMyBPNetworkSimulationSettingsText_Statics::NewProp_MinLatency,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FMyBPNetworkSimulationSettingsText_Statics::NewProp_MaxLatency,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FMyBPNetworkSimulationSettingsText_Statics::NewProp_PacketLossPercentage,
 	};
 	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FMyBPNetworkSimulationSettingsText_Statics::ReturnStructParams = {
 		(UObject* (*)())Z_Construct_UPackage__Script_Network_Assignment,
@@ -129,7 +129,7 @@ static struct FScriptStruct_Network_Assignment_StaticRegisterNativesFMyBPNetwork
 		}
 		return ReturnStruct;
 	}
-	uint32 Get_Z_Construct_UScriptStruct_FMyBPNetworkSimulationSettingsText_Hash() { return 1218811123U; }
+	uint32 Get_Z_Construct_UScriptStruct_FMyBPNetworkSimulationSettingsText_Hash() { return 51608092U; }
 class UScriptStruct* FMyBPNetworkSimulationSettings::StaticStruct()
 {
 	static class UScriptStruct* Singleton = NULL;
@@ -159,17 +159,17 @@ static struct FScriptStruct_Network_Assignment_StaticRegisterNativesFMyBPNetwork
 #endif
 		static void* NewStructOps();
 #if WITH_METADATA
-		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_PacketLossPercentage_MetaData[];
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_MinLatency_MetaData[];
 #endif
-		static const UE4CodeGen_Private::FIntPropertyParams NewProp_PacketLossPercentage;
+		static const UE4CodeGen_Private::FIntPropertyParams NewProp_MinLatency;
 #if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_MaxLatency_MetaData[];
 #endif
 		static const UE4CodeGen_Private::FIntPropertyParams NewProp_MaxLatency;
 #if WITH_METADATA
-		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_MinLatency_MetaData[];
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_PacketLossPercentage_MetaData[];
 #endif
-		static const UE4CodeGen_Private::FIntPropertyParams NewProp_MinLatency;
+		static const UE4CodeGen_Private::FIntPropertyParams NewProp_PacketLossPercentage;
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
 		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
@@ -184,14 +184,15 @@ static struct FScriptStruct_Network_Assignment_StaticRegisterNativesFMyBPNetwork
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FMyBPNetworkSimulationSettings>();
 	}
 #if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FMyBPNetworkSimulationSettings_Statics::NewProp_PacketLossPercentage_MetaData[] = {
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FMyBPNetworkSimulationSettings_Statics::NewProp_MinLatency_MetaData[] = {
 		{ "Category", "Network Settings" },
-		{ "ClampMax", "100" },
+		{ "ClampMax", "5000" },
 		{ "ClampMin", "0" },
+		{ "DisplayName", "Minimum Latency" },
 		{ "ModuleRelativePath", "MyNetDebugWidget.h" },
 	};
 #endif
-	const UE4CodeGen_Private::FIntPropertyParams Z_Construct_UScriptStruct_FMyBPNetworkSimulationSettings_Statics::NewProp_PacketLossPercentage = { "PacketLossPercentage", nullptr, (EPropertyFlags)0x0010000000000005, UE4CodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FMyBPNetworkSimulationSettings, PacketLossPercentage), METADATA_PARAMS(Z_Construct_UScriptStruct_FMyBPNetworkSimulationSettings_Statics::NewProp_PacketLossPercentage_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FMyBPNetworkSimulationSettings_Statics::NewProp_PacketLossPercentage_MetaData)) };
+	const UE4CodeGen_Private::FIntPropertyParams Z_Construct_UScriptStruct_FMyBPNetworkSimulationSettings_Statics::NewProp_MinLatency = { "MinLatency", nullptr, (EPropertyFlags)0x0010000000000005, UE4CodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FMyBPNetworkSimulationSettings, MinLatency), METADATA_PARAMS(Z_Construct_UScriptStruct_FMyBPNetworkSimulationSettings_Statics::NewProp_MinLatency_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FMyBPNetworkSimulationSettings_Statics::NewProp_MinLatency_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FMyBPNetworkSimulationSettings_Statics::NewProp_MaxLatency_MetaData[] = {
 		{ "Category", "Network Settings" },
@@ -203,19 +204,18 @@ static struct FScriptStruct_Network_Assignment_StaticRegisterNativesFMyBPNetwork
 #endif
 	const UE4CodeGen_Private::FIntPropertyParams Z_Construct_UScriptStruct_FMyBPNetworkSimulationSettings_Statics::NewProp_MaxLatency = { "MaxLatency", nullptr, (EPropertyFlags)0x0010000000000005, UE4CodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FMyBPNetworkSimulationSettings, MaxLatency), METADATA_PARAMS(Z_Construct_UScriptStruct_FMyBPNetworkSimulationSettings_Statics::NewProp_MaxLatency_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FMyBPNetworkSimulationSettings_Statics::NewProp_MaxLatency_MetaData)) };
 #if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FMyBPNetworkSimulationSettings_Statics::NewProp_MinLatency_MetaData[] = {
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FMyBPNetworkSimulationSettings_Statics::NewProp_PacketLossPercentage_MetaData[] = {
 		{ "Category", "Network Settings" },
-		{ "ClampMax", "5000" },
+		{ "ClampMax", "100" },
 		{ "ClampMin", "0" },
-		{ "DisplayName", "Minimum Latency" },
 		{ "ModuleRelativePath", "MyNetDebugWidget.h" },
 	};
 #endif
-	const UE4CodeGen_Private::FIntPropertyParams Z_Construct_UScriptStruct_FMyBPNetworkSimulationSettings_Statics::NewProp_MinLatency = { "MinLatency", nullptr, (EPropertyFlags)0x0010000000000005, UE4CodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FMyBPNetworkSimulationSettings, MinLatency), METADATA_PARAMS(Z_Construct_UScriptStruct_FMyBPNetworkSimulationSettings_Statics::NewProp_MinLatency_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FMyBPNetworkSimulationSettings_Statics::NewProp_MinLatency_MetaData)) };
+	const UE4CodeGen_Private::FIntPropertyParams Z_Construct_UScriptStruct_FMyBPNetworkSimulationSettings_Statics::NewProp_PacketLossPercentage = { "PacketLossPercentage", nullptr, (EPropertyFlags)0x0010000000000005, UE4CodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FMyBPNetworkSimulationSettings, PacketLossPercentage), METADATA_PARAMS(Z_Construct_UScriptStruct_FMyBPNetworkSimulationSettings_Statics::NewProp_PacketLossPercentage_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FMyBPNetworkSimulationSettings_Statics::NewProp_PacketLossPercentage_MetaData)) };
 	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UScriptStruct_FMyBPNetworkSimulationSettings_Statics::PropPointers[] = {
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FMyBPNetworkSimulationSettings_Statics::NewProp_PacketLossPercentage,
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FMyBPNetworkSimulationSettings_Statics::NewProp_MaxLatency,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FMyBPNetworkSimulationSettings_Statics::NewProp_MinLatency,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FMyBPNetworkSimulationSettings_Statics::NewProp_MaxLatency,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FMyBPNetworkSimulationSettings_Statics::NewProp_PacketLossPercentage,
 	};
 	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FMyBPNetworkSimulationSettings_Statics::ReturnStructParams = {
 		(UObject* (*)())Z_Construct_UPackage__Script_Network_Assignment,
@@ -245,7 +245,7 @@ static struct FScriptStruct_Network_Assignment_StaticRegisterNativesFMyBPNetwork
 		}
 		return ReturnStruct;
 	}
-	uint32 Get_Z_Construct_UScriptStruct_FMyBPNetworkSimulationSettings_Hash() { return 2240036976U; }
+	uint32 Get_Z_Construct_UScriptStruct_FMyBPNetworkSimulationSettings_Hash() { return 296030737U; }
 	DEFINE_FUNCTION(UMyNetDebugWidget::execUpdateNetworkSimulationSettings)
 	{
 		P_GET_STRUCT_REF(FMyBPNetworkSimulationSettings,Z_Param_Out_InPackets);
@@ -501,7 +501,7 @@ static struct FScriptStruct_Network_Assignment_StaticRegisterNativesFMyBPNetwork
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(UMyNetDebugWidget, 1737337441);
+	IMPLEMENT_CLASS(UMyNetDebugWidget, 4249550051);
 	template<> NETWORK_ASSIGNMENT_API UClass* StaticClass<UMyNetDebugWidget>()
 	{
 		return UMyNetDebugWidget::StaticClass();

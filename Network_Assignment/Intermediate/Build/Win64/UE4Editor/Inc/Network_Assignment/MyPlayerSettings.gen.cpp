@@ -32,33 +32,33 @@ void EmptyLinkFunctionForGeneratedCodeMyPlayerSettings() {}
 		static const UE4CodeGen_Private::FMetaDataPairParam Class_MetaDataParams[];
 #endif
 #if WITH_METADATA
-		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_Health_MetaData[];
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_Acceleration_MetaData[];
 #endif
-		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_Health;
-#if WITH_METADATA
-		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_FireCooldown_MetaData[];
-#endif
-		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_FireCooldown;
-#if WITH_METADATA
-		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_BrakingFriction_MetaData[];
-#endif
-		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_BrakingFriction;
-#if WITH_METADATA
-		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_Friction_MetaData[];
-#endif
-		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_Friction;
-#if WITH_METADATA
-		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_MaxVelocity_MetaData[];
-#endif
-		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_MaxVelocity;
+		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_Acceleration;
 #if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_TurnSpeedDefault_MetaData[];
 #endif
 		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_TurnSpeedDefault;
 #if WITH_METADATA
-		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_Acceleration_MetaData[];
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_MaxVelocity_MetaData[];
 #endif
-		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_Acceleration;
+		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_MaxVelocity;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_Friction_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_Friction;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_BrakingFriction_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_BrakingFriction;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_FireCooldown_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_FireCooldown;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_Health_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_Health;
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
 		static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
 		static const UE4CodeGen_Private::FClassParams ClassParams;
@@ -74,28 +74,27 @@ void EmptyLinkFunctionForGeneratedCodeMyPlayerSettings() {}
 	};
 #endif
 #if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UMyPlayerSettings_Statics::NewProp_Health_MetaData[] = {
-		{ "Category", "Player" },
-		{ "ModuleRelativePath", "MyPlayerSettings.h" },
-	};
-#endif
-	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UClass_UMyPlayerSettings_Statics::NewProp_Health = { "Health", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UMyPlayerSettings, Health), METADATA_PARAMS(Z_Construct_UClass_UMyPlayerSettings_Statics::NewProp_Health_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UMyPlayerSettings_Statics::NewProp_Health_MetaData)) };
-#if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UMyPlayerSettings_Statics::NewProp_FireCooldown_MetaData[] = {
-		{ "Category", "Weapon" },
-		{ "ModuleRelativePath", "MyPlayerSettings.h" },
-	};
-#endif
-	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UClass_UMyPlayerSettings_Statics::NewProp_FireCooldown = { "FireCooldown", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UMyPlayerSettings, FireCooldown), METADATA_PARAMS(Z_Construct_UClass_UMyPlayerSettings_Statics::NewProp_FireCooldown_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UMyPlayerSettings_Statics::NewProp_FireCooldown_MetaData)) };
-#if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UMyPlayerSettings_Statics::NewProp_BrakingFriction_MetaData[] = {
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UMyPlayerSettings_Statics::NewProp_Acceleration_MetaData[] = {
 		{ "Category", "Movement" },
-		{ "ClampMax", "1.000000" },
-		{ "ClampMin", "0.000000" },
 		{ "ModuleRelativePath", "MyPlayerSettings.h" },
 	};
 #endif
-	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UClass_UMyPlayerSettings_Statics::NewProp_BrakingFriction = { "BrakingFriction", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UMyPlayerSettings, BrakingFriction), METADATA_PARAMS(Z_Construct_UClass_UMyPlayerSettings_Statics::NewProp_BrakingFriction_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UMyPlayerSettings_Statics::NewProp_BrakingFriction_MetaData)) };
+	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UClass_UMyPlayerSettings_Statics::NewProp_Acceleration = { "Acceleration", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UMyPlayerSettings, Acceleration), METADATA_PARAMS(Z_Construct_UClass_UMyPlayerSettings_Statics::NewProp_Acceleration_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UMyPlayerSettings_Statics::NewProp_Acceleration_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UMyPlayerSettings_Statics::NewProp_TurnSpeedDefault_MetaData[] = {
+		{ "Category", "Movement" },
+		{ "DisplayName", "TurnSpeed" },
+		{ "ModuleRelativePath", "MyPlayerSettings.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UClass_UMyPlayerSettings_Statics::NewProp_TurnSpeedDefault = { "TurnSpeedDefault", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UMyPlayerSettings, TurnSpeedDefault), METADATA_PARAMS(Z_Construct_UClass_UMyPlayerSettings_Statics::NewProp_TurnSpeedDefault_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UMyPlayerSettings_Statics::NewProp_TurnSpeedDefault_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UMyPlayerSettings_Statics::NewProp_MaxVelocity_MetaData[] = {
+		{ "Category", "Movement" },
+		{ "ModuleRelativePath", "MyPlayerSettings.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UClass_UMyPlayerSettings_Statics::NewProp_MaxVelocity = { "MaxVelocity", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UMyPlayerSettings, MaxVelocity), METADATA_PARAMS(Z_Construct_UClass_UMyPlayerSettings_Statics::NewProp_MaxVelocity_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UMyPlayerSettings_Statics::NewProp_MaxVelocity_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UMyPlayerSettings_Statics::NewProp_Friction_MetaData[] = {
 		{ "Category", "Movement" },
@@ -106,35 +105,36 @@ void EmptyLinkFunctionForGeneratedCodeMyPlayerSettings() {}
 #endif
 	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UClass_UMyPlayerSettings_Statics::NewProp_Friction = { "Friction", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UMyPlayerSettings, Friction), METADATA_PARAMS(Z_Construct_UClass_UMyPlayerSettings_Statics::NewProp_Friction_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UMyPlayerSettings_Statics::NewProp_Friction_MetaData)) };
 #if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UMyPlayerSettings_Statics::NewProp_MaxVelocity_MetaData[] = {
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UMyPlayerSettings_Statics::NewProp_BrakingFriction_MetaData[] = {
 		{ "Category", "Movement" },
+		{ "ClampMax", "1.000000" },
+		{ "ClampMin", "0.000000" },
 		{ "ModuleRelativePath", "MyPlayerSettings.h" },
 	};
 #endif
-	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UClass_UMyPlayerSettings_Statics::NewProp_MaxVelocity = { "MaxVelocity", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UMyPlayerSettings, MaxVelocity), METADATA_PARAMS(Z_Construct_UClass_UMyPlayerSettings_Statics::NewProp_MaxVelocity_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UMyPlayerSettings_Statics::NewProp_MaxVelocity_MetaData)) };
+	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UClass_UMyPlayerSettings_Statics::NewProp_BrakingFriction = { "BrakingFriction", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UMyPlayerSettings, BrakingFriction), METADATA_PARAMS(Z_Construct_UClass_UMyPlayerSettings_Statics::NewProp_BrakingFriction_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UMyPlayerSettings_Statics::NewProp_BrakingFriction_MetaData)) };
 #if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UMyPlayerSettings_Statics::NewProp_TurnSpeedDefault_MetaData[] = {
-		{ "Category", "Movement" },
-		{ "DisplayName", "TurnSpeed" },
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UMyPlayerSettings_Statics::NewProp_FireCooldown_MetaData[] = {
+		{ "Category", "Weapon" },
 		{ "ModuleRelativePath", "MyPlayerSettings.h" },
 	};
 #endif
-	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UClass_UMyPlayerSettings_Statics::NewProp_TurnSpeedDefault = { "TurnSpeedDefault", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UMyPlayerSettings, TurnSpeedDefault), METADATA_PARAMS(Z_Construct_UClass_UMyPlayerSettings_Statics::NewProp_TurnSpeedDefault_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UMyPlayerSettings_Statics::NewProp_TurnSpeedDefault_MetaData)) };
+	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UClass_UMyPlayerSettings_Statics::NewProp_FireCooldown = { "FireCooldown", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UMyPlayerSettings, FireCooldown), METADATA_PARAMS(Z_Construct_UClass_UMyPlayerSettings_Statics::NewProp_FireCooldown_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UMyPlayerSettings_Statics::NewProp_FireCooldown_MetaData)) };
 #if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UMyPlayerSettings_Statics::NewProp_Acceleration_MetaData[] = {
-		{ "Category", "Movement" },
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UMyPlayerSettings_Statics::NewProp_Health_MetaData[] = {
+		{ "Category", "Player" },
 		{ "ModuleRelativePath", "MyPlayerSettings.h" },
 	};
 #endif
-	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UClass_UMyPlayerSettings_Statics::NewProp_Acceleration = { "Acceleration", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UMyPlayerSettings, Acceleration), METADATA_PARAMS(Z_Construct_UClass_UMyPlayerSettings_Statics::NewProp_Acceleration_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UMyPlayerSettings_Statics::NewProp_Acceleration_MetaData)) };
+	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UClass_UMyPlayerSettings_Statics::NewProp_Health = { "Health", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UMyPlayerSettings, Health), METADATA_PARAMS(Z_Construct_UClass_UMyPlayerSettings_Statics::NewProp_Health_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UMyPlayerSettings_Statics::NewProp_Health_MetaData)) };
 	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_UMyPlayerSettings_Statics::PropPointers[] = {
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UMyPlayerSettings_Statics::NewProp_Health,
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UMyPlayerSettings_Statics::NewProp_FireCooldown,
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UMyPlayerSettings_Statics::NewProp_BrakingFriction,
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UMyPlayerSettings_Statics::NewProp_Friction,
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UMyPlayerSettings_Statics::NewProp_MaxVelocity,
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UMyPlayerSettings_Statics::NewProp_TurnSpeedDefault,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UMyPlayerSettings_Statics::NewProp_Acceleration,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UMyPlayerSettings_Statics::NewProp_TurnSpeedDefault,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UMyPlayerSettings_Statics::NewProp_MaxVelocity,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UMyPlayerSettings_Statics::NewProp_Friction,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UMyPlayerSettings_Statics::NewProp_BrakingFriction,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UMyPlayerSettings_Statics::NewProp_FireCooldown,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UMyPlayerSettings_Statics::NewProp_Health,
 	};
 	const FCppClassTypeInfoStatic Z_Construct_UClass_UMyPlayerSettings_Statics::StaticCppClassTypeInfo = {
 		TCppClassTypeTraits<UMyPlayerSettings>::IsAbstract,
@@ -163,7 +163,7 @@ void EmptyLinkFunctionForGeneratedCodeMyPlayerSettings() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(UMyPlayerSettings, 2825462791);
+	IMPLEMENT_CLASS(UMyPlayerSettings, 400411877);
 	template<> NETWORK_ASSIGNMENT_API UClass* StaticClass<UMyPlayerSettings>()
 	{
 		return UMyPlayerSettings::StaticClass();

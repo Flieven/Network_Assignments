@@ -20,8 +20,7 @@ AMyRocket::AMyRocket()
 	MeshComponent->SetGenerateOverlapEvents(false);
 	MeshComponent->SetCollisionProfileName(TEXT("NoCollision"));
 
-	SphereComponent = CreateDefaultSubobject<USphereComponent>(TEXT("ExplosionRadius"));
-	SphereComponent->SetupAttachment(RootComponent);
+	collisionSphere = FCollisionShape::MakeSphere(explosionRadius);
 
 	SetReplicates(true);
 }
@@ -41,7 +40,7 @@ void AMyRocket::Tick(float DeltaTime)
 	Super::Tick(DeltaTime);
 
 	LifeTimeElapsed -= DeltaTime;
-	DistanceMoved += MovementVelocity * DeltaTime;
+	DistanceMoved += movementVelocity * DeltaTime;
 
 	FacingRotationStart = FQuat::Slerp(FacingRotationStart.ToOrientationQuat(), FacingRotationCorrection, 0.09f * DeltaTime).Vector();
 
@@ -51,7 +50,7 @@ void AMyRocket::Tick(float DeltaTime)
 		const float ArrowLength = 3000.0f;
 		const float ArrowSize = 50.0f;
 
-		DrawDebugDirectionalArrow(GetWorld(), RocketStartLocation, RocketStartLocation + OriginalFacingDirection * ArrowLength, ArrowSize, FColor::Red);
+		DrawDebugDirectionalArrow(GetWorld(), RocketStartLocation, RocketStartLocation + originalFacingDirection * ArrowLength, ArrowSize, FColor::Red);
 
 		DrawDebugDirectionalArrow(GetWorld(), RocketStartLocation, RocketStartLocation + FacingRotationStart * ArrowLength, ArrowSize, FColor::Green);
 	}
@@ -83,7 +82,7 @@ void AMyRocket::StartMoving(const FVector& forward, const FVector& inStartLocati
 	SetRocketVisibility(true);
 	LifeTimeElapsed = LifeTime;
 	DistanceMoved = 0.0f;
-	OriginalFacingDirection = FacingRotationStart;
+	originalFacingDirection = FacingRotationStart;
 }
 
 void AMyRocket::ApplyCorrection(const FVector& forward)
@@ -95,20 +94,24 @@ void AMyRocket::Explode()
 {
 	if (Explosion != nullptr)
 	{
-		SphereComponent->GetOverlappingActors(OverlappingPlayers);
+		GetWorld()->OverlapMultiByChannel
+		(overlappingPlayers, GetActorLocation(), FQuat::Identity, ECC_WorldDynamic, collisionSphere);
 
-		for(AActor* actor : OverlappingPlayers)
+		//DrawDebugSphere(GetWorld(), GetActorLocation(), explosionRadius, 16, FColor::Red, true, .5f);
+
+		TArray<AActor*> uniqueHits;
+
+		for(FOverlapResult result : overlappingPlayers)
 		{
-			//The collider only overlaps Player channel but as a failsafe if something gets the wrong channel.
-			//And because GetOverlappingActors didn't want to just get TSubclassOf<AMyPlayer> for some reason and only took AActor arrays.
-			if (AMyPlayer* playerActor = Cast<AMyPlayer>(actor))
+			if (AMyPlayer* playerActor = Cast<AMyPlayer>(result.GetActor()))
 			{
-				playerActor->TakeDamage(DamageDone);
+				playerActor->TakeDamage(damageDone);
 			}
 		}
 
 		UGameplayStatics::SpawnEmitterAtLocation(GetWorld(), Explosion, GetActorLocation(), GetActorRotation(), true);
 	}
+	overlappingPlayers.Empty();
 	MakeFree();
 }
 

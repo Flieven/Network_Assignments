@@ -27,9 +27,6 @@ public:
 
 	bool IsFree() const { return bIsFree; }
 
-	UPROPERTY(VisibleDefaultsOnly, Category = "Explosion")
-		USphereComponent* SphereComponent;
-
 private:
 
 	void SetRocketVisibility(bool bVisible);
@@ -44,25 +41,30 @@ private:
 	UPROPERTY(EditAnywhere, Category = "Debug")
 		bool bDebugDrawCorrection = true;
 
-	FVector OriginalFacingDirection = FVector::ZeroVector;
+	UPROPERTY(EditAnywhere, Category = "Explosion")
+		float explosionRadius = 100.0f;
+
+	UPROPERTY(EditAnywhere, Category = "Explosion")
+		float damageDone = 5.0f;
+
+	UPROPERTY(EditAnywhere)
+		float movementVelocity = 1300.0f;
+
+	FVector originalFacingDirection = FVector::ZeroVector;
 
 	FVector FacingRotationStart = FVector::ZeroVector;
 	FQuat FacingRotationCorrection = FQuat::Identity;
 
 	FVector RocketStartLocation = FVector::ZeroVector;
 
-	TArray<AActor*> OverlappingPlayers;
+	TArray<FOverlapResult> overlappingPlayers;
+
+	FCollisionShape collisionSphere;
 
 	float LifeTime = 2.0f;
 	float LifeTimeElapsed = 0.0f;
 
 	float DistanceMoved = 0.0f;
-
-	UPROPERTY(EditAnywhere, Category = "Explosion")
-	float DamageDone = 5.0f;
-
-	UPROPERTY(EditAnywhere)
-		float MovementVelocity = 1300.0f;
 
 	bool bIsFree = true;
 };

@@ -86,7 +86,7 @@ void EmptyLinkFunctionForGeneratedCodeMyMovementComponent() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(UMyMovementComponent, 3412229407);
+	IMPLEMENT_CLASS(UMyMovementComponent, 4134097820);
 	template<> NETWORK_ASSIGNMENT_API UClass* StaticClass<UMyMovementComponent>()
 	{
 		return UMyMovementComponent::StaticClass();

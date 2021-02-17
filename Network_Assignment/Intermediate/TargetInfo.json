@@ -2,12 +2,12 @@
 	"Targets": [
 		{
 			"Name": "Network_Assignment",
-			"Path": "D:\\Unreal Engine\\Network_Assignment\\Network_Assignment\\Source\\Network_Assignment.Target.cs",
+			"Path": "D:\\Engines\\UnrealEngine\\Projects\\Network_Assignments\\Network_Assignment\\Source\\Network_Assignment.Target.cs",
 			"Type": "Game"
 		},
 		{
 			"Name": "Network_AssignmentEditor",
-			"Path": "D:\\Unreal Engine\\Network_Assignment\\Network_Assignment\\Source\\Network_AssignmentEditor.Target.cs",
+			"Path": "D:\\Engines\\UnrealEngine\\Projects\\Network_Assignments\\Network_Assignment\\Source\\Network_AssignmentEditor.Target.cs",
 			"Type": "Editor"
 		}
 	]

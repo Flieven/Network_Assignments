@@ -17,9 +17,8 @@ void EmptyLinkFunctionForGeneratedCodeMyRocket() {}
 	NETWORK_ASSIGNMENT_API UClass* Z_Construct_UClass_AMyRocket();
 	ENGINE_API UClass* Z_Construct_UClass_AActor();
 	UPackage* Z_Construct_UPackage__Script_Network_Assignment();
-	ENGINE_API UClass* Z_Construct_UClass_UStaticMeshComponent_NoRegister();
 	ENGINE_API UClass* Z_Construct_UClass_UParticleSystem_NoRegister();
-	ENGINE_API UClass* Z_Construct_UClass_USphereComponent_NoRegister();
+	ENGINE_API UClass* Z_Construct_UClass_UStaticMeshComponent_NoRegister();
 // End Cross Module References
 	void AMyRocket::StaticRegisterNativesAMyRocket()
 	{
@@ -35,30 +34,30 @@ void EmptyLinkFunctionForGeneratedCodeMyRocket() {}
 		static const UE4CodeGen_Private::FMetaDataPairParam Class_MetaDataParams[];
 #endif
 #if WITH_METADATA
-		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_MovementVelocity_MetaData[];
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_Explosion_MetaData[];
 #endif
-		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_MovementVelocity;
+		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_Explosion;
 #if WITH_METADATA
-		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_DamageDone_MetaData[];
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_MeshComponent_MetaData[];
 #endif
-		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_DamageDone;
+		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_MeshComponent;
 #if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_bDebugDrawCorrection_MetaData[];
 #endif
 		static void NewProp_bDebugDrawCorrection_SetBit(void* Obj);
 		static const UE4CodeGen_Private::FBoolPropertyParams NewProp_bDebugDrawCorrection;
 #if WITH_METADATA
-		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_MeshComponent_MetaData[];
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_explosionRadius_MetaData[];
 #endif
-		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_MeshComponent;
+		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_explosionRadius;
 #if WITH_METADATA
-		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_Explosion_MetaData[];
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_damageDone_MetaData[];
 #endif
-		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_Explosion;
+		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_damageDone;
 #if WITH_METADATA
-		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_SphereComponent_MetaData[];
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_movementVelocity_MetaData[];
 #endif
-		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_SphereComponent;
+		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_movementVelocity;
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
 		static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
 		static const UE4CodeGen_Private::FClassParams ClassParams;
@@ -74,19 +73,20 @@ void EmptyLinkFunctionForGeneratedCodeMyRocket() {}
 	};
 #endif
 #if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AMyRocket_Statics::NewProp_MovementVelocity_MetaData[] = {
-		{ "Category", "MyRocket" },
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AMyRocket_Statics::NewProp_Explosion_MetaData[] = {
+		{ "Category", "VFX" },
 		{ "ModuleRelativePath", "MyRocket.h" },
 	};
 #endif
-	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UClass_AMyRocket_Statics::NewProp_MovementVelocity = { "MovementVelocity", nullptr, (EPropertyFlags)0x0040000000000001, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AMyRocket, MovementVelocity), METADATA_PARAMS(Z_Construct_UClass_AMyRocket_Statics::NewProp_MovementVelocity_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AMyRocket_Statics::NewProp_MovementVelocity_MetaData)) };
+	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AMyRocket_Statics::NewProp_Explosion = { "Explosion", nullptr, (EPropertyFlags)0x0040000000000001, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AMyRocket, Explosion), Z_Construct_UClass_UParticleSystem_NoRegister, METADATA_PARAMS(Z_Construct_UClass_AMyRocket_Statics::NewProp_Explosion_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AMyRocket_Statics::NewProp_Explosion_MetaData)) };
 #if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AMyRocket_Statics::NewProp_DamageDone_MetaData[] = {
-		{ "Category", "Explosion" },
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AMyRocket_Statics::NewProp_MeshComponent_MetaData[] = {
+		{ "Category", "VFX" },
+		{ "EditInline", "true" },
 		{ "ModuleRelativePath", "MyRocket.h" },
 	};
 #endif
-	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UClass_AMyRocket_Statics::NewProp_DamageDone = { "DamageDone", nullptr, (EPropertyFlags)0x0040000000000001, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AMyRocket, DamageDone), METADATA_PARAMS(Z_Construct_UClass_AMyRocket_Statics::NewProp_DamageDone_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AMyRocket_Statics::NewProp_DamageDone_MetaData)) };
+	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AMyRocket_Statics::NewProp_MeshComponent = { "MeshComponent", nullptr, (EPropertyFlags)0x0040000000080009, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AMyRocket, MeshComponent), Z_Construct_UClass_UStaticMeshComponent_NoRegister, METADATA_PARAMS(Z_Construct_UClass_AMyRocket_Statics::NewProp_MeshComponent_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AMyRocket_Statics::NewProp_MeshComponent_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AMyRocket_Statics::NewProp_bDebugDrawCorrection_MetaData[] = {
 		{ "Category", "Debug" },
@@ -99,35 +99,33 @@ void EmptyLinkFunctionForGeneratedCodeMyRocket() {}
 	}
 	const UE4CodeGen_Private::FBoolPropertyParams Z_Construct_UClass_AMyRocket_Statics::NewProp_bDebugDrawCorrection = { "bDebugDrawCorrection", nullptr, (EPropertyFlags)0x0040000000000001, UE4CodeGen_Private::EPropertyGenFlags::Bool | UE4CodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, 1, sizeof(bool), sizeof(AMyRocket), &Z_Construct_UClass_AMyRocket_Statics::NewProp_bDebugDrawCorrection_SetBit, METADATA_PARAMS(Z_Construct_UClass_AMyRocket_Statics::NewProp_bDebugDrawCorrection_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AMyRocket_Statics::NewProp_bDebugDrawCorrection_MetaData)) };
 #if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AMyRocket_Statics::NewProp_MeshComponent_MetaData[] = {
-		{ "Category", "VFX" },
-		{ "EditInline", "true" },
-		{ "ModuleRelativePath", "MyRocket.h" },
-	};
-#endif
-	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AMyRocket_Statics::NewProp_MeshComponent = { "MeshComponent", nullptr, (EPropertyFlags)0x0040000000080009, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AMyRocket, MeshComponent), Z_Construct_UClass_UStaticMeshComponent_NoRegister, METADATA_PARAMS(Z_Construct_UClass_AMyRocket_Statics::NewProp_MeshComponent_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AMyRocket_Statics::NewProp_MeshComponent_MetaData)) };
-#if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AMyRocket_Statics::NewProp_Explosion_MetaData[] = {
-		{ "Category", "VFX" },
-		{ "ModuleRelativePath", "MyRocket.h" },
-	};
-#endif
-	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AMyRocket_Statics::NewProp_Explosion = { "Explosion", nullptr, (EPropertyFlags)0x0040000000000001, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AMyRocket, Explosion), Z_Construct_UClass_UParticleSystem_NoRegister, METADATA_PARAMS(Z_Construct_UClass_AMyRocket_Statics::NewProp_Explosion_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AMyRocket_Statics::NewProp_Explosion_MetaData)) };
-#if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AMyRocket_Statics::NewProp_SphereComponent_MetaData[] = {
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AMyRocket_Statics::NewProp_explosionRadius_MetaData[] = {
 		{ "Category", "Explosion" },
-		{ "EditInline", "true" },
 		{ "ModuleRelativePath", "MyRocket.h" },
 	};
 #endif
-	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AMyRocket_Statics::NewProp_SphereComponent = { "SphereComponent", nullptr, (EPropertyFlags)0x00100000000b0009, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AMyRocket, SphereComponent), Z_Construct_UClass_USphereComponent_NoRegister, METADATA_PARAMS(Z_Construct_UClass_AMyRocket_Statics::NewProp_SphereComponent_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AMyRocket_Statics::NewProp_SphereComponent_MetaData)) };
+	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UClass_AMyRocket_Statics::NewProp_explosionRadius = { "explosionRadius", nullptr, (EPropertyFlags)0x0040000000000001, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AMyRocket, explosionRadius), METADATA_PARAMS(Z_Construct_UClass_AMyRocket_Statics::NewProp_explosionRadius_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AMyRocket_Statics::NewProp_explosionRadius_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AMyRocket_Statics::NewProp_damageDone_MetaData[] = {
+		{ "Category", "Explosion" },
+		{ "ModuleRelativePath", "MyRocket.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UClass_AMyRocket_Statics::NewProp_damageDone = { "damageDone", nullptr, (EPropertyFlags)0x0040000000000001, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AMyRocket, damageDone), METADATA_PARAMS(Z_Construct_UClass_AMyRocket_Statics::NewProp_damageDone_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AMyRocket_Statics::NewProp_damageDone_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AMyRocket_Statics::NewProp_movementVelocity_MetaData[] = {
+		{ "Category", "MyRocket" },
+		{ "ModuleRelativePath", "MyRocket.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UClass_AMyRocket_Statics::NewProp_movementVelocity = { "movementVelocity", nullptr, (EPropertyFlags)0x0040000000000001, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AMyRocket, movementVelocity), METADATA_PARAMS(Z_Construct_UClass_AMyRocket_Statics::NewProp_movementVelocity_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AMyRocket_Statics::NewProp_movementVelocity_MetaData)) };
 	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_AMyRocket_Statics::PropPointers[] = {
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AMyRocket_Statics::NewProp_MovementVelocity,
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AMyRocket_Statics::NewProp_DamageDone,
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AMyRocket_Statics::NewProp_bDebugDrawCorrection,
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AMyRocket_Statics::NewProp_MeshComponent,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AMyRocket_Statics::NewProp_Explosion,
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AMyRocket_Statics::NewProp_SphereComponent,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AMyRocket_Statics::NewProp_MeshComponent,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AMyRocket_Statics::NewProp_bDebugDrawCorrection,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AMyRocket_Statics::NewProp_explosionRadius,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AMyRocket_Statics::NewProp_damageDone,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AMyRocket_Statics::NewProp_movementVelocity,
 	};
 	const FCppClassTypeInfoStatic Z_Construct_UClass_AMyRocket_Statics::StaticCppClassTypeInfo = {
 		TCppClassTypeTraits<AMyRocket>::IsAbstract,
@@ -156,7 +154,7 @@ void EmptyLinkFunctionForGeneratedCodeMyRocket() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(AMyRocket, 1953079605);
+	IMPLEMENT_CLASS(AMyRocket, 3127151890);
 	template<> NETWORK_ASSIGNMENT_API UClass* StaticClass<AMyRocket>()
 	{
 		return AMyRocket::StaticClass();
