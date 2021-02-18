@@ -58,7 +58,7 @@ void AMyPickup::ReActivatePickup()
 {
 	bPickedUp = false;
 	RootComponent->SetVisibility(true, true);
-	SphereComponent->SetCollisionProfileName(TEXT("OverlapAllDynamic"));
+	SphereComponent->SetCollisionProfileName(TEXT("CustomOverlapAll"));
 }
 
 void AMyPickup::OverlapBegin(UPrimitiveComponent* OverlappedComponet, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& SweepResult) 
