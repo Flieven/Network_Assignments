@@ -3,7 +3,7 @@
   <ItemGroup>
     <None Include="..\..\Network_Assignment.uproject" />
     <Filter Include="Source">
-      <UniqueIdentifier>{3F69A919-4DB3-4561-ADF5-2DFDD12D7111}</UniqueIdentifier>
+      <UniqueIdentifier>{39C899A8-DB08-484E-8B94-E4F1BF443EF2}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Source\Network_Assignment.Target.cs">
       <Filter>Source</Filter>
@@ -12,7 +12,7 @@
       <Filter>Source</Filter>
     </None>
     <Filter Include="Config">
-      <UniqueIdentifier>{935346E7-5E80-428A-B864-74A9E3BB1AFD}</UniqueIdentifier>
+      <UniqueIdentifier>{D13AB73C-5201-4F30-B5AE-8EF286F720D4}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Config\DefaultEditor.ini">
       <Filter>Config</Filter>
@@ -27,7 +27,7 @@
       <Filter>Config</Filter>
     </None>
     <Filter Include="Source\Network_Assignment">
-      <UniqueIdentifier>{AD29BFDB-F313-4BFA-BF8B-BD6D7E315C90}</UniqueIdentifier>
+      <UniqueIdentifier>{1D50A6CC-EBF3-41CA-80A0-2407E23EC364}</UniqueIdentifier>
     </Filter>
     <ClCompile Include="..\..\Source\Network_Assignment\MovementStatics.cpp">
       <Filter>Source\Network_Assignment</Filter>

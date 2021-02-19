@@ -93,19 +93,28 @@ void AMyRocket::ApplyCorrection(const FVector& forward)
 void AMyRocket::Explode()
 {
 	if (Explosion != nullptr)
-	{
-		GetWorld()->OverlapMultiByChannel
-		(overlappingPlayers, GetActorLocation(), FQuat::Identity, ECC_WorldDynamic, collisionSphere);
-
-		//DrawDebugSphere(GetWorld(), GetActorLocation(), explosionRadius, 16, FColor::Red, true, .5f);
-
-		TArray<AActor*> uniqueHits;
-
-		for(FOverlapResult result : overlappingPlayers)
+	{	
+		if (bIsActive)
 		{
-			if (AMyPlayer* playerActor = Cast<AMyPlayer>(result.GetActor()))
+			UE_LOG(LogTemp, Warning, TEXT("Exploding Rocket: %s is %s"), *GetName(), bIsActive ? TEXT("true") : TEXT("false"));
+			GetWorld()->OverlapMultiByChannel
+			(overlappingPlayers, GetActorLocation(), FQuat::Identity, ECC_WorldDynamic, collisionSphere);
+
+			//DrawDebugSphere(GetWorld(), GetActorLocation(), explosionRadius, 16, FColor::Red, true, .5f);
+
+			TArray<AMyPlayer*> uniqueHits;
+
+			for (FOverlapResult result : overlappingPlayers)
 			{
-				playerActor->TakeDamage(damageDone);
+				if (AMyPlayer* playerActor = Cast<AMyPlayer>(result.GetActor()))
+				{
+					uniqueHits.AddUnique(playerActor);
+				}
+			}
+
+			for (AMyPlayer* player : uniqueHits)
+			{
+				owner->Server_PlayerIsHit(player, damageDone);
 			}
 		}
 
@@ -119,6 +128,7 @@ void AMyRocket::Explode()
 void AMyRocket::MakeFree()
 {
 	bIsFree = true;
+	bIsActive = false;
 	SetActorTickEnabled(false);
 	SetRocketVisibility(false);
 }

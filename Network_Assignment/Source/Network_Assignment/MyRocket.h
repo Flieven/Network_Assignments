@@ -27,6 +27,9 @@ public:
 
 	bool IsFree() const { return bIsFree; }
 
+	bool bIsActive = false;
+	AMyPlayer* owner;
+
 private:
 
 	void SetRocketVisibility(bool bVisible);

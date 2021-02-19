@@ -11,6 +11,7 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 class AMyRocket;
 struct FVector;
 struct FRotator;
+class AMyPlayer;
 class AMyPickup;
 #ifdef NETWORK_ASSIGNMENT_MyPlayer_generated_h
 #error "MyPlayer.generated.h already included, missing '#pragma once' in MyPlayer.h"
@@ -26,6 +27,8 @@ class AMyPickup;
 	virtual void Server_SyncRockets_Implementation(int32 const& rockets); \
 	virtual void Multicast_SyncHealth_Implementation(float const& health); \
 	virtual void Server_SyncHealth_Implementation(float const& health); \
+	virtual void Multicast_PlayerIsHit_Implementation(AMyPlayer* Player, float const& damage); \
+	virtual void Server_PlayerIsHit_Implementation(AMyPlayer* player, float const& damage); \
 	virtual void Server_SyncRotation_Implementation(FRotator const& rotation); \
 	virtual void Server_SyncLocation_Implementation(FVector const& location); \
 	virtual void Client_OnPickupRockets_Implementation(int32 pickedupRockets); \
@@ -41,6 +44,8 @@ class AMyPickup;
 	DECLARE_FUNCTION(execServer_SyncRockets); \
 	DECLARE_FUNCTION(execMulticast_SyncHealth); \
 	DECLARE_FUNCTION(execServer_SyncHealth); \
+	DECLARE_FUNCTION(execMulticast_PlayerIsHit); \
+	DECLARE_FUNCTION(execServer_PlayerIsHit); \
 	DECLARE_FUNCTION(execServer_SyncRotation); \
 	DECLARE_FUNCTION(execServer_SyncLocation); \
 	DECLARE_FUNCTION(execClient_OnPickupRockets); \
@@ -57,6 +62,8 @@ class AMyPickup;
 	virtual void Server_SyncRockets_Implementation(int32 const& rockets); \
 	virtual void Multicast_SyncHealth_Implementation(float const& health); \
 	virtual void Server_SyncHealth_Implementation(float const& health); \
+	virtual void Multicast_PlayerIsHit_Implementation(AMyPlayer* Player, float const& damage); \
+	virtual void Server_PlayerIsHit_Implementation(AMyPlayer* player, float const& damage); \
 	virtual void Server_SyncRotation_Implementation(FRotator const& rotation); \
 	virtual void Server_SyncLocation_Implementation(FVector const& location); \
 	virtual void Client_OnPickupRockets_Implementation(int32 pickedupRockets); \
@@ -72,6 +79,8 @@ class AMyPickup;
 	DECLARE_FUNCTION(execServer_SyncRockets); \
 	DECLARE_FUNCTION(execMulticast_SyncHealth); \
 	DECLARE_FUNCTION(execServer_SyncHealth); \
+	DECLARE_FUNCTION(execMulticast_PlayerIsHit); \
+	DECLARE_FUNCTION(execServer_PlayerIsHit); \
 	DECLARE_FUNCTION(execServer_SyncRotation); \
 	DECLARE_FUNCTION(execServer_SyncLocation); \
 	DECLARE_FUNCTION(execClient_OnPickupRockets); \
@@ -103,6 +112,11 @@ class AMyPickup;
 		FVector RocketStartLocation; \
 		FRotator RocketFacingRotation; \
 	}; \
+	struct MyPlayer_eventMulticast_PlayerIsHit_Parms \
+	{ \
+		AMyPlayer* Player; \
+		float damage; \
+	}; \
 	struct MyPlayer_eventMulticast_SyncHealth_Parms \
 	{ \
 		float health; \
@@ -120,6 +134,11 @@ class AMyPickup;
 	struct MyPlayer_eventServer_OnPickup_Parms \
 	{ \
 		AMyPickup* pickup; \
+	}; \
+	struct MyPlayer_eventServer_PlayerIsHit_Parms \
+	{ \
+		AMyPlayer* player; \
+		float damage; \
 	}; \
 	struct MyPlayer_eventServer_SyncHealth_Parms \
 	{ \

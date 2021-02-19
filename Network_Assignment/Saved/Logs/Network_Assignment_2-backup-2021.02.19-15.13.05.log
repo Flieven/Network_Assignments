@@ -1,0 +1,1268 @@
+﻿Log file open, 02/19/21 16:11:42
+LogInit: LLM is enabled
+LogInit: LLM CsvWriter: off TraceWriter: off
+LogInit: Display: Running engine for game: Network_Assignment
+LogPlatformFile: Not using cached read wrapper
+LogTaskGraph: Started task graph with 5 named threads and 47 total threads with 3 sets of task threads.
+LogStats: Stats thread started at 0.291760
+LogD3D11RHI: Loaded GFSDK_Aftermath_Lib.x64.dll
+LogICUInternationalization: ICU TimeZone Detection - Raw Offset: +1:00, Platform Override: ''
+LogPluginManager: Mounting plugin MeshPainting
+LogPluginManager: Mounting plugin XGEController
+LogPluginManager: Mounting plugin Paper2D
+LogPluginManager: Mounting plugin LightPropagationVolume
+LogPluginManager: Mounting plugin EnvironmentQueryEditor
+LogPluginManager: Mounting plugin AISupport
+LogPluginManager: Mounting plugin CameraShakePreviewer
+LogPluginManager: Mounting plugin Niagara
+LogPluginManager: Mounting plugin VariantManagerContent
+LogPluginManager: Mounting plugin AssetManagerEditor
+LogPluginManager: Mounting plugin DatasmithContent
+LogPluginManager: Mounting plugin CryptoKeys
+LogPluginManager: Mounting plugin CurveEditorTools
+LogPluginManager: Mounting plugin DataValidation
+LogPluginManager: Mounting plugin FacialAnimation
+LogPluginManager: Mounting plugin GameplayTagsEditor
+LogPluginManager: Mounting plugin GeometryMode
+LogPluginManager: Mounting plugin MacGraphicsSwitching
+LogPluginManager: Mounting plugin MaterialAnalyzer
+LogPluginManager: Mounting plugin MobileLauncherProfileWizard
+LogPluginManager: Mounting plugin PluginBrowser
+LogPluginManager: Mounting plugin SpeedTreeImporter
+LogPluginManager: Mounting plugin AlembicImporter
+LogPluginManager: Mounting plugin BackChannel
+LogPluginManager: Mounting plugin ChaosCloth
+LogPluginManager: Mounting plugin AutomationUtils
+LogPluginManager: Mounting plugin ChaosEditor
+LogPluginManager: Mounting plugin ChaosClothEditor
+LogPluginManager: Mounting plugin CharacterAI
+LogPluginManager: Mounting plugin ChaosSolverPlugin
+LogPluginManager: Mounting plugin GeometryCache
+LogPluginManager: Mounting plugin GeometryCollectionPlugin
+LogPluginManager: Mounting plugin GeometryProcessing
+LogPluginManager: Mounting plugin AndroidMedia
+LogPluginManager: Mounting plugin ChaosNiagara
+LogPluginManager: Mounting plugin AvfMedia
+LogPluginManager: Mounting plugin MediaCompositing
+LogPluginManager: Mounting plugin MediaPlayerEditor
+LogPluginManager: Mounting plugin ImgMedia
+LogPluginManager: Mounting plugin TcpMessaging
+LogPluginManager: Mounting plugin WebMMedia
+LogPluginManager: Mounting plugin UdpMessaging
+LogPluginManager: Mounting plugin WmfMedia
+LogPluginManager: Mounting plugin PlanarCut
+LogPluginManager: Mounting plugin MotoSynth
+LogPluginManager: Mounting plugin PlatformCrypto
+LogPluginManager: Mounting plugin SkeletalReduction
+LogPluginManager: Mounting plugin LuminPlatformFeatures
+LogPluginManager: Mounting plugin ProxyLODPlugin
+LogPluginManager: Mounting plugin MagicLeap
+LogPluginManager: Mounting plugin MagicLeapLightEstimation
+LogPluginManager: Mounting plugin MagicLeapMedia
+LogPluginManager: Mounting plugin MagicLeapPassableWorld
+LogPluginManager: Mounting plugin MLSDK
+LogPluginManager: Mounting plugin OnlineSubsystem
+LogPluginManager: Mounting plugin OnlineSubsystemUtils
+LogPluginManager: Mounting plugin ActorSequence
+LogPluginManager: Mounting plugin MatineeToLevelSequence
+LogPluginManager: Mounting plugin LevelSequenceEditor
+LogPluginManager: Mounting plugin ActorLayerUtilities
+LogPluginManager: Mounting plugin AndroidMoviePlayer
+LogPluginManager: Mounting plugin AndroidDeviceProfileSelector
+LogPluginManager: Mounting plugin AndroidPermission
+LogPluginManager: Mounting plugin AppleMoviePlayer
+LogPluginManager: Mounting plugin TemplateSequence
+LogPluginManager: Mounting plugin AssetTags
+LogPluginManager: Mounting plugin ArchVisCharacter
+LogPluginManager: Mounting plugin AudioCapture
+LogPluginManager: Mounting plugin AudioSynesthesia
+LogPluginManager: Mounting plugin CableComponent
+LogPluginManager: Mounting plugin ChunkDownloader
+LogPluginManager: Mounting plugin CustomMeshComponent
+LogPluginManager: Mounting plugin EditableMesh
+LogPluginManager: Mounting plugin LauncherChunkInstaller
+LogPluginManager: Mounting plugin ExampleDeviceProfileSelector
+LogPluginManager: Mounting plugin GoogleCloudMessaging
+LogPluginManager: Mounting plugin GooglePAD
+LogPluginManager: Mounting plugin AppleImageUtils
+LogPluginManager: Mounting plugin ScreenshotTools
+LogPluginManager: Mounting plugin IOSDeviceProfileSelector
+LogPluginManager: Mounting plugin LinuxDeviceProfileSelector
+LogPluginManager: Mounting plugin LocationServicesBPLibrary
+LogPluginManager: Mounting plugin MobilePatchingUtils
+LogPluginManager: Mounting plugin PhysXVehicles
+LogPluginManager: Mounting plugin PostSplashScreen
+LogPluginManager: Mounting plugin ProceduralMeshComponent
+LogPluginManager: Mounting plugin PropertyAccessEditor
+LogPluginManager: Mounting plugin SignificanceManager
+LogPluginManager: Mounting plugin SoundFields
+LogPluginManager: Mounting plugin RuntimePhysXCooking
+LogPluginManager: Mounting plugin Synthesis
+LogPluginManager: Mounting plugin WebMMoviePlayer
+LogPluginManager: Mounting plugin WindowsMoviePlayer
+LogPluginManager: Mounting plugin AnimationSharing
+LogPluginManager: Mounting plugin CodeLiteSourceCodeAccess
+LogPluginManager: Mounting plugin CLionSourceCodeAccess
+LogPluginManager: Mounting plugin GitSourceControl
+LogPluginManager: Mounting plugin KDevelopSourceCodeAccess
+LogPluginManager: Mounting plugin NullSourceCodeAccess
+LogPluginManager: Mounting plugin PerforceSourceControl
+LogPluginManager: Mounting plugin PlasticSourceControl
+LogPluginManager: Mounting plugin PropertyAccessNode
+LogPluginManager: Mounting plugin PluginUtils
+LogPluginManager: Mounting plugin RiderSourceCodeAccess
+LogPluginManager: Mounting plugin OnlineSubsystemNull
+LogPluginManager: Mounting plugin SubversionSourceControl
+LogPluginManager: Mounting plugin VisualStudioSourceCodeAccess
+LogPluginManager: Mounting plugin UObjectPlugin
+LogPluginManager: Mounting plugin XCodeSourceCodeAccess
+LogPluginManager: Mounting plugin VisualStudioCodeSourceCodeAccess
+LogPluginManager: Mounting plugin ContentBrowserClassDataSource
+LogPluginManager: Mounting plugin ContentBrowserAssetDataSource
+LogPluginManager: Mounting plugin OnlineSubsystemIOS
+LogPluginManager: Mounting plugin OnlineSubsystemGooglePlay
+LogPluginManager: Mounting plugin OculusVR
+LogPluginManager: Mounting plugin SteamVR
+LogXGEController: Cannot use XGE Controller as Incredibuild is not installed on this machine.
+LogInit: Using libcurl 7.55.1-DEV
+LogInit:  - built for x86_64-pc-win32
+LogInit:  - supports SSL with OpenSSL/1.1.1
+LogInit:  - supports HTTP deflate (compression) using libz 1.2.8
+LogInit:  - other features:
+LogInit:      CURL_VERSION_SSL
+LogInit:      CURL_VERSION_LIBZ
+LogInit:      CURL_VERSION_IPV6
+LogInit:      CURL_VERSION_ASYNCHDNS
+LogInit:      CURL_VERSION_LARGEFILE
+LogInit:      CURL_VERSION_IDN
+LogInit:  CurlRequestOptions (configurable via config and command line):
+LogInit:  - bVerifyPeer = true  - Libcurl will verify peer certificate
+LogInit:  - bUseHttpProxy = false  - Libcurl will NOT use HTTP proxy
+LogInit:  - bDontReuseConnections = false  - Libcurl will reuse connections
+LogInit:  - MaxHostConnections = 16  - Libcurl will limit the number of connections to a host
+LogInit:  - LocalHostAddr = Default
+LogInit:  - BufferSize = 65536
+LogOnline: OSS: Creating online subsystem instance for: NULL
+LogInit: WinSock: version 1.1 (2.2), MaxSocks=32767, MaxUdp=65467
+LogOnline: OSS: TryLoadSubsystemAndSetDefault: Loaded subsystem for module [NULL]
+LogInit: Build: ++UE4+Release-4.26-CL-15228867
+LogInit: Engine Version: 4.26.1-15228867+++UE4+Release-4.26
+LogInit: Compatible Engine Version: 4.26.0-14830424+++UE4+Release-4.26
+LogInit: Net CL: 14830424
+LogInit: OS: Windows 10 (Release 2009) (), CPU: Intel(R) Core(TM) i7-10700F CPU @ 2.90GHz, GPU: NVIDIA GeForce RTX 3070
+LogInit: Compiled (64-bit): Jan 28 2021 07:07:34
+LogInit: Compiled with Visual C++: 19.24.28315.00
+LogInit: Build Configuration: Development
+LogInit: Branch Name: ++UE4+Release-4.26
+LogInit: Command Line:  -skipcompile
+LogInit: Base Directory: C:/Program Files/Epic Games/UE_4.26/Engine/Binaries/Win64/
+LogInit: Allocator: TBB
+LogInit: Installed Engine Build: 1
+LogDevObjectVersion: Number of dev versions registered: 29
+LogDevObjectVersion:   Dev-Blueprints (B0D832E4-1F89-4F0D-ACCF-7EB736FD4AA2): 10
+LogDevObjectVersion:   Dev-Build (E1C64328-A22C-4D53-A36C-8E866417BD8C): 0
+LogDevObjectVersion:   Dev-Core (375EC13C-06E4-48FB-B500-84F0262A717E): 4
+LogDevObjectVersion:   Dev-Editor (E4B068ED-F494-42E9-A231-DA0B2E46BB41): 40
+LogDevObjectVersion:   Dev-Framework (CFFC743F-43B0-4480-9391-14DF171D2073): 37
+LogDevObjectVersion:   Dev-Mobile (B02B49B5-BB20-44E9-A304-32B752E40360): 3
+LogDevObjectVersion:   Dev-Networking (A4E4105C-59A1-49B5-A7C5-40C4547EDFEE): 0
+LogDevObjectVersion:   Dev-Online (39C831C9-5AE6-47DC-9A44-9C173E1C8E7C): 0
+LogDevObjectVersion:   Dev-Physics (78F01B33-EBEA-4F98-B9B4-84EACCB95AA2): 4
+LogDevObjectVersion:   Dev-Platform (6631380F-2D4D-43E0-8009-CF276956A95A): 0
+LogDevObjectVersion:   Dev-Rendering (12F88B9F-8875-4AFC-A67C-D90C383ABD29): 44
+LogDevObjectVersion:   Dev-Sequencer (7B5AE74C-D270-4C10-A958-57980B212A5A): 12
+LogDevObjectVersion:   Dev-VR (D7296918-1DD6-4BDD-9DE2-64A83CC13884): 3
+LogDevObjectVersion:   Dev-LoadTimes (C2A15278-BFE7-4AFE-6C17-90FF531DF755): 1
+LogDevObjectVersion:   Private-Geometry (6EACA3D4-40EC-4CC1-B786-8BED09428FC5): 3
+LogDevObjectVersion:   Dev-AnimPhys (29E575DD-E0A3-4627-9D10-D276232CDCEA): 17
+LogDevObjectVersion:   Dev-Anim (AF43A65D-7FD3-4947-9873-3E8ED9C1BB05): 15
+LogDevObjectVersion:   Dev-ReflectionCapture (6B266CEC-1EC7-4B8F-A30B-E4D90942FC07): 1
+LogDevObjectVersion:   Dev-Automation (0DF73D61-A23F-47EA-B727-89E90C41499A): 1
+LogDevObjectVersion:   FortniteMain (601D1886-AC64-4F84-AA16-D3DE0DEAC7D6): 43
+LogDevObjectVersion:   FortniteRelease (E7086368-6B23-4C58-8439-1B7016265E91): 1
+LogDevObjectVersion:   Dev-Enterprise (9DFFBCD6-494F-0158-E221-12823C92A888): 10
+LogDevObjectVersion:   Dev-Niagara (F2AED0AC-9AFE-416F-8664-AA7FFA26D6FC): 1
+LogDevObjectVersion:   Dev-Destruction (174F1F0B-B4C6-45A5-B13F-2EE8D0FB917D): 10
+LogDevObjectVersion:   Dev-Physics-Ext (35F94A83-E258-406C-A318-09F59610247C): 40
+LogDevObjectVersion:   Dev-PhysicsMaterial-Chaos (B68FC16E-8B1B-42E2-B453-215C058844FE): 1
+LogDevObjectVersion:   Dev-CineCamera (B2E18506-4273-CFC2-A54E-F4BB758BBA07): 1
+LogDevObjectVersion:   Dev-VirtualProduction (64F58936-FD1B-42BA-BA96-7289D5D0FA4E): 1
+LogDevObjectVersion:   Dev-MediaFramework (6F0ED827-A609-4895-9C91-998D90180EA4): 2
+LogInit: Presizing for max 25165824 objects, including 0 objects not considered by GC, pre-allocating 0 bytes for permanent pool.
+LogConfig: Applying CVar settings from Section [/Script/Engine.StreamingSettings] File [D:/Engines/UnrealEngine/Projects/Network_Assignments/Network_Assignment/Saved/Config/Windows/Engine.ini]
+LogConfig: Setting CVar [[s.MinBulkDataSizeForAsyncLoading:131072]]
+LogConfig: Setting CVar [[s.AsyncLoadingThreadEnabled:0]]
+LogConfig: Setting CVar [[s.EventDrivenLoaderEnabled:1]]
+LogConfig: Setting CVar [[s.WarnIfTimeLimitExceeded:0]]
+LogConfig: Setting CVar [[s.TimeLimitExceededMultiplier:1.5]]
+LogConfig: Setting CVar [[s.TimeLimitExceededMinTime:0.005]]
+LogConfig: Setting CVar [[s.UseBackgroundLevelStreaming:1]]
+LogConfig: Setting CVar [[s.PriorityAsyncLoadingExtraTime:15.0]]
+LogConfig: Setting CVar [[s.LevelStreamingActorsUpdateTimeLimit:5.0]]
+LogConfig: Setting CVar [[s.PriorityLevelStreamingActorsUpdateExtraTime:5.0]]
+LogConfig: Setting CVar [[s.LevelStreamingComponentsRegistrationGranularity:10]]
+LogConfig: Setting CVar [[s.UnregisterComponentsTimeLimit:1.0]]
+LogConfig: Setting CVar [[s.LevelStreamingComponentsUnregistrationGranularity:5]]
+LogConfig: Setting CVar [[s.FlushStreamingOnExit:1]]
+LogInit: Object subsystem initialized
+LogConfig: Setting CVar [[con.DebugEarlyDefault:1]]
+LogConfig: Setting CVar [[r.setres:1280x720]]
+[2021.02.19-15.11.43:239][  0]LogConfig: Setting CVar [[r.VSync:0]]
+[2021.02.19-15.11.43:239][  0]LogConfig: Setting CVar [[r.RHICmdBypass:0]]
+[2021.02.19-15.11.43:239][  0]LogConfig: Applying CVar settings from Section [/Script/Engine.RendererSettings] File [D:/Engines/UnrealEngine/Projects/Network_Assignments/Network_Assignment/Saved/Config/Windows/Engine.ini]
+[2021.02.19-15.11.43:239][  0]LogConfig: Setting CVar [[r.GPUCrashDebugging:0]]
+[2021.02.19-15.11.43:239][  0]LogConfig: Applying CVar settings from Section [/Script/Engine.RendererOverrideSettings] File [D:/Engines/UnrealEngine/Projects/Network_Assignments/Network_Assignment/Saved/Config/Windows/Engine.ini]
+[2021.02.19-15.11.43:239][  0]LogConfig: Applying CVar settings from Section [/Script/Engine.StreamingSettings] File [D:/Engines/UnrealEngine/Projects/Network_Assignments/Network_Assignment/Saved/Config/Windows/Engine.ini]
+[2021.02.19-15.11.43:239][  0]LogConfig: Setting CVar [[s.MinBulkDataSizeForAsyncLoading:131072]]
+[2021.02.19-15.11.43:239][  0]LogConfig: Setting CVar [[s.AsyncLoadingThreadEnabled:0]]
+[2021.02.19-15.11.43:239][  0]LogConfig: Setting CVar [[s.EventDrivenLoaderEnabled:1]]
+[2021.02.19-15.11.43:239][  0]LogConfig: Setting CVar [[s.WarnIfTimeLimitExceeded:0]]
+[2021.02.19-15.11.43:239][  0]LogConfig: Setting CVar [[s.TimeLimitExceededMultiplier:1.5]]
+[2021.02.19-15.11.43:239][  0]LogConfig: Setting CVar [[s.TimeLimitExceededMinTime:0.005]]
+[2021.02.19-15.11.43:240][  0]LogConfig: Setting CVar [[s.UseBackgroundLevelStreaming:1]]
+[2021.02.19-15.11.43:240][  0]LogConfig: Setting CVar [[s.PriorityAsyncLoadingExtraTime:15.0]]
+[2021.02.19-15.11.43:240][  0]LogConfig: Setting CVar [[s.LevelStreamingActorsUpdateTimeLimit:5.0]]
+[2021.02.19-15.11.43:240][  0]LogConfig: Setting CVar [[s.PriorityLevelStreamingActorsUpdateExtraTime:5.0]]
+[2021.02.19-15.11.43:240][  0]LogConfig: Setting CVar [[s.LevelStreamingComponentsRegistrationGranularity:10]]
+[2021.02.19-15.11.43:240][  0]LogConfig: Setting CVar [[s.UnregisterComponentsTimeLimit:1.0]]
+[2021.02.19-15.11.43:240][  0]LogConfig: Setting CVar [[s.LevelStreamingComponentsUnregistrationGranularity:5]]
+[2021.02.19-15.11.43:240][  0]LogConfig: Setting CVar [[s.FlushStreamingOnExit:1]]
+[2021.02.19-15.11.43:240][  0]LogConfig: Applying CVar settings from Section [/Script/Engine.GarbageCollectionSettings] File [D:/Engines/UnrealEngine/Projects/Network_Assignments/Network_Assignment/Saved/Config/Windows/Engine.ini]
+[2021.02.19-15.11.43:240][  0]LogConfig: Setting CVar [[gc.MaxObjectsNotConsideredByGC:1]]
+[2021.02.19-15.11.43:240][  0]LogConfig: Setting CVar [[gc.SizeOfPermanentObjectPool:0]]
+[2021.02.19-15.11.43:240][  0]LogConfig: Setting CVar [[gc.FlushStreamingOnGC:0]]
+[2021.02.19-15.11.43:240][  0]LogConfig: Setting CVar [[gc.NumRetriesBeforeForcingGC:10]]
+[2021.02.19-15.11.43:240][  0]LogConfig: Setting CVar [[gc.AllowParallelGC:1]]
+[2021.02.19-15.11.43:240][  0]LogConfig: Setting CVar [[gc.TimeBetweenPurgingPendingKillObjects:61.1]]
+[2021.02.19-15.11.43:240][  0]LogConfig: Setting CVar [[gc.MaxObjectsInEditor:25165824]]
+[2021.02.19-15.11.43:240][  0]LogConfig: Setting CVar [[gc.IncrementalBeginDestroyEnabled:1]]
+[2021.02.19-15.11.43:240][  0]LogConfig: Setting CVar [[gc.CreateGCClusters:1]]
+[2021.02.19-15.11.43:240][  0]LogConfig: Setting CVar [[gc.MinGCClusterSize:5]]
+[2021.02.19-15.11.43:240][  0]LogConfig: Setting CVar [[gc.ActorClusteringEnabled:0]]
+[2021.02.19-15.11.43:240][  0]LogConfig: Setting CVar [[gc.BlueprintClusteringEnabled:0]]
+[2021.02.19-15.11.43:240][  0]LogConfig: Setting CVar [[gc.UseDisregardForGCOnDedicatedServers:0]]
+[2021.02.19-15.11.43:240][  0]LogConfig: Setting CVar [[gc.MultithreadedDestructionEnabled:1]]
+[2021.02.19-15.11.43:240][  0]LogConfig: Applying CVar settings from Section [/Script/Engine.NetworkSettings] File [D:/Engines/UnrealEngine/Projects/Network_Assignments/Network_Assignment/Saved/Config/Windows/Engine.ini]
+[2021.02.19-15.11.43:241][  0]LogConfig: Applying CVar settings from Section [/Script/UnrealEd.CookerSettings] File [D:/Engines/UnrealEngine/Projects/Network_Assignments/Network_Assignment/Saved/Config/Windows/Engine.ini]
+[2021.02.19-15.11.43:285][  0]LogConfig: Applying CVar settings from Section [ViewDistanceQuality@3] File [D:/Engines/UnrealEngine/Projects/Network_Assignments/Network_Assignment/Saved/Config/Windows/Scalability.ini]
+[2021.02.19-15.11.43:285][  0]LogConfig: Setting CVar [[r.SkeletalMeshLODBias:0]]
+[2021.02.19-15.11.43:286][  0]LogConfig: Setting CVar [[r.ViewDistanceScale:1.0]]
+[2021.02.19-15.11.43:286][  0]LogConfig: Applying CVar settings from Section [AntiAliasingQuality@3] File [D:/Engines/UnrealEngine/Projects/Network_Assignments/Network_Assignment/Saved/Config/Windows/Scalability.ini]
+[2021.02.19-15.11.43:286][  0]LogConfig: Setting CVar [[r.PostProcessAAQuality:4]]
+[2021.02.19-15.11.43:286][  0]LogConfig: Applying CVar settings from Section [ShadowQuality@3] File [D:/Engines/UnrealEngine/Projects/Network_Assignments/Network_Assignment/Saved/Config/Windows/Scalability.ini]
+[2021.02.19-15.11.43:286][  0]LogConfig: Setting CVar [[r.LightFunctionQuality:1]]
+[2021.02.19-15.11.43:286][  0]LogConfig: Setting CVar [[r.ShadowQuality:5]]
+[2021.02.19-15.11.43:286][  0]LogConfig: Setting CVar [[r.Shadow.CSM.MaxCascades:10]]
+[2021.02.19-15.11.43:286][  0]LogConfig: Setting CVar [[r.Shadow.MaxResolution:2048]]
+[2021.02.19-15.11.43:286][  0]LogConfig: Setting CVar [[r.Shadow.MaxCSMResolution:2048]]
+[2021.02.19-15.11.43:286][  0]LogConfig: Setting CVar [[r.Shadow.RadiusThreshold:0.01]]
+[2021.02.19-15.11.43:286][  0]LogConfig: Setting CVar [[r.Shadow.DistanceScale:1.0]]
+[2021.02.19-15.11.43:286][  0]LogConfig: Setting CVar [[r.Shadow.CSM.TransitionScale:1.0]]
+[2021.02.19-15.11.43:286][  0]LogConfig: Setting CVar [[r.Shadow.PreShadowResolutionFactor:1.0]]
+[2021.02.19-15.11.43:286][  0]LogConfig: Setting CVar [[r.DistanceFieldShadowing:1]]
+[2021.02.19-15.11.43:286][  0]LogConfig: Setting CVar [[r.DistanceFieldAO:1]]
+[2021.02.19-15.11.43:286][  0]LogConfig: Setting CVar [[r.AOQuality:2]]
+[2021.02.19-15.11.43:286][  0]LogConfig: Setting CVar [[r.VolumetricFog:1]]
+[2021.02.19-15.11.43:286][  0]LogConfig: Setting CVar [[r.VolumetricFog.GridPixelSize:8]]
+[2021.02.19-15.11.43:286][  0]LogConfig: Setting CVar [[r.VolumetricFog.GridSizeZ:128]]
+[2021.02.19-15.11.43:286][  0]LogConfig: Setting CVar [[r.VolumetricFog.HistoryMissSupersampleCount:4]]
+[2021.02.19-15.11.43:286][  0]LogConfig: Setting CVar [[r.LightMaxDrawDistanceScale:1]]
+[2021.02.19-15.11.43:286][  0]LogConfig: Setting CVar [[r.CapsuleShadows:1]]
+[2021.02.19-15.11.43:286][  0]LogConfig: Applying CVar settings from Section [PostProcessQuality@3] File [D:/Engines/UnrealEngine/Projects/Network_Assignments/Network_Assignment/Saved/Config/Windows/Scalability.ini]
+[2021.02.19-15.11.43:286][  0]LogConfig: Setting CVar [[r.MotionBlurQuality:4]]
+[2021.02.19-15.11.43:287][  0]LogConfig: Setting CVar [[r.AmbientOcclusionMipLevelFactor:0.4]]
+[2021.02.19-15.11.43:287][  0]LogConfig: Setting CVar [[r.AmbientOcclusionMaxQuality:100]]
+[2021.02.19-15.11.43:287][  0]LogConfig: Setting CVar [[r.AmbientOcclusionLevels:-1]]
+[2021.02.19-15.11.43:287][  0]LogConfig: Setting CVar [[r.AmbientOcclusionRadiusScale:1.0]]
+[2021.02.19-15.11.43:287][  0]LogConfig: Setting CVar [[r.DepthOfFieldQuality:2]]
+[2021.02.19-15.11.43:287][  0]LogConfig: Setting CVar [[r.RenderTargetPoolMin:400]]
+[2021.02.19-15.11.43:287][  0]LogConfig: Setting CVar [[r.LensFlareQuality:2]]
+[2021.02.19-15.11.43:287][  0]LogConfig: Setting CVar [[r.SceneColorFringeQuality:1]]
+[2021.02.19-15.11.43:287][  0]LogConfig: Setting CVar [[r.EyeAdaptationQuality:2]]
+[2021.02.19-15.11.43:287][  0]LogConfig: Setting CVar [[r.BloomQuality:5]]
+[2021.02.19-15.11.43:287][  0]LogConfig: Setting CVar [[r.FastBlurThreshold:100]]
+[2021.02.19-15.11.43:287][  0]LogConfig: Setting CVar [[r.Upscale.Quality:3]]
+[2021.02.19-15.11.43:287][  0]LogConfig: Setting CVar [[r.Tonemapper.GrainQuantization:1]]
+[2021.02.19-15.11.43:287][  0]LogConfig: Setting CVar [[r.LightShaftQuality:1]]
+[2021.02.19-15.11.43:287][  0]LogConfig: Setting CVar [[r.Filter.SizeScale:1]]
+[2021.02.19-15.11.43:287][  0]LogConfig: Setting CVar [[r.Tonemapper.Quality:5]]
+[2021.02.19-15.11.43:287][  0]LogConfig: Setting CVar [[r.DOF.Gather.AccumulatorQuality:1        ; higher gathering accumulator quality]]
+[2021.02.19-15.11.43:287][  0]LogConfig: Setting CVar [[r.DOF.Gather.PostfilterMethod:1          ; Median3x3 postfilering method]]
+[2021.02.19-15.11.43:287][  0]LogConfig: Setting CVar [[r.DOF.Gather.EnableBokehSettings:0       ; no bokeh simulation when gathering]]
+[2021.02.19-15.11.43:287][  0]LogConfig: Setting CVar [[r.DOF.Gather.RingCount:4                 ; medium number of samples when gathering]]
+[2021.02.19-15.11.43:287][  0]LogConfig: Setting CVar [[r.DOF.Scatter.ForegroundCompositing:1    ; additive foreground scattering]]
+[2021.02.19-15.11.43:287][  0]LogConfig: Setting CVar [[r.DOF.Scatter.BackgroundCompositing:2    ; additive background scattering]]
+[2021.02.19-15.11.43:287][  0]LogConfig: Setting CVar [[r.DOF.Scatter.EnableBokehSettings:1      ; bokeh simulation when scattering]]
+[2021.02.19-15.11.43:287][  0]LogConfig: Setting CVar [[r.DOF.Scatter.MaxSpriteRatio:0.1         ; only a maximum of 10% of scattered bokeh]]
+[2021.02.19-15.11.43:287][  0]LogConfig: Setting CVar [[r.DOF.Recombine.Quality:1                ; cheap slight out of focus]]
+[2021.02.19-15.11.43:287][  0]LogConfig: Setting CVar [[r.DOF.Recombine.EnableBokehSettings:0    ; no bokeh simulation on slight out of focus]]
+[2021.02.19-15.11.43:288][  0]LogConfig: Setting CVar [[r.DOF.TemporalAAQuality:1                ; more stable temporal accumulation]]
+[2021.02.19-15.11.43:288][  0]LogConfig: Setting CVar [[r.DOF.Kernel.MaxForegroundRadius:0.025]]
+[2021.02.19-15.11.43:288][  0]LogConfig: Setting CVar [[r.DOF.Kernel.MaxBackgroundRadius:0.025]]
+[2021.02.19-15.11.43:288][  0]LogConfig: Applying CVar settings from Section [TextureQuality@3] File [D:/Engines/UnrealEngine/Projects/Network_Assignments/Network_Assignment/Saved/Config/Windows/Scalability.ini]
+[2021.02.19-15.11.43:288][  0]LogConfig: Setting CVar [[r.Streaming.MipBias:0]]
+[2021.02.19-15.11.43:288][  0]LogConfig: Setting CVar [[r.Streaming.AmortizeCPUToGPUCopy:0]]
+[2021.02.19-15.11.43:288][  0]LogConfig: Setting CVar [[r.Streaming.MaxNumTexturesToStreamPerFrame:0]]
+[2021.02.19-15.11.43:288][  0]LogConfig: Setting CVar [[r.Streaming.Boost:1]]
+[2021.02.19-15.11.43:288][  0]LogConfig: Setting CVar [[r.MaxAnisotropy:8]]
+[2021.02.19-15.11.43:288][  0]LogConfig: Setting CVar [[r.VT.MaxAnisotropy:8]]
+[2021.02.19-15.11.43:288][  0]LogConfig: Setting CVar [[r.Streaming.LimitPoolSizeToVRAM:0]]
+[2021.02.19-15.11.43:288][  0]LogConfig: Setting CVar [[r.Streaming.PoolSize:1000]]
+[2021.02.19-15.11.43:288][  0]LogConfig: Setting CVar [[r.Streaming.MaxEffectiveScreenSize:0]]
+[2021.02.19-15.11.43:288][  0]LogConfig: Applying CVar settings from Section [EffectsQuality@3] File [D:/Engines/UnrealEngine/Projects/Network_Assignments/Network_Assignment/Saved/Config/Windows/Scalability.ini]
+[2021.02.19-15.11.43:288][  0]LogConfig: Setting CVar [[r.TranslucencyLightingVolumeDim:64]]
+[2021.02.19-15.11.43:288][  0]LogConfig: Setting CVar [[r.RefractionQuality:2]]
+[2021.02.19-15.11.43:288][  0]LogConfig: Setting CVar [[r.SSR.Quality:3]]
+[2021.02.19-15.11.43:288][  0]LogConfig: Setting CVar [[r.SSR.HalfResSceneColor:0]]
+[2021.02.19-15.11.43:288][  0]LogConfig: Setting CVar [[r.SceneColorFormat:4]]
+[2021.02.19-15.11.43:288][  0]LogConfig: Setting CVar [[r.DetailMode:2]]
+[2021.02.19-15.11.43:288][  0]LogConfig: Setting CVar [[r.TranslucencyVolumeBlur:1]]
+[2021.02.19-15.11.43:288][  0]LogConfig: Setting CVar [[r.MaterialQualityLevel:1 ; High quality]]
+[2021.02.19-15.11.43:288][  0]LogConfig: Setting CVar [[r.AnisotropicMaterials:1]]
+[2021.02.19-15.11.43:289][  0]LogConfig: Setting CVar [[r.SSS.Scale:1]]
+[2021.02.19-15.11.43:289][  0]LogConfig: Setting CVar [[r.SSS.SampleSet:2]]
+[2021.02.19-15.11.43:289][  0]LogConfig: Setting CVar [[r.SSS.Quality:1]]
+[2021.02.19-15.11.43:289][  0]LogConfig: Setting CVar [[r.SSS.HalfRes:0]]
+[2021.02.19-15.11.43:289][  0]LogConfig: Setting CVar [[r.SSGI.Quality:3]]
+[2021.02.19-15.11.43:289][  0]LogConfig: Setting CVar [[r.EmitterSpawnRateScale:1.0]]
+[2021.02.19-15.11.43:289][  0]LogConfig: Setting CVar [[r.ParticleLightQuality:2]]
+[2021.02.19-15.11.43:289][  0]LogConfig: Setting CVar [[r.SkyAtmosphere.AerialPerspectiveLUT.FastApplyOnOpaque:1 ; Always have FastSkyLUT 1 in this case to avoid wrong sky]]
+[2021.02.19-15.11.43:289][  0]LogConfig: Setting CVar [[r.SkyAtmosphere.AerialPerspectiveLUT.SampleCountMaxPerSlice:4]]
+[2021.02.19-15.11.43:289][  0]LogConfig: Setting CVar [[r.SkyAtmosphere.AerialPerspectiveLUT.DepthResolution:16.0]]
+[2021.02.19-15.11.43:289][  0]LogConfig: Setting CVar [[r.SkyAtmosphere.FastSkyLUT:1]]
+[2021.02.19-15.11.43:289][  0]LogConfig: Setting CVar [[r.SkyAtmosphere.FastSkyLUT.SampleCountMin:4.0]]
+[2021.02.19-15.11.43:289][  0]LogConfig: Setting CVar [[r.SkyAtmosphere.FastSkyLUT.SampleCountMax:128.0]]
+[2021.02.19-15.11.43:289][  0]LogConfig: Setting CVar [[r.SkyAtmosphere.SampleCountMin:4.0]]
+[2021.02.19-15.11.43:289][  0]LogConfig: Setting CVar [[r.SkyAtmosphere.SampleCountMax:128.0]]
+[2021.02.19-15.11.43:289][  0]LogConfig: Setting CVar [[r.SkyAtmosphere.TransmittanceLUT.UseSmallFormat:0]]
+[2021.02.19-15.11.43:289][  0]LogConfig: Setting CVar [[r.SkyAtmosphere.TransmittanceLUT.SampleCount:10.0]]
+[2021.02.19-15.11.43:289][  0]LogConfig: Setting CVar [[r.SkyAtmosphere.MultiScatteringLUT.SampleCount:15.0]]
+[2021.02.19-15.11.43:289][  0]LogConfig: Applying CVar settings from Section [FoliageQuality@3] File [D:/Engines/UnrealEngine/Projects/Network_Assignments/Network_Assignment/Saved/Config/Windows/Scalability.ini]
+[2021.02.19-15.11.43:289][  0]LogConfig: Setting CVar [[foliage.DensityScale:1.0]]
+[2021.02.19-15.11.43:289][  0]LogConfig: Setting CVar [[grass.DensityScale:1.0]]
+[2021.02.19-15.11.43:289][  0]LogConfig: Applying CVar settings from Section [ShadingQuality@3] File [D:/Engines/UnrealEngine/Projects/Network_Assignments/Network_Assignment/Saved/Config/Windows/Scalability.ini]
+[2021.02.19-15.11.43:289][  0]LogConfig: Setting CVar [[r.HairStrands.SkyLighting.IntegrationType:2]]
+[2021.02.19-15.11.43:289][  0]LogConfig: Setting CVar [[r.HairStrands.SkyAO.SampleCount:4]]
+[2021.02.19-15.11.43:289][  0]LogConfig: Setting CVar [[r.HairStrands.Visibility.MSAA.SamplePerPixel:4]]
+[2021.02.19-15.11.43:289][  0]LogInit: Selected Device Profile: [Windows]
+[2021.02.19-15.11.43:290][  0]LogInit: Applying CVar settings loaded from the selected device profile: [Windows]
+[2021.02.19-15.11.43:290][  0]LogHAL: Display: Platform has ~ 16 GB [17089044480 / 17179869184 / 16], which maps to Larger [LargestMinGB=32, LargerMinGB=12, DefaultMinGB=8, SmallerMinGB=6, SmallestMinGB=0)
+[2021.02.19-15.11.43:290][  0]LogInit: Going up to parent DeviceProfile []
+[2021.02.19-15.11.43:290][  0]LogConfig: Applying CVar settings from Section [ViewDistanceQuality@3] File [D:/Engines/UnrealEngine/Projects/Network_Assignments/Network_Assignment/Saved/Config/Windows/Scalability.ini]
+[2021.02.19-15.11.43:290][  0]LogConfig: Setting CVar [[r.SkeletalMeshLODBias:0]]
+[2021.02.19-15.11.43:290][  0]LogConfig: Setting CVar [[r.ViewDistanceScale:1.0]]
+[2021.02.19-15.11.43:290][  0]LogConfig: Applying CVar settings from Section [AntiAliasingQuality@3] File [D:/Engines/UnrealEngine/Projects/Network_Assignments/Network_Assignment/Saved/Config/Windows/Scalability.ini]
+[2021.02.19-15.11.43:290][  0]LogConfig: Setting CVar [[r.PostProcessAAQuality:4]]
+[2021.02.19-15.11.43:290][  0]LogConfig: Applying CVar settings from Section [ShadowQuality@3] File [D:/Engines/UnrealEngine/Projects/Network_Assignments/Network_Assignment/Saved/Config/Windows/Scalability.ini]
+[2021.02.19-15.11.43:290][  0]LogConfig: Setting CVar [[r.LightFunctionQuality:1]]
+[2021.02.19-15.11.43:290][  0]LogConfig: Setting CVar [[r.ShadowQuality:5]]
+[2021.02.19-15.11.43:290][  0]LogConfig: Setting CVar [[r.Shadow.CSM.MaxCascades:10]]
+[2021.02.19-15.11.43:290][  0]LogConfig: Setting CVar [[r.Shadow.MaxResolution:2048]]
+[2021.02.19-15.11.43:290][  0]LogConfig: Setting CVar [[r.Shadow.MaxCSMResolution:2048]]
+[2021.02.19-15.11.43:290][  0]LogConfig: Setting CVar [[r.Shadow.RadiusThreshold:0.01]]
+[2021.02.19-15.11.43:290][  0]LogConfig: Setting CVar [[r.Shadow.DistanceScale:1.0]]
+[2021.02.19-15.11.43:290][  0]LogConfig: Setting CVar [[r.Shadow.CSM.TransitionScale:1.0]]
+[2021.02.19-15.11.43:290][  0]LogConfig: Setting CVar [[r.Shadow.PreShadowResolutionFactor:1.0]]
+[2021.02.19-15.11.43:290][  0]LogConfig: Setting CVar [[r.DistanceFieldShadowing:1]]
+[2021.02.19-15.11.43:290][  0]LogConfig: Setting CVar [[r.DistanceFieldAO:1]]
+[2021.02.19-15.11.43:290][  0]LogConfig: Setting CVar [[r.AOQuality:2]]
+[2021.02.19-15.11.43:291][  0]LogConfig: Setting CVar [[r.VolumetricFog:1]]
+[2021.02.19-15.11.43:291][  0]LogConfig: Setting CVar [[r.VolumetricFog.GridPixelSize:8]]
+[2021.02.19-15.11.43:291][  0]LogConfig: Setting CVar [[r.VolumetricFog.GridSizeZ:128]]
+[2021.02.19-15.11.43:291][  0]LogConfig: Setting CVar [[r.VolumetricFog.HistoryMissSupersampleCount:4]]
+[2021.02.19-15.11.43:291][  0]LogConfig: Setting CVar [[r.LightMaxDrawDistanceScale:1]]
+[2021.02.19-15.11.43:291][  0]LogConfig: Setting CVar [[r.CapsuleShadows:1]]
+[2021.02.19-15.11.43:291][  0]LogConfig: Applying CVar settings from Section [PostProcessQuality@3] File [D:/Engines/UnrealEngine/Projects/Network_Assignments/Network_Assignment/Saved/Config/Windows/Scalability.ini]
+[2021.02.19-15.11.43:291][  0]LogConfig: Setting CVar [[r.MotionBlurQuality:4]]
+[2021.02.19-15.11.43:291][  0]LogConfig: Setting CVar [[r.AmbientOcclusionMipLevelFactor:0.4]]
+[2021.02.19-15.11.43:291][  0]LogConfig: Setting CVar [[r.AmbientOcclusionMaxQuality:100]]
+[2021.02.19-15.11.43:291][  0]LogConfig: Setting CVar [[r.AmbientOcclusionLevels:-1]]
+[2021.02.19-15.11.43:291][  0]LogConfig: Setting CVar [[r.AmbientOcclusionRadiusScale:1.0]]
+[2021.02.19-15.11.43:291][  0]LogConfig: Setting CVar [[r.DepthOfFieldQuality:2]]
+[2021.02.19-15.11.43:291][  0]LogConfig: Setting CVar [[r.RenderTargetPoolMin:400]]
+[2021.02.19-15.11.43:291][  0]LogConfig: Setting CVar [[r.LensFlareQuality:2]]
+[2021.02.19-15.11.43:291][  0]LogConfig: Setting CVar [[r.SceneColorFringeQuality:1]]
+[2021.02.19-15.11.43:291][  0]LogConfig: Setting CVar [[r.EyeAdaptationQuality:2]]
+[2021.02.19-15.11.43:291][  0]LogConfig: Setting CVar [[r.BloomQuality:5]]
+[2021.02.19-15.11.43:291][  0]LogConfig: Setting CVar [[r.FastBlurThreshold:100]]
+[2021.02.19-15.11.43:291][  0]LogConfig: Setting CVar [[r.Upscale.Quality:3]]
+[2021.02.19-15.11.43:291][  0]LogConfig: Setting CVar [[r.Tonemapper.GrainQuantization:1]]
+[2021.02.19-15.11.43:292][  0]LogConfig: Setting CVar [[r.LightShaftQuality:1]]
+[2021.02.19-15.11.43:292][  0]LogConfig: Setting CVar [[r.Filter.SizeScale:1]]
+[2021.02.19-15.11.43:292][  0]LogConfig: Setting CVar [[r.Tonemapper.Quality:5]]
+[2021.02.19-15.11.43:292][  0]LogConfig: Setting CVar [[r.DOF.Gather.AccumulatorQuality:1        ; higher gathering accumulator quality]]
+[2021.02.19-15.11.43:292][  0]LogConfig: Setting CVar [[r.DOF.Gather.PostfilterMethod:1          ; Median3x3 postfilering method]]
+[2021.02.19-15.11.43:292][  0]LogConfig: Setting CVar [[r.DOF.Gather.EnableBokehSettings:0       ; no bokeh simulation when gathering]]
+[2021.02.19-15.11.43:292][  0]LogConfig: Setting CVar [[r.DOF.Gather.RingCount:4                 ; medium number of samples when gathering]]
+[2021.02.19-15.11.43:292][  0]LogConfig: Setting CVar [[r.DOF.Scatter.ForegroundCompositing:1    ; additive foreground scattering]]
+[2021.02.19-15.11.43:292][  0]LogConfig: Setting CVar [[r.DOF.Scatter.BackgroundCompositing:2    ; additive background scattering]]
+[2021.02.19-15.11.43:292][  0]LogConfig: Setting CVar [[r.DOF.Scatter.EnableBokehSettings:1      ; bokeh simulation when scattering]]
+[2021.02.19-15.11.43:292][  0]LogConfig: Setting CVar [[r.DOF.Scatter.MaxSpriteRatio:0.1         ; only a maximum of 10% of scattered bokeh]]
+[2021.02.19-15.11.43:292][  0]LogConfig: Setting CVar [[r.DOF.Recombine.Quality:1                ; cheap slight out of focus]]
+[2021.02.19-15.11.43:292][  0]LogConfig: Setting CVar [[r.DOF.Recombine.EnableBokehSettings:0    ; no bokeh simulation on slight out of focus]]
+[2021.02.19-15.11.43:292][  0]LogConfig: Setting CVar [[r.DOF.TemporalAAQuality:1                ; more stable temporal accumulation]]
+[2021.02.19-15.11.43:292][  0]LogConfig: Setting CVar [[r.DOF.Kernel.MaxForegroundRadius:0.025]]
+[2021.02.19-15.11.43:292][  0]LogConfig: Setting CVar [[r.DOF.Kernel.MaxBackgroundRadius:0.025]]
+[2021.02.19-15.11.43:292][  0]LogConfig: Applying CVar settings from Section [TextureQuality@3] File [D:/Engines/UnrealEngine/Projects/Network_Assignments/Network_Assignment/Saved/Config/Windows/Scalability.ini]
+[2021.02.19-15.11.43:292][  0]LogConfig: Setting CVar [[r.Streaming.MipBias:0]]
+[2021.02.19-15.11.43:292][  0]LogConfig: Setting CVar [[r.Streaming.AmortizeCPUToGPUCopy:0]]
+[2021.02.19-15.11.43:292][  0]LogConfig: Setting CVar [[r.Streaming.MaxNumTexturesToStreamPerFrame:0]]
+[2021.02.19-15.11.43:292][  0]LogConfig: Setting CVar [[r.Streaming.Boost:1]]
+[2021.02.19-15.11.43:292][  0]LogConfig: Setting CVar [[r.MaxAnisotropy:8]]
+[2021.02.19-15.11.43:293][  0]LogConfig: Setting CVar [[r.VT.MaxAnisotropy:8]]
+[2021.02.19-15.11.43:293][  0]LogConfig: Setting CVar [[r.Streaming.LimitPoolSizeToVRAM:0]]
+[2021.02.19-15.11.43:293][  0]LogConfig: Setting CVar [[r.Streaming.PoolSize:1000]]
+[2021.02.19-15.11.43:293][  0]LogConfig: Setting CVar [[r.Streaming.MaxEffectiveScreenSize:0]]
+[2021.02.19-15.11.43:293][  0]LogConfig: Applying CVar settings from Section [EffectsQuality@3] File [D:/Engines/UnrealEngine/Projects/Network_Assignments/Network_Assignment/Saved/Config/Windows/Scalability.ini]
+[2021.02.19-15.11.43:293][  0]LogConfig: Setting CVar [[r.TranslucencyLightingVolumeDim:64]]
+[2021.02.19-15.11.43:293][  0]LogConfig: Setting CVar [[r.RefractionQuality:2]]
+[2021.02.19-15.11.43:293][  0]LogConfig: Setting CVar [[r.SSR.Quality:3]]
+[2021.02.19-15.11.43:293][  0]LogConfig: Setting CVar [[r.SSR.HalfResSceneColor:0]]
+[2021.02.19-15.11.43:293][  0]LogConfig: Setting CVar [[r.SceneColorFormat:4]]
+[2021.02.19-15.11.43:293][  0]LogConfig: Setting CVar [[r.DetailMode:2]]
+[2021.02.19-15.11.43:293][  0]LogConfig: Setting CVar [[r.TranslucencyVolumeBlur:1]]
+[2021.02.19-15.11.43:293][  0]LogConfig: Setting CVar [[r.MaterialQualityLevel:1 ; High quality]]
+[2021.02.19-15.11.43:293][  0]LogConfig: Setting CVar [[r.AnisotropicMaterials:1]]
+[2021.02.19-15.11.43:293][  0]LogConfig: Setting CVar [[r.SSS.Scale:1]]
+[2021.02.19-15.11.43:293][  0]LogConfig: Setting CVar [[r.SSS.SampleSet:2]]
+[2021.02.19-15.11.43:293][  0]LogConfig: Setting CVar [[r.SSS.Quality:1]]
+[2021.02.19-15.11.43:294][  0]LogConfig: Setting CVar [[r.SSS.HalfRes:0]]
+[2021.02.19-15.11.43:294][  0]LogConfig: Setting CVar [[r.SSGI.Quality:3]]
+[2021.02.19-15.11.43:294][  0]LogConfig: Setting CVar [[r.EmitterSpawnRateScale:1.0]]
+[2021.02.19-15.11.43:294][  0]LogConfig: Setting CVar [[r.ParticleLightQuality:2]]
+[2021.02.19-15.11.43:294][  0]LogConfig: Setting CVar [[r.SkyAtmosphere.AerialPerspectiveLUT.FastApplyOnOpaque:1 ; Always have FastSkyLUT 1 in this case to avoid wrong sky]]
+[2021.02.19-15.11.43:294][  0]LogConfig: Setting CVar [[r.SkyAtmosphere.AerialPerspectiveLUT.SampleCountMaxPerSlice:4]]
+[2021.02.19-15.11.43:294][  0]LogConfig: Setting CVar [[r.SkyAtmosphere.AerialPerspectiveLUT.DepthResolution:16.0]]
+[2021.02.19-15.11.43:294][  0]LogConfig: Setting CVar [[r.SkyAtmosphere.FastSkyLUT:1]]
+[2021.02.19-15.11.43:294][  0]LogConfig: Setting CVar [[r.SkyAtmosphere.FastSkyLUT.SampleCountMin:4.0]]
+[2021.02.19-15.11.43:294][  0]LogConfig: Setting CVar [[r.SkyAtmosphere.FastSkyLUT.SampleCountMax:128.0]]
+[2021.02.19-15.11.43:294][  0]LogConfig: Setting CVar [[r.SkyAtmosphere.SampleCountMin:4.0]]
+[2021.02.19-15.11.43:294][  0]LogConfig: Setting CVar [[r.SkyAtmosphere.SampleCountMax:128.0]]
+[2021.02.19-15.11.43:294][  0]LogConfig: Setting CVar [[r.SkyAtmosphere.TransmittanceLUT.UseSmallFormat:0]]
+[2021.02.19-15.11.43:294][  0]LogConfig: Setting CVar [[r.SkyAtmosphere.TransmittanceLUT.SampleCount:10.0]]
+[2021.02.19-15.11.43:294][  0]LogConfig: Setting CVar [[r.SkyAtmosphere.MultiScatteringLUT.SampleCount:15.0]]
+[2021.02.19-15.11.43:294][  0]LogConfig: Applying CVar settings from Section [FoliageQuality@3] File [D:/Engines/UnrealEngine/Projects/Network_Assignments/Network_Assignment/Saved/Config/Windows/Scalability.ini]
+[2021.02.19-15.11.43:294][  0]LogConfig: Setting CVar [[foliage.DensityScale:1.0]]
+[2021.02.19-15.11.43:294][  0]LogConfig: Setting CVar [[grass.DensityScale:1.0]]
+[2021.02.19-15.11.43:294][  0]LogConfig: Applying CVar settings from Section [ShadingQuality@3] File [D:/Engines/UnrealEngine/Projects/Network_Assignments/Network_Assignment/Saved/Config/Windows/Scalability.ini]
+[2021.02.19-15.11.43:295][  0]LogConfig: Setting CVar [[r.HairStrands.SkyLighting.IntegrationType:2]]
+[2021.02.19-15.11.43:295][  0]LogConfig: Setting CVar [[r.HairStrands.SkyAO.SampleCount:4]]
+[2021.02.19-15.11.43:295][  0]LogConfig: Setting CVar [[r.HairStrands.Visibility.MSAA.SamplePerPixel:4]]
+[2021.02.19-15.11.43:295][  0]LogConfig: Applying CVar settings from Section [Startup] File [../../../Engine/Config/ConsoleVariables.ini]
+[2021.02.19-15.11.43:295][  0]LogConfig: Setting CVar [[net.UseAdaptiveNetUpdateFrequency:0]]
+[2021.02.19-15.11.43:295][  0]LogConfig: Setting CVar [[p.chaos.AllowCreatePhysxBodies:1]]
+[2021.02.19-15.11.43:295][  0]LogConfig: Setting CVar [[fx.SkipVectorVMBackendOptimizations:1]]
+[2021.02.19-15.11.43:295][  0]LogConfig: Applying CVar settings from Section [ConsoleVariables] File [D:/Engines/UnrealEngine/Projects/Network_Assignments/Network_Assignment/Saved/Config/Windows/Engine.ini]
+[2021.02.19-15.11.43:295][  0]LogInit: Computer: DESKTOP-K41CE6A
+[2021.02.19-15.11.43:295][  0]LogInit: User: Leoxx
+[2021.02.19-15.11.43:295][  0]LogInit: CPU Page size=4096, Cores=8
+[2021.02.19-15.11.43:295][  0]LogInit: High frequency timer resolution =10.000000 MHz
+[2021.02.19-15.11.43:295][  0]LogMemory: Memory total: Physical=15.9GB (16GB approx)
+[2021.02.19-15.11.43:296][  0]LogMemory: Platform Memory Stats for Windows
+[2021.02.19-15.11.43:296][  0]LogMemory: Process Physical Memory: 135.74 MB used, 135.74 MB peak
+[2021.02.19-15.11.43:296][  0]LogMemory: Process Virtual Memory: 113.41 MB used, 113.41 MB peak
+[2021.02.19-15.11.43:296][  0]LogMemory: Physical Memory: 11378.61 MB used,  4918.77 MB free, 16297.38 MB total
+[2021.02.19-15.11.43:296][  0]LogMemory: Virtual Memory: 134213968.00 MB used,  3756.86 MB free, 134217728.00 MB total
+[2021.02.19-15.11.43:313][  0]LogWindows: WindowsPlatformFeatures enabled
+[2021.02.19-15.11.43:541][  0]LogInit: Physics initialised using underlying interface: PhysX
+[2021.02.19-15.11.43:542][  0]LogInit: Using OS detected language (en-US).
+[2021.02.19-15.11.43:542][  0]LogInit: Using OS detected locale (sv-SE).
+[2021.02.19-15.11.43:546][  0]LogTextLocalizationManager: No specific localization for 'en-US' exists, so the 'en' localization will be used.
+[2021.02.19-15.11.43:686][  0]LogInit: Setting process to per monitor DPI aware
+[2021.02.19-15.11.43:712][  0]LogWindowsTextInputMethodSystem: Display: IME system deactivated.
+[2021.02.19-15.11.43:780][  0]LogSlate: New Slate User Created.  User Index 0, Is Virtual User: 0
+[2021.02.19-15.11.43:780][  0]LogSlate: Slate User Registered.  User Index 0, Is Virtual User: 0
+[2021.02.19-15.11.43:940][  0]LogHMD: Failed to initialize OpenVR with code 110
+[2021.02.19-15.11.43:940][  0]LogD3D11RHI: D3D11 min allowed feature level: 11_0
+[2021.02.19-15.11.43:940][  0]LogD3D11RHI: D3D11 max allowed feature level: 11_0
+[2021.02.19-15.11.43:940][  0]LogD3D11RHI: D3D11 adapters:
+[2021.02.19-15.11.44:044][  0]LogD3D11RHI:    0. 'NVIDIA GeForce RTX 3070' (Feature Level 11_0)
+[2021.02.19-15.11.44:044][  0]LogD3D11RHI:       8043/0/8148 MB DedicatedVideo/DedicatedSystem/SharedSystem, Outputs:3, VendorId:0x10de
+[2021.02.19-15.11.44:051][  0]LogD3D11RHI:    1. 'Microsoft Basic Render Driver' (Feature Level 11_0)
+[2021.02.19-15.11.44:051][  0]LogD3D11RHI:       0/0/8148 MB DedicatedVideo/DedicatedSystem/SharedSystem, Outputs:0, VendorId:0x1414
+[2021.02.19-15.11.44:051][  0]LogD3D11RHI: Chosen D3D11 Adapter: 0
+[2021.02.19-15.11.44:056][  0]LogD3D11RHI: Creating new Direct3DDevice
+[2021.02.19-15.11.44:057][  0]LogD3D11RHI:     GPU DeviceId: 0x2484 (for the marketing name, search the web for "GPU Device Id")
+[2021.02.19-15.11.44:057][  0]LogWindows: EnumDisplayDevices:
+[2021.02.19-15.11.44:057][  0]LogWindows:    0. 'NVIDIA GeForce RTX 3070' (P:0 D:1)
+[2021.02.19-15.11.44:057][  0]LogWindows:    1. 'NVIDIA GeForce RTX 3070' (P:0 D:1)
+[2021.02.19-15.11.44:057][  0]LogWindows:    2. 'NVIDIA GeForce RTX 3070' (P:1 D:1)
+[2021.02.19-15.11.44:058][  0]LogWindows:    3. 'NVIDIA GeForce RTX 3070' (P:0 D:0)
+[2021.02.19-15.11.44:058][  0]LogWindows: DebugString: FoundDriverCount:4 
+[2021.02.19-15.11.44:058][  0]LogD3D11RHI:     Adapter Name: NVIDIA GeForce RTX 3070
+[2021.02.19-15.11.44:058][  0]LogD3D11RHI:   Driver Version: 461.09 (internal:27.21.14.6109, unified:461.09)
+[2021.02.19-15.11.44:058][  0]LogD3D11RHI:      Driver Date: 12-31-2020
+[2021.02.19-15.11.44:058][  0]LogRHI: Texture pool is 5630 MB (70% of 8043 MB)
+[2021.02.19-15.11.44:135][  0]LogD3D11RHI: RHI has support for 64 bit atomics
+[2021.02.19-15.11.44:135][  0]LogD3D11RHI: Async texture creation enabled
+[2021.02.19-15.11.44:135][  0]LogD3D11RHI: Array index from any shader is supported
+[2021.02.19-15.11.44:136][  0]LogD3D11RHI: HDR output is supported on display 0 (NvId: 0x80061080).
+[2021.02.19-15.11.44:148][  0]LogD3D11RHI: GPU Timing Frequency: 1000.000000 (Debug: 2 1)
+[2021.02.19-15.11.44:151][  0]LogRHI: GeForceNow SDK initialized: 1
+[2021.02.19-15.11.44:404][  0]LogTargetPlatformManager: Display: Loaded TargetPlatform 'AllDesktop'
+[2021.02.19-15.11.44:423][  0]LogTargetPlatformManager: Display: Loaded TargetPlatform 'Android'
+[2021.02.19-15.11.44:423][  0]LogTargetPlatformManager: Display: Loaded TargetPlatform 'Android_ASTC'
+[2021.02.19-15.11.44:423][  0]LogTargetPlatformManager: Display: Loaded TargetPlatform 'Android_DXT'
+[2021.02.19-15.11.44:423][  0]LogTargetPlatformManager: Display: Loaded TargetPlatform 'Android_ETC2'
+[2021.02.19-15.11.44:423][  0]LogTargetPlatformManager: Display: Loaded TargetPlatform 'AndroidClient'
+[2021.02.19-15.11.44:423][  0]LogTargetPlatformManager: Display: Loaded TargetPlatform 'Android_ASTCClient'
+[2021.02.19-15.11.44:423][  0]LogTargetPlatformManager: Display: Loaded TargetPlatform 'Android_DXTClient'
+[2021.02.19-15.11.44:423][  0]LogTargetPlatformManager: Display: Loaded TargetPlatform 'Android_ETC2Client'
+[2021.02.19-15.11.44:423][  0]LogTargetPlatformManager: Display: Loaded TargetPlatform 'Android_Multi'
+[2021.02.19-15.11.44:423][  0]LogTargetPlatformManager: Display: Loaded TargetPlatform 'Android_MultiClient'
+[2021.02.19-15.11.44:449][  0]LogTargetPlatformManager: Display: Loaded TargetPlatform 'IOSClient'
+[2021.02.19-15.11.44:449][  0]LogTargetPlatformManager: Display: Loaded TargetPlatform 'IOS'
+[2021.02.19-15.11.44:471][  0]LogTargetPlatformManager: Display: Loaded TargetPlatform 'Linux'
+[2021.02.19-15.11.44:479][  0]LogTargetPlatformManager: Display: Loaded TargetPlatform 'LinuxNoEditor'
+[2021.02.19-15.11.44:487][  0]LogTargetPlatformManager: Display: Loaded TargetPlatform 'LinuxClient'
+[2021.02.19-15.11.44:496][  0]LogTargetPlatformManager: Display: Loaded TargetPlatform 'LinuxServer'
+[2021.02.19-15.11.44:504][  0]LogTargetPlatformManager: Display: Loaded TargetPlatform 'LinuxAArch64NoEditor'
+[2021.02.19-15.11.44:513][  0]LogTargetPlatformManager: Display: Loaded TargetPlatform 'LinuxAArch64Client'
+[2021.02.19-15.11.44:523][  0]LogTargetPlatformManager: Display: Loaded TargetPlatform 'LinuxAArch64Server'
+[2021.02.19-15.11.44:544][  0]LogTargetPlatformManager: Display: Loaded TargetPlatform 'Lumin'
+[2021.02.19-15.11.44:544][  0]LogTargetPlatformManager: Display: Loaded TargetPlatform 'LuminClient'
+[2021.02.19-15.11.44:552][  0]LogTargetPlatformManager: Display: Loaded TargetPlatform 'MacNoEditor'
+[2021.02.19-15.11.44:560][  0]LogTargetPlatformManager: Display: Loaded TargetPlatform 'Mac'
+[2021.02.19-15.11.44:569][  0]LogTargetPlatformManager: Display: Loaded TargetPlatform 'MacClient'
+[2021.02.19-15.11.44:578][  0]LogTargetPlatformManager: Display: Loaded TargetPlatform 'MacServer'
+[2021.02.19-15.11.44:591][  0]LogTargetPlatformManager: Display: Loaded TargetPlatform 'TVOSClient'
+[2021.02.19-15.11.44:591][  0]LogTargetPlatformManager: Display: Loaded TargetPlatform 'TVOS'
+[2021.02.19-15.11.44:600][  0]LogTargetPlatformManager: Display: Loaded TargetPlatform 'WindowsNoEditor'
+[2021.02.19-15.11.44:610][  0]LogTargetPlatformManager: Display: Loaded TargetPlatform 'Windows'
+[2021.02.19-15.11.44:620][  0]LogTargetPlatformManager: Display: Loaded TargetPlatform 'WindowsClient'
+[2021.02.19-15.11.44:628][  0]LogTargetPlatformManager: Display: Loaded TargetPlatform 'WindowsServer'
+[2021.02.19-15.11.44:629][  0]LogTargetPlatformManager: Display: Building Assets For Windows
+[2021.02.19-15.11.44:641][  0]LogAudioDebug: Display: Lib vorbis DLL was dynamically loaded.
+[2021.02.19-15.11.44:747][  0]LogRendererCore: Ray tracing is disabled. Reason: r.RayTracing=0.
+[2021.02.19-15.11.44:747][  0]LogShaderCompilers: Guid format shader working directory is -26 characters bigger than the processId version (D:/Engines/UnrealEngine/Projects/Network_Assignments/Network_Assignment/Intermediate/Shaders/WorkingDirectory/13800/).
+[2021.02.19-15.11.44:748][  0]LogShaderCompilers: Cleaned the shader compiler working directory 'C:/Users/Leoxx/AppData/Local/Temp/UnrealShaderWorkingDir/0D0D0FF442F5BCDFC813AC8F91639892/'.
+[2021.02.19-15.11.44:748][  0]LogShaderCompilers: Cannot use XGE Shader Compiler as Incredibuild is not installed on this machine.
+[2021.02.19-15.11.44:748][  0]LogShaderCompilers: Display: Using Local Shader Compiler.
+[2021.02.19-15.11.45:351][  0]LogDerivedDataCache: Display: Max Cache Size: 512 MB
+[2021.02.19-15.11.45:397][  0]LogDerivedDataCache: Loaded boot cache 0.05s 77MB C:/Users/Leoxx/AppData/Local/UnrealEngine/4.26/DerivedDataCache/Boot.ddc.
+[2021.02.19-15.11.45:397][  0]LogDerivedDataCache: Display: Loaded Boot cache: C:/Users/Leoxx/AppData/Local/UnrealEngine/4.26/DerivedDataCache/Boot.ddc
+[2021.02.19-15.11.45:397][  0]LogDerivedDataCache: FDerivedDataBackendGraph:  Pak pak cache file D:/Engines/UnrealEngine/Projects/Network_Assignments/Network_Assignment/DerivedDataCache/DDC.ddp not found, will not use a pak cache.
+[2021.02.19-15.11.45:397][  0]LogDerivedDataCache: Unable to find inner node Pak for hierarchical cache Hierarchy.
+[2021.02.19-15.11.45:397][  0]LogDerivedDataCache: FDerivedDataBackendGraph:  CompressedPak pak cache file D:/Engines/UnrealEngine/Projects/Network_Assignments/Network_Assignment/DerivedDataCache/Compressed.ddp not found, will not use a pak cache.
+[2021.02.19-15.11.45:397][  0]LogDerivedDataCache: Unable to find inner node CompressedPak for hierarchical cache Hierarchy.
+[2021.02.19-15.11.45:406][  0]LogDerivedDataCache: Display: Pak cache opened for reading ../../../Engine/DerivedDataCache/Compressed.ddp.
+[2021.02.19-15.11.45:406][  0]LogDerivedDataCache: FDerivedDataBackendGraph:  EnterprisePak pak cache file ../../../Enterprise/DerivedDataCache/Compressed.ddp not found, will not use a pak cache.
+[2021.02.19-15.11.45:406][  0]LogDerivedDataCache: Unable to find inner node EnterprisePak for hierarchical cache Hierarchy.
+[2021.02.19-15.11.45:411][  0]LogDerivedDataCache: Speed tests for C:/Users/Leoxx/AppData/Local/UnrealEngine/Common/DerivedDataCache took 0.01 seconds
+[2021.02.19-15.11.45:411][  0]LogDerivedDataCache: Display: Performance to C:/Users/Leoxx/AppData/Local/UnrealEngine/Common/DerivedDataCache: Latency=0.02ms. RandomReadSpeed=1211.16MBs, RandomWriteSpeed=234.40MBs. Assigned SpeedClass 'Local'
+[2021.02.19-15.11.45:412][  0]LogDerivedDataCache: Using Local data cache path C:/Users/Leoxx/AppData/Local/UnrealEngine/Common/DerivedDataCache: Writable
+[2021.02.19-15.11.45:412][  0]LogDerivedDataCache: Shared data cache path not found in *engine.ini, will not use an Shared cache.
+[2021.02.19-15.11.45:412][  0]LogDerivedDataCache: Unable to find inner node Shared for hierarchical cache Hierarchy.
+[2021.02.19-15.11.45:450][  0]LogSlate: Using FreeType 2.10.0
+[2021.02.19-15.11.45:451][  0]LogSlate: SlateFontServices - WITH_FREETYPE: 1, WITH_HARFBUZZ: 1
+[2021.02.19-15.11.45:474][  0]LogAssetRegistry: FAssetRegistry took 0.0054 seconds to start up
+[2021.02.19-15.11.45:661][  0]LogInit: Selected Device Profile: [Windows]
+[2021.02.19-15.11.45:661][  0]LogInit: Active device profile: [000002519B48A200][000002519C2AB800 49] Windows
+[2021.02.19-15.11.45:662][  0]LogInit: Profiles: [000002519B48A200][000002519C2AB800 49] Windows, [000002519B3DE500][000002519C2AF940 49] WindowsNoEditor, [000002519B489400][000002519C2B7AC0 49] WindowsServer, [000002519B3DF200][000002519C2BBC40 49] WindowsClient, [000002519B488800][000002519C2BE100 49] IOS, [000002519B3DE900][000002519C2C2280 49] iPadAir, [000002519B488E00][000002519C2C6400 49] iPadAir2, [000002519C786300][000002519C2CE6C0 49] IPadPro, [000002519C786400][000002519C2CA700 49] iPadAir3, [000002519B3DD500][000002519C2D2880 49] iPadAir4, [000002519C786500][000002519C2D6A00 49] iPadMini2, [000002519B3DFD00][000002519C2DAB80 49] iPadMini3, [000002519C785200][000002519C2DED00 49] iPadMini4, [000002519B3DE100][000002519C2E2E80 49] iPadMini5, [000002519B3D1B00][000002519C2EB140 49] iPhone6, [000002519B3D1C00][000002519C2E7180 49] iPodTouch6, [000002519C785E00][000002519C2F3440 49] iPhone7, [000002519C785D00][000002519C2EF480 49] iPodTouch7, [000002519B3D3400][000002519C2B35C0 49] iPhone5S, [000002519C784C00][000002519C2F7700 49] iPhone6Plus, [000002519B3D1400][000002519C2FB840 49] iPhone6S, [000002519C784200][000002519C2FF980 49] iPhone6SPlus, [000002519B3D0300][000002519C307B00 49] iPhone7Plus, [000002519C784400][000002519C30BC80 49] iPhoneSE, [000002519B3D2700][000002519C30E140 49] iPhone8, [000002519C787E00][000002519C3122C0 49] iPhone8Plus, [000002519B3D1900][000002519C316440 49] iPhoneX, [000002519C786100][000002519C31A5C0 49] iPhoneXS, [000002519B3D3700][000002519C31E740 49] iPhoneXSMax, [000002519C787C00][000002519C3228C0 49] iPhoneXR, [000002519B3D3F00][000002519C326A40 49] iPhone11, [000002519C784A00][000002519C32ABC0 49] iPhone11Pro, [000002519B3D2800][000002519C32ED40 49] iPhone11ProMax, [000002519C787000][000002519C332EC0 49] iPhoneSE2, [000002519B3D0500][000002519C337040 49] iPhone12Mini, [000002519C785500][000002519C33B1C0 49] iPhone12, [000002519B3D2000][000002519C33F340 49] iPhone12Pro, [000002519C786700][000002519C3434C0 49] iPhone12ProMax, [000002519B3D3D00][000002519C347640 49] iPadPro105, [000002519B488B00][000002519C303780 49] iPadPro129, [000002519B3D3500][000002519C34B8C0 49] iPadPro97, [000002519B489D00][000002519C34FA00 49] iPadPro2_129, [000002519B3D2300][000002519C357B80 49] iPad5, [000002519B488400][000002519C35BD00 49] iPad6, [000002519B3D2E00][000002519C35E1C0 49] iPad7, [000002519B48A800][000002519C362340 49] iPad8, [000002519B3D1F00][000002519C3664C0 49] iPadPro11, [000002519B48A700][000002519C36A640 49] iPadPro2_11, [000002519B3D2200][000002519C36E7C0 49] iPadPro3_129, [000002519B489A00][000002519C372940 49] iPadPro4_129, [000002519B3D0B00][000002519C376AC0 49] AppleTV, [000002519B489E00][000002519C37AC40 49] AppleTV4K, [000002519B3D1300][000002519C37EDC0 49] TVOS, [000002519B48A500][000002519C382F40 49] Mac, [000002519B3D1E00][000002519C3870C0 49] MacClient, [000002519B48AD00][000002519C38B240 49] MacNoEditor, [000002519B3D2A00][000002519C38F3C0 49] MacServer, [000002519B48AA00][000002519C393540 49] Linux, [000002519B3D2100][000002519C3976C0 49] LinuxNoEditor, [000002519B48AC00][000002519C353800 49] LinuxAArch64NoEditor, [000002519B3D3800][000002519C39B940 49] LinuxClient, [000002519B489200][000002519D3B1A80 49] LinuxAArch64Client, [000002519B3D0200][000002519D3B9C00 49] LinuxServer, [000002519B488200][000002519D3BC0C0 49] LinuxAArch64Server, [000002519B3D1700][000002519D3C0240 49] Android, [000002519B48B700][000002519D3C43C0 49] Android_Low, [000002519B3D0E00][000002519D3C8540 49] Android_Mid, [000002519B48AB00][000002519D3CC6C0 49] Android_High, [000002519B3D2D00][000002519D3D0840 49] Android_Default, [000002519B489100][000002519D3D49C0 49] Android_Adreno4xx, [000002519B3D1100][000002519D3D8B40 49] Android_Adreno5xx_Low, [000002519B489000][000002519D3DCCC0 49] Android_Adreno5xx, [000002519B3D0C00][000002519D3E0E40 49] Android_Adreno6xx, [000002519B48A100][000002519D3E4FC0 49] Android_Adreno6xx_Vulkan, [000002519B3D1600][000002519D3E9140 49] Android_Mali_T6xx, [000002519B489B00][000002519D3ED2C0 49] Android_Mali_T7xx, [000002519B3D3100][000002519D3F1440 49] Android_Mali_T8xx, [000002519B48A600][000002519D3F55C0 49] Android_Mali_G71, [000002519B3D2F00][000002519D3F9740 49] Android_Mali_G72, [000002519B489900][000002519D3B5880 49] Android_Mali_G72_Vulkan, [000002519B3D1200][000002519D3FD9C0 49] Android_Mali_G76, [000002519B489300][000002519D401B00 49] Android_Mali_G76_Vulkan, [000002519B3DE800][000002519D405C40 49] Android_Mali_G77, [000002519C787100][000002519D40C100 49] Android_Mali_G77_Vulkan, [000002519B3DC400][000002519D410280 49] Android_Vulkan_SM5, [000002519C787F00][000002519D414400 49] Android_PowerVR_G6xxx, [000002519B3DD900][000002519D418580 49] Android_PowerVR_GT7xxx, [000002519C787B00][000002519D41C700 49] Android_PowerVR_GE8xxx, [000002519B3DD100][000002519D420880 49] Android_PowerVR_GM9xxx, [000002519C784300][000002519D424A00 49] Android_PowerVR_GM9xxx_Vulkan, [000002519B3DC500][000002519D428B80 49] Android_TegraK1, [000002519C786200][000002519D42CD00 49] Android_Unknown_Vulkan, [000002519B3DD000][000002519D430E80 49] Lumin, [000002519C786B00][000002519D435000 49] Lumin_Desktop, [000002519B3DCE00][000002519D439180 49] HoloLens, 
+[2021.02.19-15.11.45:777][  0]LogMeshReduction: Using QuadricMeshReduction for automatic static mesh reduction
+[2021.02.19-15.11.45:777][  0]LogMeshReduction: Using SimplygonMeshReduction for automatic skeletal mesh reduction
+[2021.02.19-15.11.45:777][  0]LogMeshReduction: Using ProxyLODMeshReduction for automatic mesh merging
+[2021.02.19-15.11.45:777][  0]LogMeshReduction: No distributed automatic mesh merging module available
+[2021.02.19-15.11.45:777][  0]LogMeshMerging: No distributed automatic mesh merging module available
+[2021.02.19-15.11.45:819][  0]LogNetVersion: Network_Assignment 1.0.0, NetCL: 14830424, EngineNetVer: 16, GameNetVer: 0 (Checksum: 459756255)
+[2021.02.19-15.11.46:146][  0]LogHMD: PokeAHoleMaterial loaded successfully
+[2021.02.19-15.11.46:175][  0]LogPackageLocalizationCache: Processed 22 localized package path(s) for 1 prioritized culture(s) in 0.028603 seconds
+[2021.02.19-15.11.46:180][  0]LogUObjectArray: 16830 objects as part of root set at end of initial load.
+[2021.02.19-15.11.46:180][  0]LogUObjectAllocator: 4209472 out of 0 bytes used by permanent object pool.
+[2021.02.19-15.11.46:180][  0]LogUObjectArray: CloseDisregardForGC: 0/0 objects in disregard for GC pool
+[2021.02.19-15.11.46:535][  0]LogTcpMessaging: Initializing TcpMessaging bridge
+[2021.02.19-15.11.46:541][  0]LogUdpMessaging: Initializing bridge on interface 0.0.0.0:0 to multicast group 230.0.0.1:6666.
+[2021.02.19-15.11.46:731][  0]LogActor: Warning: SetReplicates called on non-initialized actor Default__MyPickup. Directly setting bReplicates is the correct procedure for pre-init actors.
+[2021.02.19-15.11.46:732][  0]LogActor: Warning: SetReplicates called on non-initialized actor Default__MyRocket. Directly setting bReplicates is the correct procedure for pre-init actors.
+[2021.02.19-15.11.47:079][  0]LogAndroidPermission: UAndroidPermissionCallbackProxy::GetInstance
+[2021.02.19-15.11.47:107][  0]LogAudioCaptureCore: Display: No Audio Capture implementations found. Audio input will be silent.
+[2021.02.19-15.11.47:107][  0]LogAudioCaptureCore: Display: No Audio Capture implementations found. Audio input will be silent.
+[2021.02.19-15.11.47:187][  0]SourceControl: Source control is disabled
+[2021.02.19-15.11.47:187][  0]SourceControl: Source control is disabled
+[2021.02.19-15.11.47:194][  0]SourceControl: Source control is disabled
+[2021.02.19-15.11.47:198][  0]SourceControl: Source control is disabled
+[2021.02.19-15.11.47:208][  0]SourceControl: Source control is disabled
+[2021.02.19-15.11.47:213][  0]LogUProjectInfo: Found projects:
+[2021.02.19-15.11.47:238][  0]LogCollectionManager: Loaded 0 collections in 0.001608 seconds
+[2021.02.19-15.11.47:266][  0]LogFileCache: Scanning file cache for directory 'D:/Engines/UnrealEngine/Projects/Network_Assignments/Network_Assignment/Saved/Collections/' took 0.00s
+[2021.02.19-15.11.47:266][  0]LogFileCache: Scanning file cache for directory 'D:/Engines/UnrealEngine/Projects/Network_Assignments/Network_Assignment/Content/Developers/Leoxx/Collections/' took 0.00s
+[2021.02.19-15.11.47:266][  0]LogFileCache: Scanning file cache for directory 'D:/Engines/UnrealEngine/Projects/Network_Assignments/Network_Assignment/Content/Collections/' took 0.00s
+[2021.02.19-15.11.47:266][  0]LogOcInput: OculusInput pre-init called
+[2021.02.19-15.11.47:278][  0]LogWindows: Failed to load 'OVRPlugin.dll' (GetLastError=126)
+[2021.02.19-15.11.47:279][  0]LogWindows: File 'OVRPlugin.dll' does not exist
+[2021.02.19-15.11.47:334][  0]LogEngine: Initializing Engine...
+[2021.02.19-15.11.47:335][  0]LogHMD: Failed to initialize OpenVR with code 110
+[2021.02.19-15.11.47:335][  0]LogMagicLeap: Warning: VR disabled because ZI is not enabled.  To enable, in the editor, Edit -> Project Settings -> Plugins -> Magic Leap Plugin -> Enable Zero Iteration
+[2021.02.19-15.11.47:335][  0]LogStats: UGameplayTagsManager::InitializeManager -  0.000 s
+[2021.02.19-15.11.47:420][  0]LogInit: Initializing FReadOnlyCVARCache
+[2021.02.19-15.11.47:430][  0]LogAIModule: Creating AISystem for world Untitled
+[2021.02.19-15.11.47:443][  0]LogAudio: Display: Initializing Audio Device Manager...
+[2021.02.19-15.11.47:448][  0]LogAudio: Display: Audio Device Manager Initialized
+[2021.02.19-15.11.47:448][  0]LogAudio: Display: Creating Audio Device:                 Id: 1, Scope: Shared, Realtime: True
+[2021.02.19-15.11.47:448][  0]LogAudioMixer: Display: Audio Mixer Platform Settings:
+[2021.02.19-15.11.47:449][  0]LogAudioMixer: Display: 	Sample Rate:						  48000
+[2021.02.19-15.11.47:449][  0]LogAudioMixer: Display: 	Callback Buffer Frame Size Requested: 1024
+[2021.02.19-15.11.47:449][  0]LogAudioMixer: Display: 	Callback Buffer Frame Size To Use:	  1024
+[2021.02.19-15.11.47:449][  0]LogAudioMixer: Display: 	Number of buffers to queue:			  2
+[2021.02.19-15.11.47:449][  0]LogAudioMixer: Display: 	Max Channels (voices):				  32
+[2021.02.19-15.11.47:449][  0]LogAudioMixer: Display: 	Number of Async Source Workers:		  0
+[2021.02.19-15.11.47:449][  0]LogAudio: Display: AudioDevice MaxSources: 32
+[2021.02.19-15.11.47:449][  0]LogAudio: Display: Using built-in audio occlusion.
+[2021.02.19-15.11.47:449][  0]LogAudioMixer: Display: Initializing audio mixer.
+[2021.02.19-15.11.47:469][  0]LogAudioMixer: Display: 0: FrontLeft
+[2021.02.19-15.11.47:469][  0]LogAudioMixer: Display: 1: FrontRight
+[2021.02.19-15.11.47:611][  0]LogAudioMixer: Display: Using Audio Device Speakers (Realtek(R) Audio)
+[2021.02.19-15.11.47:615][  0]LogAudioMixer: Display: Initializing Sound Submixes...
+[2021.02.19-15.11.47:617][  0]LogAudioMixer: Display: Creating Master Submix 'MasterSubmixDefault'
+[2021.02.19-15.11.47:617][  0]LogAudioMixer: Display: Creating Master Submix 'MasterReverbSubmixDefault'
+[2021.02.19-15.11.47:618][  0]LogAudioMixer: Display: Creating Master Submix 'MasterEQSubmixDefault'
+[2021.02.19-15.11.47:618][  0]LogAudioMixer: FMixerPlatformXAudio2::StartAudioStream() called
+[2021.02.19-15.11.47:618][  0]LogAudioMixer: Display: Output buffers initialized: Frames=1024, Channels=2, Samples=2048
+[2021.02.19-15.11.47:620][  0]LogAudioMixer: Display: Starting AudioMixerPlatformInterface::RunInternal()
+[2021.02.19-15.11.47:620][  0]LogAudioMixer: Display: FMixerPlatformXAudio2::SubmitBuffer() called for the first time
+[2021.02.19-15.11.47:620][  0]LogInit: FAudioDevice initialized.
+[2021.02.19-15.11.47:620][  0]LogAudio: Display: Audio Device (ID: 1) registered with world 'Untitled'.
+[2021.02.19-15.11.47:620][  0]LogNetVersion: Set ProjectVersion to 1.0.0.0. Version Checksum will be recalculated on next use.
+[2021.02.19-15.11.47:654][  0]LogDerivedDataCache: Saved boot cache 0.03s 77MB C:/Users/Leoxx/AppData/Local/UnrealEngine/4.26/DerivedDataCache/Boot.ddc.
+[2021.02.19-15.11.47:654][  0]LogInit: Texture streaming: Enabled
+[2021.02.19-15.11.47:670][  0]LogAnalytics: Display: [UEEditor.Rocket.Release] APIServer = https://datarouter.ol.epicgames.com/. AppVersion = 4.26.1-15228867+++UE4+Release-4.26
+[2021.02.19-15.11.47:675][  0]LogEngineSessionManager: EngineSessionManager initialized
+[2021.02.19-15.11.47:676][  0]LogEditorSessionSummary: Verbose: Initializing EditorSessionSummaryWriter for editor session tracking
+[2021.02.19-15.11.47:679][  0]LogEditorSessionSummary: EditorSessionSummaryWriter initialized
+[2021.02.19-15.11.47:699][  0]LogInit: Transaction tracking system initialized
+[2021.02.19-15.11.47:731][  0]BlueprintLog: New page: Editor Load
+[2021.02.19-15.11.47:833][  0]LocalizationService: Localization service is disabled
+[2021.02.19-15.11.47:865][  0]TimingProfiler: Initialize
+[2021.02.19-15.11.47:865][  0]TimingProfiler: OnSessionChanged
+[2021.02.19-15.11.47:865][  0]LoadingProfiler: Initialize
+[2021.02.19-15.11.47:865][  0]LoadingProfiler: OnSessionChanged
+[2021.02.19-15.11.47:865][  0]NetworkingProfiler: Initialize
+[2021.02.19-15.11.47:865][  0]NetworkingProfiler: OnSessionChanged
+[2021.02.19-15.11.47:865][  0]MemoryProfiler: Initialize
+[2021.02.19-15.11.47:865][  0]MemoryProfiler: OnSessionChanged
+[2021.02.19-15.11.47:999][  0]LogCook: Display: CookSettings for Memory: MemoryMaxUsedVirtual 0MiB, MemoryMaxUsedPhysical 16384MiB, MemoryMinFreeVirtual 0MiB, MemoryMinFreePhysical 1024MiB
+[2021.02.19-15.11.47:999][  0]LogCook: Display: Mobile HDR setting 1
+[2021.02.19-15.11.48:197][  0]LogFileCache: Scanning file cache for directory 'D:/Engines/UnrealEngine/Projects/Network_Assignments/Network_Assignment/Content/' took 0.01s
+[2021.02.19-15.11.48:324][  0]LogInit: Display: Engine is initialized. Leaving FEngineLoop::Init()
+[2021.02.19-15.11.48:328][  0]SourceControl: Source control is disabled
+[2021.02.19-15.11.48:328][  0]LogUnrealEdMisc: Loading editor; pre map load, took 6.180
+[2021.02.19-15.11.48:328][  0]Cmd: MAP LOAD FILE="D:/Engines/UnrealEngine/Projects/Network_Assignments/Network_Assignment/Content/Maps/MY_Map.umap" TEMPLATE=0 SHOWPROGRESS=1 FEATURELEVEL=3
+[2021.02.19-15.11.48:328][  0]LightingResults: New page: Lighting Build
+[2021.02.19-15.11.48:329][  0]LogWorld: UWorld::CleanupWorld for Untitled, bSessionEnded=true, bCleanupResources=true
+[2021.02.19-15.11.48:330][  0]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2021.02.19-15.11.48:330][  0]MapCheck: New page: Map Check
+[2021.02.19-15.11.48:330][  0]LightingResults: New page: Lighting Build
+[2021.02.19-15.11.48:337][  0]LogUObjectHash: Compacting FUObjectHashTables data took   0.59ms
+[2021.02.19-15.11.48:379][  0]LogActor: Warning: SetReplicates called on non-initialized actor Default__BP_Rocket_C. Directly setting bReplicates is the correct procedure for pre-init actors.
+[2021.02.19-15.11.48:380][  0]LogActor: Warning: SetReplicates called on non-initialized actor Default__SKEL_BP_Rocket_C. Directly setting bReplicates is the correct procedure for pre-init actors.
+[2021.02.19-15.11.48:400][  0]LogActor: Warning: SetReplicates called on non-initialized actor Default__BP_Pickup_C. Directly setting bReplicates is the correct procedure for pre-init actors.
+[2021.02.19-15.11.48:401][  0]LogActor: Warning: SetReplicates called on non-initialized actor Default__SKEL_BP_Pickup_C. Directly setting bReplicates is the correct procedure for pre-init actors.
+[2021.02.19-15.11.48:403][  0]LogActor: Warning: SetReplicates called on non-initialized actor BP_Pickup_2. Directly setting bReplicates is the correct procedure for pre-init actors.
+[2021.02.19-15.11.48:431][  0]LogAudio: Display: Audio Device (ID: 1) registered with world 'My_Map'.
+[2021.02.19-15.11.48:432][  0]LogAIModule: Creating AISystem for world My_Map
+[2021.02.19-15.11.48:435][  0]LogEditorServer: Finished looking for orphan Actors (0.000 secs)
+[2021.02.19-15.11.48:440][  0]LogUObjectHash: Compacting FUObjectHashTables data took   0.65ms
+[2021.02.19-15.11.48:440][  0]Cmd: MAP CHECKDEP NOCLEARLOG
+[2021.02.19-15.11.48:440][  0]MapCheck: Map check complete: 0 Error(s), 0 Warning(s), took 0,092ms to complete.
+[2021.02.19-15.11.48:440][  0]LogFileHelpers: Loading map 'MY_Map' took 0.113
+[2021.02.19-15.11.48:442][  0]LogUnrealEdMisc: Total Editor Startup Time, took 6.295
+[2021.02.19-15.11.48:567][  0]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2021.02.19-15.11.48:572][  0]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2021.02.19-15.11.48:577][  0]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2021.02.19-15.11.48:581][  0]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2021.02.19-15.11.48:593][  0]LogNativeClassHierarchy: Verbose: Native class hierarchy populated in 0.0069 seconds. Added 3608 classes and 861 folders.
+[2021.02.19-15.11.48:595][  0]LogNativeClassHierarchy: Verbose: Native class hierarchy updated for 'WidgetCarousel' in 0.0002 seconds. Added 0 classes and 0 folders.
+[2021.02.19-15.11.48:597][  0]LogPakFile: PakFile PrimaryIndexSize=187
+[2021.02.19-15.11.48:597][  0]LogPakFile: PakFile PathHashIndexSize=101
+[2021.02.19-15.11.48:597][  0]LogPakFile: PakFile FullDirectoryIndexSize=148
+[2021.02.19-15.11.48:597][  0]LogPakFile: OnPakFileMounted2Time == 0.000005
+[2021.02.19-15.11.48:598][  0]LogPakFile: PakFile PrimaryIndexSize=189
+[2021.02.19-15.11.48:599][  0]LogPakFile: PakFile PathHashIndexSize=101
+[2021.02.19-15.11.48:599][  0]LogPakFile: PakFile FullDirectoryIndexSize=152
+[2021.02.19-15.11.48:599][  0]LogPakFile: OnPakFileMounted2Time == 0.000007
+[2021.02.19-15.11.48:600][  0]LogPakFile: PakFile PrimaryIndexSize=191
+[2021.02.19-15.11.48:600][  0]LogPakFile: PakFile PathHashIndexSize=101
+[2021.02.19-15.11.48:600][  0]LogPakFile: PakFile FullDirectoryIndexSize=160
+[2021.02.19-15.11.48:600][  0]LogPakFile: OnPakFileMounted2Time == 0.000009
+[2021.02.19-15.11.48:601][  0]LogPakFile: PakFile PrimaryIndexSize=185
+[2021.02.19-15.11.48:601][  0]LogPakFile: PakFile PathHashIndexSize=101
+[2021.02.19-15.11.48:601][  0]LogPakFile: PakFile FullDirectoryIndexSize=148
+[2021.02.19-15.11.48:601][  0]LogPakFile: OnPakFileMounted2Time == 0.000010
+[2021.02.19-15.11.48:602][  0]LogPakFile: PakFile PrimaryIndexSize=190
+[2021.02.19-15.11.48:603][  0]LogPakFile: PakFile PathHashIndexSize=101
+[2021.02.19-15.11.48:603][  0]LogPakFile: PakFile FullDirectoryIndexSize=154
+[2021.02.19-15.11.48:603][  0]LogPakFile: OnPakFileMounted2Time == 0.000011
+[2021.02.19-15.11.48:604][  0]LogPakFile: PakFile PrimaryIndexSize=192
+[2021.02.19-15.11.48:604][  0]LogPakFile: PakFile PathHashIndexSize=101
+[2021.02.19-15.11.48:604][  0]LogPakFile: PakFile FullDirectoryIndexSize=158
+[2021.02.19-15.11.48:604][  0]LogPakFile: OnPakFileMounted2Time == 0.000013
+[2021.02.19-15.11.48:605][  0]LogPakFile: PakFile PrimaryIndexSize=182
+[2021.02.19-15.11.48:605][  0]LogPakFile: PakFile PathHashIndexSize=101
+[2021.02.19-15.11.48:605][  0]LogPakFile: PakFile FullDirectoryIndexSize=138
+[2021.02.19-15.11.48:605][  0]LogPakFile: OnPakFileMounted2Time == 0.000014
+[2021.02.19-15.11.48:606][  0]LogPakFile: PakFile PrimaryIndexSize=184
+[2021.02.19-15.11.48:606][  0]LogPakFile: PakFile PathHashIndexSize=101
+[2021.02.19-15.11.48:606][  0]LogPakFile: PakFile FullDirectoryIndexSize=142
+[2021.02.19-15.11.48:606][  0]LogPakFile: OnPakFileMounted2Time == 0.000015
+[2021.02.19-15.11.48:608][  0]LogPakFile: PakFile PrimaryIndexSize=188
+[2021.02.19-15.11.48:608][  0]LogPakFile: PakFile PathHashIndexSize=101
+[2021.02.19-15.11.48:608][  0]LogPakFile: PakFile FullDirectoryIndexSize=150
+[2021.02.19-15.11.48:608][  0]LogPakFile: OnPakFileMounted2Time == 0.000016
+[2021.02.19-15.11.48:609][  0]LogPakFile: PakFile PrimaryIndexSize=182
+[2021.02.19-15.11.48:609][  0]LogPakFile: PakFile PathHashIndexSize=101
+[2021.02.19-15.11.48:609][  0]LogPakFile: PakFile FullDirectoryIndexSize=138
+[2021.02.19-15.11.48:609][  0]LogPakFile: OnPakFileMounted2Time == 0.000017
+[2021.02.19-15.11.48:610][  0]LogPakFile: PakFile PrimaryIndexSize=184
+[2021.02.19-15.11.48:610][  0]LogPakFile: PakFile PathHashIndexSize=101
+[2021.02.19-15.11.48:610][  0]LogPakFile: PakFile FullDirectoryIndexSize=142
+[2021.02.19-15.11.48:610][  0]LogPakFile: OnPakFileMounted2Time == 0.000018
+[2021.02.19-15.11.48:611][  0]LogPakFile: PakFile PrimaryIndexSize=183
+[2021.02.19-15.11.48:611][  0]LogPakFile: PakFile PathHashIndexSize=101
+[2021.02.19-15.11.48:611][  0]LogPakFile: PakFile FullDirectoryIndexSize=140
+[2021.02.19-15.11.48:611][  0]LogPakFile: OnPakFileMounted2Time == 0.000020
+[2021.02.19-15.11.48:613][  0]LogPakFile: PakFile PrimaryIndexSize=185
+[2021.02.19-15.11.48:613][  0]LogPakFile: PakFile PathHashIndexSize=101
+[2021.02.19-15.11.48:613][  0]LogPakFile: PakFile FullDirectoryIndexSize=144
+[2021.02.19-15.11.48:613][  0]LogPakFile: OnPakFileMounted2Time == 0.000021
+[2021.02.19-15.11.48:614][  0]LogPakFile: PakFile PrimaryIndexSize=188
+[2021.02.19-15.11.48:614][  0]LogPakFile: PakFile PathHashIndexSize=101
+[2021.02.19-15.11.48:614][  0]LogPakFile: PakFile FullDirectoryIndexSize=150
+[2021.02.19-15.11.48:614][  0]LogPakFile: OnPakFileMounted2Time == 0.000022
+[2021.02.19-15.11.48:615][  0]LogPakFile: PakFile PrimaryIndexSize=190
+[2021.02.19-15.11.48:615][  0]LogPakFile: PakFile PathHashIndexSize=101
+[2021.02.19-15.11.48:615][  0]LogPakFile: PakFile FullDirectoryIndexSize=154
+[2021.02.19-15.11.48:615][  0]LogPakFile: OnPakFileMounted2Time == 0.000023
+[2021.02.19-15.11.48:616][  0]LogPakFile: PakFile PrimaryIndexSize=187
+[2021.02.19-15.11.48:616][  0]LogPakFile: PakFile PathHashIndexSize=101
+[2021.02.19-15.11.48:616][  0]LogPakFile: PakFile FullDirectoryIndexSize=148
+[2021.02.19-15.11.48:616][  0]LogPakFile: OnPakFileMounted2Time == 0.000024
+[2021.02.19-15.11.48:617][  0]LogPakFile: PakFile PrimaryIndexSize=189
+[2021.02.19-15.11.48:617][  0]LogPakFile: PakFile PathHashIndexSize=101
+[2021.02.19-15.11.48:617][  0]LogPakFile: PakFile FullDirectoryIndexSize=152
+[2021.02.19-15.11.48:617][  0]LogPakFile: OnPakFileMounted2Time == 0.000025
+[2021.02.19-15.11.48:619][  0]LogPakFile: PakFile PrimaryIndexSize=183
+[2021.02.19-15.11.48:619][  0]LogPakFile: PakFile PathHashIndexSize=101
+[2021.02.19-15.11.48:619][  0]LogPakFile: PakFile FullDirectoryIndexSize=140
+[2021.02.19-15.11.48:619][  0]LogPakFile: OnPakFileMounted2Time == 0.000026
+[2021.02.19-15.11.48:620][  0]LogPakFile: PakFile PrimaryIndexSize=185
+[2021.02.19-15.11.48:620][  0]LogPakFile: PakFile PathHashIndexSize=101
+[2021.02.19-15.11.48:620][  0]LogPakFile: PakFile FullDirectoryIndexSize=144
+[2021.02.19-15.11.48:620][  0]LogPakFile: OnPakFileMounted2Time == 0.000028
+[2021.02.19-15.11.48:621][  0]LogPakFile: PakFile PrimaryIndexSize=185
+[2021.02.19-15.11.48:621][  0]LogPakFile: PakFile PathHashIndexSize=101
+[2021.02.19-15.11.48:622][  0]LogPakFile: PakFile FullDirectoryIndexSize=144
+[2021.02.19-15.11.48:622][  0]LogPakFile: OnPakFileMounted2Time == 0.000029
+[2021.02.19-15.11.48:623][  0]LogPakFile: PakFile PrimaryIndexSize=187
+[2021.02.19-15.11.48:623][  0]LogPakFile: PakFile PathHashIndexSize=101
+[2021.02.19-15.11.48:623][  0]LogPakFile: PakFile FullDirectoryIndexSize=148
+[2021.02.19-15.11.48:623][  0]LogPakFile: OnPakFileMounted2Time == 0.000030
+[2021.02.19-15.11.48:624][  0]LogPakFile: PakFile PrimaryIndexSize=183
+[2021.02.19-15.11.48:624][  0]LogPakFile: PakFile PathHashIndexSize=101
+[2021.02.19-15.11.48:624][  0]LogPakFile: PakFile FullDirectoryIndexSize=140
+[2021.02.19-15.11.48:624][  0]LogPakFile: OnPakFileMounted2Time == 0.000031
+[2021.02.19-15.11.48:625][  0]LogPakFile: PakFile PrimaryIndexSize=186
+[2021.02.19-15.11.48:625][  0]LogPakFile: PakFile PathHashIndexSize=101
+[2021.02.19-15.11.48:625][  0]LogPakFile: PakFile FullDirectoryIndexSize=146
+[2021.02.19-15.11.48:625][  0]LogPakFile: OnPakFileMounted2Time == 0.000032
+[2021.02.19-15.11.48:626][  0]LogPakFile: PakFile PrimaryIndexSize=188
+[2021.02.19-15.11.48:627][  0]LogPakFile: PakFile PathHashIndexSize=101
+[2021.02.19-15.11.48:627][  0]LogPakFile: PakFile FullDirectoryIndexSize=150
+[2021.02.19-15.11.48:627][  0]LogPakFile: OnPakFileMounted2Time == 0.000033
+[2021.02.19-15.11.48:628][  0]LogPakFile: PakFile PrimaryIndexSize=185
+[2021.02.19-15.11.48:628][  0]LogPakFile: PakFile PathHashIndexSize=101
+[2021.02.19-15.11.48:628][  0]LogPakFile: PakFile FullDirectoryIndexSize=144
+[2021.02.19-15.11.48:628][  0]LogPakFile: OnPakFileMounted2Time == 0.000034
+[2021.02.19-15.11.48:629][  0]LogPakFile: PakFile PrimaryIndexSize=192
+[2021.02.19-15.11.48:629][  0]LogPakFile: PakFile PathHashIndexSize=101
+[2021.02.19-15.11.48:629][  0]LogPakFile: PakFile FullDirectoryIndexSize=158
+[2021.02.19-15.11.48:629][  0]LogPakFile: OnPakFileMounted2Time == 0.000036
+[2021.02.19-15.11.48:702][  0]LogNativeClassHierarchy: Verbose: Native class hierarchy updated for 'AddContentDialog' in 0.0002 seconds. Added 0 classes and 0 folders.
+[2021.02.19-15.11.48:705][  0]LogNativeClassHierarchy: Verbose: Native class hierarchy updated for 'SceneOutliner' in 0.0002 seconds. Added 2 classes and 0 folders.
+[2021.02.19-15.11.48:734][  0]LogSlate: Took 0.000495 seconds to synchronously load lazily loaded font '../../../Engine/Content/Slate/Fonts/Roboto-Regular.ttf' (155K)
+[2021.02.19-15.11.48:736][  0]LogSlate: Took 0.000355 seconds to synchronously load lazily loaded font '../../../Engine/Content/Slate/Fonts/Roboto-Bold.ttf' (160K)
+[2021.02.19-15.11.48:739][  0]LogSlate: Took 0.000394 seconds to synchronously load lazily loaded font '../../../Engine/Content/Editor/Slate/Fonts/FontAwesome.ttf' (139K)
+[2021.02.19-15.11.48:740][  0]LogSlate: Took 0.000307 seconds to synchronously load lazily loaded font '../../../Engine/Content/Slate/Fonts/DroidSansMono.ttf' (77K)
+[2021.02.19-15.11.48:928][  0]LogRenderer: Reallocating scene render targets to support 1208x568 Format 10 NumSamples 1 (Frame:1).
+[2021.02.19-15.11.49:037][  0]LogNativeClassHierarchy: Verbose: Native class hierarchy updated for 'HierarchicalLODOutliner' in 0.0002 seconds. Added 0 classes and 0 folders.
+[2021.02.19-15.11.49:037][  0]LogLoad: (Engine Initialization) Total time: 6.89 seconds
+[2021.02.19-15.11.49:037][  0]LogLoad: (Engine Initialization) Total Blueprint compile time: 0.00 seconds
+[2021.02.19-15.11.49:037][  0]LogInit: First time updating LLM stats...
+[2021.02.19-15.11.49:063][  0]LogAssetRegistry: Asset discovery search completed in 3.5928 seconds
+[2021.02.19-15.11.49:065][  0]LogCollectionManager: Fixed up redirectors for 0 collections in 0.000003 seconds (updated 0 objects)
+[2021.02.19-15.11.49:083][  0]LogContentStreaming: Texture pool size now 1000 MB
+[2021.02.19-15.11.55:396][670]LogTemp: Repeating last play command: New Editor Window (PIE)
+[2021.02.19-15.11.55:401][670]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2021.02.19-15.11.55:402][670]PIE: New page: PIE session: MY_Map (19 feb. 2021 17:11:55)
+[2021.02.19-15.11.55:403][670]LogOnline: OSS: Creating online subsystem instance for: NULL
+[2021.02.19-15.11.55:405][670]LogOnline: OSS: TryLoadSubsystemAndSetDefault: Loaded subsystem for module [NULL]
+[2021.02.19-15.11.55:405][670]LogPlayLevel: Creating play world package: /Game/Maps/UEDPIE_0_MY_Map
+[2021.02.19-15.11.55:406][670]LogActor: Warning: SetReplicates called on non-initialized actor BP_Pickup_2. Directly setting bReplicates is the correct procedure for pre-init actors.
+[2021.02.19-15.11.55:408][670]LogPlayLevel: PIE: StaticDuplicateObject took: (0.003289s)
+[2021.02.19-15.11.55:409][670]LogAIModule: Creating AISystem for world My_Map
+[2021.02.19-15.11.55:410][670]LogPlayLevel: PIE: World Init took: (0.001024s)
+[2021.02.19-15.11.55:410][670]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/Maps/MY_Map.My_Map to /Game/Maps/UEDPIE_0_MY_Map.My_Map (0.004584s)
+[2021.02.19-15.11.55:413][670]LogUObjectHash: Compacting FUObjectHashTables data took   0.50ms
+[2021.02.19-15.11.55:414][670]LogAudio: Display: Creating Audio Device:                 Id: 2, Scope: Unique, Realtime: True
+[2021.02.19-15.11.55:414][670]LogAudioMixer: Display: Audio Mixer Platform Settings:
+[2021.02.19-15.11.55:414][670]LogAudioMixer: Display: 	Sample Rate:						  48000
+[2021.02.19-15.11.55:414][670]LogAudioMixer: Display: 	Callback Buffer Frame Size Requested: 1024
+[2021.02.19-15.11.55:414][670]LogAudioMixer: Display: 	Callback Buffer Frame Size To Use:	  1024
+[2021.02.19-15.11.55:414][670]LogAudioMixer: Display: 	Number of buffers to queue:			  2
+[2021.02.19-15.11.55:414][670]LogAudioMixer: Display: 	Max Channels (voices):				  32
+[2021.02.19-15.11.55:414][670]LogAudioMixer: Display: 	Number of Async Source Workers:		  0
+[2021.02.19-15.11.55:414][670]LogAudio: Display: AudioDevice MaxSources: 32
+[2021.02.19-15.11.55:414][670]LogAudio: Display: Using built-in audio occlusion.
+[2021.02.19-15.11.55:414][670]LogAudioMixer: Display: Initializing audio mixer.
+[2021.02.19-15.11.55:419][670]LogAudioMixer: Display: 0: FrontLeft
+[2021.02.19-15.11.55:419][670]LogAudioMixer: Display: 1: FrontRight
+[2021.02.19-15.11.55:535][670]LogAudioMixer: Display: Using Audio Device Speakers (Realtek(R) Audio)
+[2021.02.19-15.11.55:536][670]LogAudioMixer: Display: Initializing Sound Submixes...
+[2021.02.19-15.11.55:536][670]LogAudioMixer: Display: Creating Master Submix 'MasterSubmixDefault'
+[2021.02.19-15.11.55:536][670]LogAudioMixer: Display: Creating Master Submix 'MasterReverbSubmixDefault'
+[2021.02.19-15.11.55:536][670]LogAudioMixer: Display: Creating Master Submix 'MasterEQSubmixDefault'
+[2021.02.19-15.11.55:536][670]LogAudioMixer: FMixerPlatformXAudio2::StartAudioStream() called
+[2021.02.19-15.11.55:536][670]LogAudioMixer: Display: Output buffers initialized: Frames=1024, Channels=2, Samples=2048
+[2021.02.19-15.11.55:548][670]LogAudioMixer: Display: Starting AudioMixerPlatformInterface::RunInternal()
+[2021.02.19-15.11.55:548][670]LogAudioMixer: Display: FMixerPlatformXAudio2::SubmitBuffer() called for the first time
+[2021.02.19-15.11.55:548][670]LogInit: FAudioDevice initialized.
+[2021.02.19-15.11.55:548][670]LogAudio: Display: Audio Device (ID: 2) registered with world 'My_Map'.
+[2021.02.19-15.11.55:566][670]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2021.02.19-15.11.55:566][670]LogLoad: Game class is 'BP_Network_AssignmentGameMode_C'
+[2021.02.19-15.11.55:568][670]LogWorld: Bringing World /Game/Maps/UEDPIE_0_MY_Map.My_Map up for play (max tick rate 0) at 2021.02.19-16.11.55
+[2021.02.19-15.11.55:568][670]LogWorld: Bringing up level for play took: 0.000876
+[2021.02.19-15.11.55:568][670]LogOnline: OSS: Creating online subsystem instance for: :Context_1
+[2021.02.19-15.11.55:572][670]LogNativeClassHierarchy: Verbose: Native class hierarchy updated for 'MovieSceneCapture' in 0.0003 seconds. Added 20 classes and 0 folders.
+[2021.02.19-15.11.55:573][670]LogNet: ReplicationDriverClass is null! Not using ReplicationDriver.
+[2021.02.19-15.11.55:573][670]LogNetCore: DDoS detection status: detection enabled: 0 analytics enabled: 0
+[2021.02.19-15.11.55:574][670]LogInit: WinSock: Socket queue. Rx: 131072 (config 131072) Tx: 131072 (config 131072)
+[2021.02.19-15.11.55:574][670]LogNet: Created socket for bind address: 0.0.0.0 on port 17777
+[2021.02.19-15.11.55:574][670]PacketHandlerLog: Loaded PacketHandler component: Engine.EngineHandlerComponentFactory (StatelessConnectHandlerComponent)
+[2021.02.19-15.11.55:574][670]LogNet: GameNetDriver IpNetDriver_0 IpNetDriver listening on port 17777
+[2021.02.19-15.11.55:575][670]LogActor: Warning: SetReplicates called on non-initialized actor BP_Rocket_C_0. Directly setting bReplicates is the correct procedure for pre-init actors.
+[2021.02.19-15.11.55:575][670]LogActor: Warning: SetReplicates called on non-initialized actor BP_Rocket_C_1. Directly setting bReplicates is the correct procedure for pre-init actors.
+[2021.02.19-15.11.55:575][670]LogActor: Warning: SetReplicates called on non-initialized actor BP_Rocket_C_2. Directly setting bReplicates is the correct procedure for pre-init actors.
+[2021.02.19-15.11.55:575][670]LogActor: Warning: SetReplicates called on non-initialized actor BP_Rocket_C_3. Directly setting bReplicates is the correct procedure for pre-init actors.
+[2021.02.19-15.11.55:575][670]LogActor: Warning: SetReplicates called on non-initialized actor BP_Rocket_C_4. Directly setting bReplicates is the correct procedure for pre-init actors.
+[2021.02.19-15.11.55:576][670]LogActor: Warning: SetReplicates called on non-initialized actor BP_Rocket_C_5. Directly setting bReplicates is the correct procedure for pre-init actors.
+[2021.02.19-15.11.55:576][670]LogActor: Warning: SetReplicates called on non-initialized actor BP_Rocket_C_6. Directly setting bReplicates is the correct procedure for pre-init actors.
+[2021.02.19-15.11.55:576][670]LogActor: Warning: SetReplicates called on non-initialized actor BP_Rocket_C_7. Directly setting bReplicates is the correct procedure for pre-init actors.
+[2021.02.19-15.11.55:577][670]PIE: Server logged in
+[2021.02.19-15.11.55:578][670]PIE: Play in editor total start time 0,179 seconds.
+[2021.02.19-15.11.55:579][670]LogAudio: Display: Creating Audio Device:                 Id: 3, Scope: Unique, Realtime: True
+[2021.02.19-15.11.55:579][670]LogAudioMixer: Display: Audio Mixer Platform Settings:
+[2021.02.19-15.11.55:579][670]LogAudioMixer: Display: 	Sample Rate:						  48000
+[2021.02.19-15.11.55:579][670]LogAudioMixer: Display: 	Callback Buffer Frame Size Requested: 1024
+[2021.02.19-15.11.55:579][670]LogAudioMixer: Display: 	Callback Buffer Frame Size To Use:	  1024
+[2021.02.19-15.11.55:579][670]LogAudioMixer: Display: 	Number of buffers to queue:			  2
+[2021.02.19-15.11.55:579][670]LogAudioMixer: Display: 	Max Channels (voices):				  32
+[2021.02.19-15.11.55:580][670]LogAudioMixer: Display: 	Number of Async Source Workers:		  0
+[2021.02.19-15.11.55:580][670]LogAudio: Display: AudioDevice MaxSources: 32
+[2021.02.19-15.11.55:580][670]LogAudio: Display: Using built-in audio occlusion.
+[2021.02.19-15.11.55:580][670]LogAudioMixer: Display: Initializing audio mixer.
+[2021.02.19-15.11.55:584][670]LogAudioMixer: Display: 0: FrontLeft
+[2021.02.19-15.11.55:584][670]LogAudioMixer: Display: 1: FrontRight
+[2021.02.19-15.11.55:706][670]LogAudioMixer: Display: Using Audio Device Speakers (Realtek(R) Audio)
+[2021.02.19-15.11.55:706][670]LogAudioMixer: Display: Initializing Sound Submixes...
+[2021.02.19-15.11.55:707][670]LogAudioMixer: Display: Creating Master Submix 'MasterSubmixDefault'
+[2021.02.19-15.11.55:707][670]LogAudioMixer: Display: Creating Master Submix 'MasterReverbSubmixDefault'
+[2021.02.19-15.11.55:707][670]LogAudioMixer: Display: Creating Master Submix 'MasterEQSubmixDefault'
+[2021.02.19-15.11.55:707][670]LogAudioMixer: FMixerPlatformXAudio2::StartAudioStream() called
+[2021.02.19-15.11.55:707][670]LogAudioMixer: Display: Output buffers initialized: Frames=1024, Channels=2, Samples=2048
+[2021.02.19-15.11.55:718][670]LogAudioMixer: Display: Starting AudioMixerPlatformInterface::RunInternal()
+[2021.02.19-15.11.55:718][670]LogAudioMixer: Display: FMixerPlatformXAudio2::SubmitBuffer() called for the first time
+[2021.02.19-15.11.55:718][670]LogInit: FAudioDevice initialized.
+[2021.02.19-15.11.55:718][670]LogAudio: Display: Audio Device (ID: 3) registered with world 'Untitled'.
+[2021.02.19-15.11.55:736][670]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2021.02.19-15.11.55:736][670]LogNet: Browse: 127.0.0.1:17777/Game/StarterContent/Maps/Minimal_Default
+[2021.02.19-15.11.55:737][670]LogInit: WinSock: Socket queue. Rx: 32768 (config 32768) Tx: 32768 (config 32768)
+[2021.02.19-15.11.55:737][670]LogNet: Created socket for bind address: 0.0.0.0 on port 0
+[2021.02.19-15.11.55:737][670]PacketHandlerLog: Loaded PacketHandler component: Engine.EngineHandlerComponentFactory (StatelessConnectHandlerComponent)
+[2021.02.19-15.11.55:737][670]LogNet: Game client on port 17777, rate 100000
+[2021.02.19-15.11.55:738][670]PIE: Client logged in
+[2021.02.19-15.11.55:740][670]PIE: Play in editor total start time 0,34 seconds.
+[2021.02.19-15.11.55:741][670]LogAudio: Display: Creating Audio Device:                 Id: 4, Scope: Unique, Realtime: True
+[2021.02.19-15.11.55:741][670]LogAudioMixer: Display: Audio Mixer Platform Settings:
+[2021.02.19-15.11.55:741][670]LogAudioMixer: Display: 	Sample Rate:						  48000
+[2021.02.19-15.11.55:741][670]LogAudioMixer: Display: 	Callback Buffer Frame Size Requested: 1024
+[2021.02.19-15.11.55:741][670]LogAudioMixer: Display: 	Callback Buffer Frame Size To Use:	  1024
+[2021.02.19-15.11.55:741][670]LogAudioMixer: Display: 	Number of buffers to queue:			  2
+[2021.02.19-15.11.55:742][670]LogAudioMixer: Display: 	Max Channels (voices):				  32
+[2021.02.19-15.11.55:742][670]LogAudioMixer: Display: 	Number of Async Source Workers:		  0
+[2021.02.19-15.11.55:742][670]LogAudio: Display: AudioDevice MaxSources: 32
+[2021.02.19-15.11.55:742][670]LogAudio: Display: Using built-in audio occlusion.
+[2021.02.19-15.11.55:742][670]LogAudioMixer: Display: Initializing audio mixer.
+[2021.02.19-15.11.55:746][670]LogAudioMixer: Display: 0: FrontLeft
+[2021.02.19-15.11.55:746][670]LogAudioMixer: Display: 1: FrontRight
+[2021.02.19-15.11.55:863][670]LogAudioMixer: Display: Using Audio Device Speakers (Realtek(R) Audio)
+[2021.02.19-15.11.55:863][670]LogAudioMixer: Display: Initializing Sound Submixes...
+[2021.02.19-15.11.55:863][670]LogAudioMixer: Display: Creating Master Submix 'MasterSubmixDefault'
+[2021.02.19-15.11.55:863][670]LogAudioMixer: Display: Creating Master Submix 'MasterReverbSubmixDefault'
+[2021.02.19-15.11.55:864][670]LogAudioMixer: Display: Creating Master Submix 'MasterEQSubmixDefault'
+[2021.02.19-15.11.55:864][670]LogAudioMixer: FMixerPlatformXAudio2::StartAudioStream() called
+[2021.02.19-15.11.55:864][670]LogAudioMixer: Display: Output buffers initialized: Frames=1024, Channels=2, Samples=2048
+[2021.02.19-15.11.55:875][670]LogAudioMixer: Display: Starting AudioMixerPlatformInterface::RunInternal()
+[2021.02.19-15.11.55:875][670]LogAudioMixer: Display: FMixerPlatformXAudio2::SubmitBuffer() called for the first time
+[2021.02.19-15.11.55:875][670]LogInit: FAudioDevice initialized.
+[2021.02.19-15.11.55:875][670]LogAudio: Display: Audio Device (ID: 4) registered with world 'Untitled'.
+[2021.02.19-15.11.55:893][670]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2021.02.19-15.11.55:893][670]LogNet: Browse: 127.0.0.1:17777/Game/StarterContent/Maps/Minimal_Default
+[2021.02.19-15.11.55:894][670]LogInit: WinSock: Socket queue. Rx: 32768 (config 32768) Tx: 32768 (config 32768)
+[2021.02.19-15.11.55:894][670]LogNet: Created socket for bind address: 0.0.0.0 on port 0
+[2021.02.19-15.11.55:894][670]PacketHandlerLog: Loaded PacketHandler component: Engine.EngineHandlerComponentFactory (StatelessConnectHandlerComponent)
+[2021.02.19-15.11.55:894][670]LogNet: Game client on port 17777, rate 100000
+[2021.02.19-15.11.55:895][670]PIE: Client logged in
+[2021.02.19-15.11.55:897][670]PIE: Play in editor total start time 0,497 seconds.
+[2021.02.19-15.11.55:898][670]LogAudio: Display: Creating Audio Device:                 Id: 5, Scope: Unique, Realtime: True
+[2021.02.19-15.11.55:898][670]LogAudioMixer: Display: Audio Mixer Platform Settings:
+[2021.02.19-15.11.55:898][670]LogAudioMixer: Display: 	Sample Rate:						  48000
+[2021.02.19-15.11.55:898][670]LogAudioMixer: Display: 	Callback Buffer Frame Size Requested: 1024
+[2021.02.19-15.11.55:898][670]LogAudioMixer: Display: 	Callback Buffer Frame Size To Use:	  1024
+[2021.02.19-15.11.55:898][670]LogAudioMixer: Display: 	Number of buffers to queue:			  2
+[2021.02.19-15.11.55:899][670]LogAudioMixer: Display: 	Max Channels (voices):				  32
+[2021.02.19-15.11.55:899][670]LogAudioMixer: Display: 	Number of Async Source Workers:		  0
+[2021.02.19-15.11.55:899][670]LogAudio: Display: AudioDevice MaxSources: 32
+[2021.02.19-15.11.55:899][670]LogAudio: Display: Using built-in audio occlusion.
+[2021.02.19-15.11.55:899][670]LogAudioMixer: Display: Initializing audio mixer.
+[2021.02.19-15.11.55:904][670]LogAudioMixer: Display: 0: FrontLeft
+[2021.02.19-15.11.55:904][670]LogAudioMixer: Display: 1: FrontRight
+[2021.02.19-15.11.56:024][670]LogAudioMixer: Display: Using Audio Device Speakers (Realtek(R) Audio)
+[2021.02.19-15.11.56:025][670]LogAudioMixer: Display: Initializing Sound Submixes...
+[2021.02.19-15.11.56:025][670]LogAudioMixer: Display: Creating Master Submix 'MasterSubmixDefault'
+[2021.02.19-15.11.56:025][670]LogAudioMixer: Display: Creating Master Submix 'MasterReverbSubmixDefault'
+[2021.02.19-15.11.56:026][670]LogAudioMixer: Display: Creating Master Submix 'MasterEQSubmixDefault'
+[2021.02.19-15.11.56:026][670]LogAudioMixer: FMixerPlatformXAudio2::StartAudioStream() called
+[2021.02.19-15.11.56:026][670]LogAudioMixer: Display: Output buffers initialized: Frames=1024, Channels=2, Samples=2048
+[2021.02.19-15.11.56:035][670]LogAudioMixer: Display: Starting AudioMixerPlatformInterface::RunInternal()
+[2021.02.19-15.11.56:036][670]LogAudioMixer: Display: FMixerPlatformXAudio2::SubmitBuffer() called for the first time
+[2021.02.19-15.11.56:036][670]LogInit: FAudioDevice initialized.
+[2021.02.19-15.11.56:036][670]LogAudio: Display: Audio Device (ID: 5) registered with world 'Untitled'.
+[2021.02.19-15.11.56:051][670]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2021.02.19-15.11.56:051][670]LogNet: Browse: 127.0.0.1:17777/Game/StarterContent/Maps/Minimal_Default
+[2021.02.19-15.11.56:051][670]LogInit: WinSock: Socket queue. Rx: 32768 (config 32768) Tx: 32768 (config 32768)
+[2021.02.19-15.11.56:052][670]LogNet: Created socket for bind address: 0.0.0.0 on port 0
+[2021.02.19-15.11.56:052][670]PacketHandlerLog: Loaded PacketHandler component: Engine.EngineHandlerComponentFactory (StatelessConnectHandlerComponent)
+[2021.02.19-15.11.56:052][670]LogNet: Game client on port 17777, rate 100000
+[2021.02.19-15.11.56:053][670]PIE: Client logged in
+[2021.02.19-15.11.56:054][670]PIE: Play in editor total start time 0,655 seconds.
+[2021.02.19-15.11.56:807][672]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:58489
+[2021.02.19-15.11.56:807][672]LogHandshake: SendConnectChallenge. Timestamp: 1.418696, Cookie: 017005158185152083021140058189035134184229046144027143120118
+[2021.02.19-15.11.56:809][672]LogHandshake: SendChallengeResponse. Timestamp: 1.418696, Cookie: 017005158185152083021140058189035134184229046144027143120118
+[2021.02.19-15.11.56:821][673]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:58489
+[2021.02.19-15.11.56:821][673]LogHandshake: SendChallengeAck. InCookie: 017005158185152083021140058189035134184229046144027143120118
+[2021.02.19-15.11.56:821][673]LogNet: Server accepting post-challenge connection from: 127.0.0.1:58489
+[2021.02.19-15.11.56:821][673]PacketHandlerLog: Loaded PacketHandler component: Engine.EngineHandlerComponentFactory (StatelessConnectHandlerComponent)
+[2021.02.19-15.11.56:821][673]LogNet: NotifyAcceptedConnection: Name: My_Map, TimeStamp: 02/19/21 16:11:56, [UNetConnection] RemoteAddr: 127.0.0.1:58489, Name: IpConnection_3, Driver: GameNetDriver IpNetDriver_0, IsServer: YES, PC: NULL, Owner: NULL, UniqueId: INVALID
+[2021.02.19-15.11.56:821][673]LogNet: AddClientConnection: Added client connection: [UNetConnection] RemoteAddr: 127.0.0.1:58489, Name: IpConnection_3, Driver: GameNetDriver IpNetDriver_0, IsServer: YES, PC: NULL, Owner: NULL, UniqueId: INVALID
+[2021.02.19-15.11.56:822][673]LogNetVersion: Network_Assignment 1.0.0.0, NetCL: 14830424, EngineNetVer: 16, GameNetVer: 0 (Checksum: 186023228)
+[2021.02.19-15.11.56:822][673]LogNet: UPendingNetGame::SendInitialJoin: Sending hello. [UNetConnection] RemoteAddr: 127.0.0.1:17777, Name: IpConnection_0, Driver: PendingNetDriver IpNetDriver_1, IsServer: NO, PC: NULL, Owner: NULL, UniqueId: INVALID
+[2021.02.19-15.11.56:904][683]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:58490
+[2021.02.19-15.11.56:904][683]LogHandshake: SendConnectChallenge. Timestamp: 1.516594, Cookie: 035220025205241221088030141165158184221124025132130113120031
+[2021.02.19-15.11.56:905][683]LogHandshake: SendChallengeResponse. Timestamp: 1.516594, Cookie: 035220025205241221088030141165158184221124025132130113120031
+[2021.02.19-15.11.56:912][684]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:58490
+[2021.02.19-15.11.56:913][684]LogHandshake: SendChallengeAck. InCookie: 035220025205241221088030141165158184221124025132130113120031
+[2021.02.19-15.11.56:913][684]LogNet: Server accepting post-challenge connection from: 127.0.0.1:58490
+[2021.02.19-15.11.56:913][684]PacketHandlerLog: Loaded PacketHandler component: Engine.EngineHandlerComponentFactory (StatelessConnectHandlerComponent)
+[2021.02.19-15.11.56:913][684]LogNet: NotifyAcceptedConnection: Name: My_Map, TimeStamp: 02/19/21 16:11:56, [UNetConnection] RemoteAddr: 127.0.0.1:58490, Name: IpConnection_4, Driver: GameNetDriver IpNetDriver_0, IsServer: YES, PC: NULL, Owner: NULL, UniqueId: INVALID
+[2021.02.19-15.11.56:913][684]LogNet: AddClientConnection: Added client connection: [UNetConnection] RemoteAddr: 127.0.0.1:58490, Name: IpConnection_4, Driver: GameNetDriver IpNetDriver_0, IsServer: YES, PC: NULL, Owner: NULL, UniqueId: INVALID
+[2021.02.19-15.11.56:914][684]LogNet: UPendingNetGame::SendInitialJoin: Sending hello. [UNetConnection] RemoteAddr: 127.0.0.1:17777, Name: IpConnection_1, Driver: PendingNetDriver IpNetDriver_2, IsServer: NO, PC: NULL, Owner: NULL, UniqueId: INVALID
+[2021.02.19-15.11.56:954][689]LogNet: NotifyAcceptingChannel Control 0 server World /Game/Maps/UEDPIE_0_MY_Map.My_Map: Accepted
+[2021.02.19-15.11.56:954][689]LogNet: Remote platform little endian=1
+[2021.02.19-15.11.56:954][689]LogNet: This platform little endian=1
+[2021.02.19-15.11.57:046][700]LogNet: NotifyAcceptingChannel Control 0 server World /Game/Maps/UEDPIE_0_MY_Map.My_Map: Accepted
+[2021.02.19-15.11.57:046][700]LogNet: Remote platform little endian=1
+[2021.02.19-15.11.57:046][700]LogNet: This platform little endian=1
+[2021.02.19-15.11.57:070][703]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:58491
+[2021.02.19-15.11.57:070][703]LogHandshake: SendConnectChallenge. Timestamp: 1.683264, Cookie: 035136152171221165093134053098051145197255059145054226015067
+[2021.02.19-15.11.57:072][703]LogHandshake: SendChallengeResponse. Timestamp: 1.683264, Cookie: 035136152171221165093134053098051145197255059145054226015067
+[2021.02.19-15.11.57:079][704]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:58491
+[2021.02.19-15.11.57:079][704]LogHandshake: SendChallengeAck. InCookie: 035136152171221165093134053098051145197255059145054226015067
+[2021.02.19-15.11.57:079][704]LogNet: Server accepting post-challenge connection from: 127.0.0.1:58491
+[2021.02.19-15.11.57:080][704]PacketHandlerLog: Loaded PacketHandler component: Engine.EngineHandlerComponentFactory (StatelessConnectHandlerComponent)
+[2021.02.19-15.11.57:080][704]LogNet: NotifyAcceptedConnection: Name: My_Map, TimeStamp: 02/19/21 16:11:57, [UNetConnection] RemoteAddr: 127.0.0.1:58491, Name: IpConnection_5, Driver: GameNetDriver IpNetDriver_0, IsServer: YES, PC: NULL, Owner: NULL, UniqueId: INVALID
+[2021.02.19-15.11.57:080][704]LogNet: AddClientConnection: Added client connection: [UNetConnection] RemoteAddr: 127.0.0.1:58491, Name: IpConnection_5, Driver: GameNetDriver IpNetDriver_0, IsServer: YES, PC: NULL, Owner: NULL, UniqueId: INVALID
+[2021.02.19-15.11.57:081][704]LogNet: UPendingNetGame::SendInitialJoin: Sending hello. [UNetConnection] RemoteAddr: 127.0.0.1:17777, Name: IpConnection_2, Driver: PendingNetDriver IpNetDriver_3, IsServer: NO, PC: NULL, Owner: NULL, UniqueId: INVALID
+[2021.02.19-15.11.57:088][705]LogOnline: OSS: Creating online subsystem instance for: :Context_2
+[2021.02.19-15.11.57:195][718]LogNet: NotifyAcceptingChannel Control 0 server World /Game/Maps/UEDPIE_0_MY_Map.My_Map: Accepted
+[2021.02.19-15.11.57:195][718]LogNet: Remote platform little endian=1
+[2021.02.19-15.11.57:195][718]LogNet: This platform little endian=1
+[2021.02.19-15.11.57:196][718]LogOnline: OSS: Creating online subsystem instance for: :Context_3
+[2021.02.19-15.11.57:229][722]LogNet: Login request: ?Name=DESKTOP-K41CE6A-521287D248234FEDD8F08086CA484DD6 userId: NULL:DESKTOP-K41CE6A-521287D248234FEDD8F08086CA484DD6 platform: NULL
+[2021.02.19-15.11.57:313][732]LogOnline: OSS: Creating online subsystem instance for: :Context_4
+[2021.02.19-15.11.57:321][733]LogNet: Login request: ?Name=DESKTOP-K41CE6A-709B9F044D555FCB08D3F3893A3CA6A4 userId: NULL:DESKTOP-K41CE6A-709B9F044D555FCB08D3F3893A3CA6A4 platform: NULL
+[2021.02.19-15.11.57:372][739]LogNet: Welcomed by server (Level: /Game/Maps/UEDPIE_0_MY_Map, Game: /Game/Blueprints/BP_Network_AssignmentGameMode.BP_Network_AssignmentGameMode_C)
+[2021.02.19-15.11.57:372][739]LogLoad: LoadMap: 127.0.0.1:17777/Game/Maps/UEDPIE_0_MY_Map?game=/Game/Blueprints/BP_Network_AssignmentGameMode.BP_Network_AssignmentGameMode_C
+[2021.02.19-15.11.57:372][739]LogWorld: BeginTearingDown for /Temp/Untitled_1
+[2021.02.19-15.11.57:372][739]LogWorld: UWorld::CleanupWorld for Untitled, bSessionEnded=true, bCleanupResources=true
+[2021.02.19-15.11.57:372][739]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2021.02.19-15.11.57:375][739]LogAudio: Display: Audio Device unregistered from world 'None'.
+[2021.02.19-15.11.57:377][739]LogUObjectHash: Compacting FUObjectHashTables data took   0.56ms
+[2021.02.19-15.11.57:378][739]LogActor: Warning: SetReplicates called on non-initialized actor BP_Pickup_2. Directly setting bReplicates is the correct procedure for pre-init actors.
+[2021.02.19-15.11.57:382][739]LogAudio: Display: Audio Device (ID: 3) registered with world 'My_Map'.
+[2021.02.19-15.11.57:383][739]LogAIModule: Creating AISystem for world My_Map
+[2021.02.19-15.11.57:383][739]LogWorld: Bringing World /Game/Maps/UEDPIE_1_MY_Map.My_Map up for play (max tick rate 0) at 2021.02.19-16.11.57
+[2021.02.19-15.11.57:384][739]LogWorld: Bringing up level for play took: 0.000447
+[2021.02.19-15.11.57:384][739]LogLoad: Took 0.011630 seconds to LoadMap(/Game/Maps/UEDPIE_0_MY_Map)
+[2021.02.19-15.11.57:465][747]LogNet: Welcomed by server (Level: /Game/Maps/UEDPIE_0_MY_Map, Game: /Game/Blueprints/BP_Network_AssignmentGameMode.BP_Network_AssignmentGameMode_C)
+[2021.02.19-15.11.57:465][747]LogLoad: LoadMap: 127.0.0.1:17777/Game/Maps/UEDPIE_0_MY_Map?game=/Game/Blueprints/BP_Network_AssignmentGameMode.BP_Network_AssignmentGameMode_C
+[2021.02.19-15.11.57:465][747]LogWorld: BeginTearingDown for /Temp/Untitled_2
+[2021.02.19-15.11.57:465][747]LogWorld: UWorld::CleanupWorld for Untitled, bSessionEnded=true, bCleanupResources=true
+[2021.02.19-15.11.57:465][747]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2021.02.19-15.11.57:469][747]LogAudio: Display: Audio Device unregistered from world 'None'.
+[2021.02.19-15.11.57:470][747]LogUObjectHash: Compacting FUObjectHashTables data took   0.54ms
+[2021.02.19-15.11.57:470][747]LogActor: Warning: SetReplicates called on non-initialized actor BP_Pickup_2. Directly setting bReplicates is the correct procedure for pre-init actors.
+[2021.02.19-15.11.57:473][747]LogAudio: Display: Audio Device (ID: 4) registered with world 'My_Map'.
+[2021.02.19-15.11.57:474][747]LogAIModule: Creating AISystem for world My_Map
+[2021.02.19-15.11.57:475][747]LogWorld: Bringing World /Game/Maps/UEDPIE_2_MY_Map.My_Map up for play (max tick rate 0) at 2021.02.19-16.11.57
+[2021.02.19-15.11.57:475][747]LogWorld: Bringing up level for play took: 0.000447
+[2021.02.19-15.11.57:476][747]LogLoad: Took 0.010336 seconds to LoadMap(/Game/Maps/UEDPIE_0_MY_Map)
+[2021.02.19-15.11.57:499][748]LogNet: Login request: ?Name=DESKTOP-K41CE6A-9DFEEEBB45EB5EC4142D11B7647CE4A3 userId: NULL:DESKTOP-K41CE6A-9DFEEEBB45EB5EC4142D11B7647CE4A3 platform: NULL
+[2021.02.19-15.11.57:549][754]LogNet: Client netspeed is 100000
+[2021.02.19-15.11.57:549][754]LogNet: Join request: /Game/StarterContent/Maps/Minimal_Default?Name=DESKTOP-K41CE6A-521287D248234FEDD8F08086CA484DD6?SplitscreenCount=1
+[2021.02.19-15.11.57:550][754]LogOnlineSession: Warning: OSS: No game present to join for session (GameSession)
+[2021.02.19-15.11.57:551][754]LogActor: Warning: SetReplicates called on non-initialized actor BP_Rocket_C_8. Directly setting bReplicates is the correct procedure for pre-init actors.
+[2021.02.19-15.11.57:551][754]LogActor: Warning: SetReplicates called on non-initialized actor BP_Rocket_C_9. Directly setting bReplicates is the correct procedure for pre-init actors.
+[2021.02.19-15.11.57:551][754]LogActor: Warning: SetReplicates called on non-initialized actor BP_Rocket_C_10. Directly setting bReplicates is the correct procedure for pre-init actors.
+[2021.02.19-15.11.57:551][754]LogActor: Warning: SetReplicates called on non-initialized actor BP_Rocket_C_11. Directly setting bReplicates is the correct procedure for pre-init actors.
+[2021.02.19-15.11.57:552][754]LogActor: Warning: SetReplicates called on non-initialized actor BP_Rocket_C_12. Directly setting bReplicates is the correct procedure for pre-init actors.
+[2021.02.19-15.11.57:552][754]LogActor: Warning: SetReplicates called on non-initialized actor BP_Rocket_C_13. Directly setting bReplicates is the correct procedure for pre-init actors.
+[2021.02.19-15.11.57:552][754]LogActor: Warning: SetReplicates called on non-initialized actor BP_Rocket_C_14. Directly setting bReplicates is the correct procedure for pre-init actors.
+[2021.02.19-15.11.57:552][754]LogActor: Warning: SetReplicates called on non-initialized actor BP_Rocket_C_15. Directly setting bReplicates is the correct procedure for pre-init actors.
+[2021.02.19-15.11.57:552][754]LogNet: Join succeeded: DESKTOP-K41CE6A-5212
+[2021.02.19-15.11.57:609][761]LogNet: Welcomed by server (Level: /Game/Maps/UEDPIE_0_MY_Map, Game: /Game/Blueprints/BP_Network_AssignmentGameMode.BP_Network_AssignmentGameMode_C)
+[2021.02.19-15.11.57:610][761]LogLoad: LoadMap: 127.0.0.1:17777/Game/Maps/UEDPIE_0_MY_Map?game=/Game/Blueprints/BP_Network_AssignmentGameMode.BP_Network_AssignmentGameMode_C
+[2021.02.19-15.11.57:610][761]LogWorld: BeginTearingDown for /Temp/Untitled_3
+[2021.02.19-15.11.57:610][761]LogWorld: UWorld::CleanupWorld for Untitled, bSessionEnded=true, bCleanupResources=true
+[2021.02.19-15.11.57:610][761]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2021.02.19-15.11.57:613][761]LogAudio: Display: Audio Device unregistered from world 'None'.
+[2021.02.19-15.11.57:614][761]LogUObjectHash: Compacting FUObjectHashTables data took   0.52ms
+[2021.02.19-15.11.57:616][761]LogActor: Warning: SetReplicates called on non-initialized actor BP_Pickup_2. Directly setting bReplicates is the correct procedure for pre-init actors.
+[2021.02.19-15.11.57:619][761]LogAudio: Display: Audio Device (ID: 5) registered with world 'My_Map'.
+[2021.02.19-15.11.57:620][761]LogAIModule: Creating AISystem for world My_Map
+[2021.02.19-15.11.57:621][761]LogWorld: Bringing World /Game/Maps/UEDPIE_3_MY_Map.My_Map up for play (max tick rate 0) at 2021.02.19-16.11.57
+[2021.02.19-15.11.57:622][761]LogWorld: Bringing up level for play took: 0.000612
+[2021.02.19-15.11.57:622][761]LogLoad: Took 0.012227 seconds to LoadMap(/Game/Maps/UEDPIE_0_MY_Map)
+[2021.02.19-15.11.57:640][762]LogNet: Client netspeed is 100000
+[2021.02.19-15.11.57:641][762]LogNet: Join request: /Game/StarterContent/Maps/Minimal_Default?Name=DESKTOP-K41CE6A-709B9F044D555FCB08D3F3893A3CA6A4?SplitscreenCount=1
+[2021.02.19-15.11.57:641][762]LogOnlineSession: Warning: OSS: No game present to join for session (GameSession)
+[2021.02.19-15.11.57:642][762]LogActor: Warning: SetReplicates called on non-initialized actor BP_Rocket_C_16. Directly setting bReplicates is the correct procedure for pre-init actors.
+[2021.02.19-15.11.57:642][762]LogActor: Warning: SetReplicates called on non-initialized actor BP_Rocket_C_17. Directly setting bReplicates is the correct procedure for pre-init actors.
+[2021.02.19-15.11.57:643][762]LogActor: Warning: SetReplicates called on non-initialized actor BP_Rocket_C_18. Directly setting bReplicates is the correct procedure for pre-init actors.
+[2021.02.19-15.11.57:643][762]LogActor: Warning: SetReplicates called on non-initialized actor BP_Rocket_C_19. Directly setting bReplicates is the correct procedure for pre-init actors.
+[2021.02.19-15.11.57:643][762]LogActor: Warning: SetReplicates called on non-initialized actor BP_Rocket_C_20. Directly setting bReplicates is the correct procedure for pre-init actors.
+[2021.02.19-15.11.57:643][762]LogActor: Warning: SetReplicates called on non-initialized actor BP_Rocket_C_21. Directly setting bReplicates is the correct procedure for pre-init actors.
+[2021.02.19-15.11.57:643][762]LogActor: Warning: SetReplicates called on non-initialized actor BP_Rocket_C_22. Directly setting bReplicates is the correct procedure for pre-init actors.
+[2021.02.19-15.11.57:643][762]LogActor: Warning: SetReplicates called on non-initialized actor BP_Rocket_C_23. Directly setting bReplicates is the correct procedure for pre-init actors.
+[2021.02.19-15.11.57:644][762]LogNet: Join succeeded: DESKTOP-K41CE6A-709B
+[2021.02.19-15.11.57:687][767]LogActor: Warning: SetReplicates called on non-initialized actor BP_Rocket_C_0. Directly setting bReplicates is the correct procedure for pre-init actors.
+[2021.02.19-15.11.57:728][772]LogActor: Warning: SetReplicates called on non-initialized actor BP_Rocket_C_1. Directly setting bReplicates is the correct procedure for pre-init actors.
+[2021.02.19-15.11.57:729][772]LogActor: Warning: SetReplicates called on non-initialized actor BP_Rocket_C_2. Directly setting bReplicates is the correct procedure for pre-init actors.
+[2021.02.19-15.11.57:729][772]LogActor: Warning: SetReplicates called on non-initialized actor BP_Rocket_C_3. Directly setting bReplicates is the correct procedure for pre-init actors.
+[2021.02.19-15.11.57:729][772]LogActor: Warning: SetReplicates called on non-initialized actor BP_Rocket_C_4. Directly setting bReplicates is the correct procedure for pre-init actors.
+[2021.02.19-15.11.57:761][776]LogNet: Client netspeed is 100000
+[2021.02.19-15.11.57:762][776]LogActor: Warning: SetReplicates called on non-initialized actor BP_Rocket_C_5. Directly setting bReplicates is the correct procedure for pre-init actors.
+[2021.02.19-15.11.57:762][776]LogActor: Warning: SetReplicates called on non-initialized actor BP_Rocket_C_6. Directly setting bReplicates is the correct procedure for pre-init actors.
+[2021.02.19-15.11.57:763][776]LogActor: Warning: SetReplicates called on non-initialized actor BP_Rocket_C_7. Directly setting bReplicates is the correct procedure for pre-init actors.
+[2021.02.19-15.11.57:763][776]LogActor: Warning: SetReplicates called on non-initialized actor BP_Rocket_C_8. Directly setting bReplicates is the correct procedure for pre-init actors.
+[2021.02.19-15.11.57:763][776]LogActor: Warning: SetReplicates called on non-initialized actor BP_Rocket_C_9. Directly setting bReplicates is the correct procedure for pre-init actors.
+[2021.02.19-15.11.57:786][779]LogNet: Join request: /Game/StarterContent/Maps/Minimal_Default?Name=DESKTOP-K41CE6A-9DFEEEBB45EB5EC4142D11B7647CE4A3?SplitscreenCount=1
+[2021.02.19-15.11.57:787][779]LogOnlineSession: Warning: OSS: No game present to join for session (GameSession)
+[2021.02.19-15.11.57:788][779]LogActor: Warning: SetReplicates called on non-initialized actor BP_Rocket_C_24. Directly setting bReplicates is the correct procedure for pre-init actors.
+[2021.02.19-15.11.57:788][779]LogActor: Warning: SetReplicates called on non-initialized actor BP_Rocket_C_25. Directly setting bReplicates is the correct procedure for pre-init actors.
+[2021.02.19-15.11.57:788][779]LogActor: Warning: SetReplicates called on non-initialized actor BP_Rocket_C_26. Directly setting bReplicates is the correct procedure for pre-init actors.
+[2021.02.19-15.11.57:788][779]LogActor: Warning: SetReplicates called on non-initialized actor BP_Rocket_C_27. Directly setting bReplicates is the correct procedure for pre-init actors.
+[2021.02.19-15.11.57:789][779]LogActor: Warning: SetReplicates called on non-initialized actor BP_Rocket_C_28. Directly setting bReplicates is the correct procedure for pre-init actors.
+[2021.02.19-15.11.57:789][779]LogActor: Warning: SetReplicates called on non-initialized actor BP_Rocket_C_29. Directly setting bReplicates is the correct procedure for pre-init actors.
+[2021.02.19-15.11.57:789][779]LogActor: Warning: SetReplicates called on non-initialized actor BP_Rocket_C_30. Directly setting bReplicates is the correct procedure for pre-init actors.
+[2021.02.19-15.11.57:789][779]LogActor: Warning: SetReplicates called on non-initialized actor BP_Rocket_C_31. Directly setting bReplicates is the correct procedure for pre-init actors.
+[2021.02.19-15.11.57:789][779]LogNet: Join succeeded: DESKTOP-K41CE6A-9DFE
+[2021.02.19-15.11.57:792][779]LogActor: Warning: SetReplicates called on non-initialized actor BP_Rocket_C_0. Directly setting bReplicates is the correct procedure for pre-init actors.
+[2021.02.19-15.11.57:792][779]LogActor: Warning: SetReplicates called on non-initialized actor BP_Rocket_C_1. Directly setting bReplicates is the correct procedure for pre-init actors.
+[2021.02.19-15.11.57:792][779]LogActor: Warning: SetReplicates called on non-initialized actor BP_Rocket_C_2. Directly setting bReplicates is the correct procedure for pre-init actors.
+[2021.02.19-15.11.57:827][783]LogActor: Warning: SetReplicates called on non-initialized actor BP_Rocket_C_3. Directly setting bReplicates is the correct procedure for pre-init actors.
+[2021.02.19-15.11.57:843][785]LogActor: Warning: SetReplicates called on non-initialized actor BP_Rocket_C_10. Directly setting bReplicates is the correct procedure for pre-init actors.
+[2021.02.19-15.11.57:844][785]LogActor: Warning: SetReplicates called on non-initialized actor BP_Rocket_C_11. Directly setting bReplicates is the correct procedure for pre-init actors.
+[2021.02.19-15.11.57:844][785]LogActor: Warning: SetReplicates called on non-initialized actor BP_Rocket_C_12. Directly setting bReplicates is the correct procedure for pre-init actors.
+[2021.02.19-15.11.57:844][785]LogActor: Warning: SetReplicates called on non-initialized actor BP_Rocket_C_13. Directly setting bReplicates is the correct procedure for pre-init actors.
+[2021.02.19-15.11.57:844][785]LogActor: Warning: SetReplicates called on non-initialized actor BP_Rocket_C_14. Directly setting bReplicates is the correct procedure for pre-init actors.
+[2021.02.19-15.11.57:844][785]LogActor: Warning: SetReplicates called on non-initialized actor BP_Rocket_C_15. Directly setting bReplicates is the correct procedure for pre-init actors.
+[2021.02.19-15.11.57:845][785]LogActor: Warning: SetReplicates called on non-initialized actor BP_Rocket_C_16. Directly setting bReplicates is the correct procedure for pre-init actors.
+[2021.02.19-15.11.57:845][785]LogActor: Warning: SetReplicates called on non-initialized actor BP_Rocket_C_17. Directly setting bReplicates is the correct procedure for pre-init actors.
+[2021.02.19-15.11.57:845][785]LogActor: Warning: SetReplicates called on non-initialized actor BP_Rocket_C_18. Directly setting bReplicates is the correct procedure for pre-init actors.
+[2021.02.19-15.11.57:846][785]LogActor: Warning: SetReplicates called on non-initialized actor BP_Rocket_C_4. Directly setting bReplicates is the correct procedure for pre-init actors.
+[2021.02.19-15.11.57:846][785]LogActor: Warning: SetReplicates called on non-initialized actor BP_Rocket_C_5. Directly setting bReplicates is the correct procedure for pre-init actors.
+[2021.02.19-15.11.57:846][785]LogActor: Warning: SetReplicates called on non-initialized actor BP_Rocket_C_6. Directly setting bReplicates is the correct procedure for pre-init actors.
+[2021.02.19-15.11.57:846][785]LogActor: Warning: SetReplicates called on non-initialized actor BP_Rocket_C_7. Directly setting bReplicates is the correct procedure for pre-init actors.
+[2021.02.19-15.11.57:846][785]LogActor: Warning: SetReplicates called on non-initialized actor BP_Rocket_C_8. Directly setting bReplicates is the correct procedure for pre-init actors.
+[2021.02.19-15.11.57:846][785]LogActor: Warning: SetReplicates called on non-initialized actor BP_Rocket_C_9. Directly setting bReplicates is the correct procedure for pre-init actors.
+[2021.02.19-15.11.57:846][785]LogActor: Warning: SetReplicates called on non-initialized actor BP_Rocket_C_10. Directly setting bReplicates is the correct procedure for pre-init actors.
+[2021.02.19-15.11.57:847][785]LogActor: Warning: SetReplicates called on non-initialized actor BP_Rocket_C_11. Directly setting bReplicates is the correct procedure for pre-init actors.
+[2021.02.19-15.11.57:847][785]LogActor: Warning: SetReplicates called on non-initialized actor BP_Rocket_C_12. Directly setting bReplicates is the correct procedure for pre-init actors.
+[2021.02.19-15.11.57:847][785]LogActor: Warning: SetReplicates called on non-initialized actor BP_Rocket_C_13. Directly setting bReplicates is the correct procedure for pre-init actors.
+[2021.02.19-15.11.57:847][785]LogActor: Warning: SetReplicates called on non-initialized actor BP_Rocket_C_14. Directly setting bReplicates is the correct procedure for pre-init actors.
+[2021.02.19-15.11.57:847][785]LogActor: Warning: SetReplicates called on non-initialized actor BP_Rocket_C_15. Directly setting bReplicates is the correct procedure for pre-init actors.
+[2021.02.19-15.11.57:847][785]LogActor: Warning: SetReplicates called on non-initialized actor BP_Rocket_C_16. Directly setting bReplicates is the correct procedure for pre-init actors.
+[2021.02.19-15.11.57:848][785]LogActor: Warning: SetReplicates called on non-initialized actor BP_Rocket_C_17. Directly setting bReplicates is the correct procedure for pre-init actors.
+[2021.02.19-15.11.57:874][788]LogActor: Warning: SetReplicates called on non-initialized actor BP_Rocket_C_18. Directly setting bReplicates is the correct procedure for pre-init actors.
+[2021.02.19-15.11.57:875][788]LogActor: Warning: SetReplicates called on non-initialized actor BP_Rocket_C_19. Directly setting bReplicates is the correct procedure for pre-init actors.
+[2021.02.19-15.11.57:875][788]LogActor: Warning: SetReplicates called on non-initialized actor BP_Rocket_C_20. Directly setting bReplicates is the correct procedure for pre-init actors.
+[2021.02.19-15.11.57:875][788]LogActor: Warning: SetReplicates called on non-initialized actor BP_Rocket_C_21. Directly setting bReplicates is the correct procedure for pre-init actors.
+[2021.02.19-15.11.57:891][790]LogActor: Warning: SetReplicates called on non-initialized actor BP_Rocket_C_19. Directly setting bReplicates is the correct procedure for pre-init actors.
+[2021.02.19-15.11.57:891][790]LogActor: Warning: SetReplicates called on non-initialized actor BP_Rocket_C_22. Directly setting bReplicates is the correct procedure for pre-init actors.
+[2021.02.19-15.11.57:892][790]LogActor: Warning: SetReplicates called on non-initialized actor BP_Rocket_C_23. Directly setting bReplicates is the correct procedure for pre-init actors.
+[2021.02.19-15.11.57:932][795]LogActor: Warning: SetReplicates called on non-initialized actor BP_Rocket_C_20. Directly setting bReplicates is the correct procedure for pre-init actors.
+[2021.02.19-15.11.57:933][795]LogActor: Warning: SetReplicates called on non-initialized actor BP_Rocket_C_21. Directly setting bReplicates is the correct procedure for pre-init actors.
+[2021.02.19-15.11.57:933][795]LogActor: Warning: SetReplicates called on non-initialized actor BP_Rocket_C_22. Directly setting bReplicates is the correct procedure for pre-init actors.
+[2021.02.19-15.11.57:933][795]LogActor: Warning: SetReplicates called on non-initialized actor BP_Rocket_C_23. Directly setting bReplicates is the correct procedure for pre-init actors.
+[2021.02.19-15.11.57:933][795]LogOnlineSession: Warning: OSS: No game present to join for session (GameSession)
+[2021.02.19-15.11.57:934][795]LogActor: Warning: SetReplicates called on non-initialized actor BP_Rocket_C_24. Directly setting bReplicates is the correct procedure for pre-init actors.
+[2021.02.19-15.11.57:934][795]LogActor: Warning: SetReplicates called on non-initialized actor BP_Rocket_C_25. Directly setting bReplicates is the correct procedure for pre-init actors.
+[2021.02.19-15.11.57:934][795]LogActor: Warning: SetReplicates called on non-initialized actor BP_Rocket_C_26. Directly setting bReplicates is the correct procedure for pre-init actors.
+[2021.02.19-15.11.57:935][795]LogOnlineSession: Warning: OSS: No game present to join for session (GameSession)
+[2021.02.19-15.11.57:935][795]LogActor: Warning: SetReplicates called on non-initialized actor BP_Rocket_C_24. Directly setting bReplicates is the correct procedure for pre-init actors.
+[2021.02.19-15.11.57:935][795]LogActor: Warning: SetReplicates called on non-initialized actor BP_Rocket_C_25. Directly setting bReplicates is the correct procedure for pre-init actors.
+[2021.02.19-15.11.57:935][795]LogActor: Warning: SetReplicates called on non-initialized actor BP_Rocket_C_26. Directly setting bReplicates is the correct procedure for pre-init actors.
+[2021.02.19-15.11.57:935][795]LogActor: Warning: SetReplicates called on non-initialized actor BP_Rocket_C_27. Directly setting bReplicates is the correct procedure for pre-init actors.
+[2021.02.19-15.11.57:936][795]LogActor: Warning: SetReplicates called on non-initialized actor BP_Rocket_C_28. Directly setting bReplicates is the correct procedure for pre-init actors.
+[2021.02.19-15.11.57:936][795]LogActor: Warning: SetReplicates called on non-initialized actor BP_Rocket_C_29. Directly setting bReplicates is the correct procedure for pre-init actors.
+[2021.02.19-15.11.57:936][795]LogActor: Warning: SetReplicates called on non-initialized actor BP_Rocket_C_30. Directly setting bReplicates is the correct procedure for pre-init actors.
+[2021.02.19-15.11.57:937][795]LogActor: Warning: SetReplicates called on non-initialized actor BP_Rocket_C_0. Directly setting bReplicates is the correct procedure for pre-init actors.
+[2021.02.19-15.11.57:937][795]LogActor: Warning: SetReplicates called on non-initialized actor BP_Rocket_C_1. Directly setting bReplicates is the correct procedure for pre-init actors.
+[2021.02.19-15.11.57:937][795]LogActor: Warning: SetReplicates called on non-initialized actor BP_Rocket_C_2. Directly setting bReplicates is the correct procedure for pre-init actors.
+[2021.02.19-15.11.57:946][796]LogActor: Warning: SetReplicates called on non-initialized actor BP_Rocket_C_27. Directly setting bReplicates is the correct procedure for pre-init actors.
+[2021.02.19-15.11.57:972][799]LogActor: Warning: SetReplicates called on non-initialized actor BP_Rocket_C_3. Directly setting bReplicates is the correct procedure for pre-init actors.
+[2021.02.19-15.11.57:972][799]LogActor: Warning: SetReplicates called on non-initialized actor BP_Rocket_C_4. Directly setting bReplicates is the correct procedure for pre-init actors.
+[2021.02.19-15.11.57:972][799]LogActor: Warning: SetReplicates called on non-initialized actor BP_Rocket_C_5. Directly setting bReplicates is the correct procedure for pre-init actors.
+[2021.02.19-15.11.57:972][799]LogActor: Warning: SetReplicates called on non-initialized actor BP_Rocket_C_6. Directly setting bReplicates is the correct procedure for pre-init actors.
+[2021.02.19-15.11.57:973][799]LogActor: Warning: SetReplicates called on non-initialized actor BP_Rocket_C_7. Directly setting bReplicates is the correct procedure for pre-init actors.
+[2021.02.19-15.11.57:981][800]LogActor: Warning: SetReplicates called on non-initialized actor BP_Rocket_C_31. Directly setting bReplicates is the correct procedure for pre-init actors.
+[2021.02.19-15.11.58:006][803]LogActor: Warning: SetReplicates called on non-initialized actor BP_Rocket_C_8. Directly setting bReplicates is the correct procedure for pre-init actors.
+[2021.02.19-15.11.58:007][803]LogActor: Warning: SetReplicates called on non-initialized actor BP_Rocket_C_9. Directly setting bReplicates is the correct procedure for pre-init actors.
+[2021.02.19-15.11.58:007][803]LogActor: Warning: SetReplicates called on non-initialized actor BP_Rocket_C_10. Directly setting bReplicates is the correct procedure for pre-init actors.
+[2021.02.19-15.11.58:007][803]LogActor: Warning: SetReplicates called on non-initialized actor BP_Rocket_C_11. Directly setting bReplicates is the correct procedure for pre-init actors.
+[2021.02.19-15.11.58:008][803]LogActor: Warning: SetReplicates called on non-initialized actor BP_Rocket_C_12. Directly setting bReplicates is the correct procedure for pre-init actors.
+[2021.02.19-15.11.58:008][803]LogActor: Warning: SetReplicates called on non-initialized actor BP_Rocket_C_13. Directly setting bReplicates is the correct procedure for pre-init actors.
+[2021.02.19-15.11.58:008][803]LogActor: Warning: SetReplicates called on non-initialized actor BP_Rocket_C_14. Directly setting bReplicates is the correct procedure for pre-init actors.
+[2021.02.19-15.11.58:008][803]LogActor: Warning: SetReplicates called on non-initialized actor BP_Rocket_C_15. Directly setting bReplicates is the correct procedure for pre-init actors.
+[2021.02.19-15.11.58:008][803]LogActor: Warning: SetReplicates called on non-initialized actor BP_Rocket_C_16. Directly setting bReplicates is the correct procedure for pre-init actors.
+[2021.02.19-15.11.58:019][804]LogActor: Warning: SetReplicates called on non-initialized actor BP_Rocket_C_17. Directly setting bReplicates is the correct procedure for pre-init actors.
+[2021.02.19-15.11.58:019][804]LogActor: Warning: SetReplicates called on non-initialized actor BP_Rocket_C_18. Directly setting bReplicates is the correct procedure for pre-init actors.
+[2021.02.19-15.11.58:019][804]LogActor: Warning: SetReplicates called on non-initialized actor BP_Rocket_C_19. Directly setting bReplicates is the correct procedure for pre-init actors.
+[2021.02.19-15.11.58:020][804]LogActor: Warning: SetReplicates called on non-initialized actor BP_Rocket_C_20. Directly setting bReplicates is the correct procedure for pre-init actors.
+[2021.02.19-15.11.58:043][807]LogActor: Warning: SetReplicates called on non-initialized actor BP_Rocket_C_21. Directly setting bReplicates is the correct procedure for pre-init actors.
+[2021.02.19-15.11.58:044][807]LogActor: Warning: SetReplicates called on non-initialized actor BP_Rocket_C_22. Directly setting bReplicates is the correct procedure for pre-init actors.
+[2021.02.19-15.11.58:044][807]LogActor: Warning: SetReplicates called on non-initialized actor BP_Rocket_C_23. Directly setting bReplicates is the correct procedure for pre-init actors.
+[2021.02.19-15.11.58:044][807]LogActor: Warning: SetReplicates called on non-initialized actor BP_Rocket_C_24. Directly setting bReplicates is the correct procedure for pre-init actors.
+[2021.02.19-15.11.58:044][807]LogActor: Warning: SetReplicates called on non-initialized actor BP_Rocket_C_25. Directly setting bReplicates is the correct procedure for pre-init actors.
+[2021.02.19-15.11.58:044][807]LogActor: Warning: SetReplicates called on non-initialized actor BP_Rocket_C_26. Directly setting bReplicates is the correct procedure for pre-init actors.
+[2021.02.19-15.11.58:045][807]LogActor: Warning: SetReplicates called on non-initialized actor BP_Rocket_C_27. Directly setting bReplicates is the correct procedure for pre-init actors.
+[2021.02.19-15.11.58:045][807]LogActor: Warning: SetReplicates called on non-initialized actor BP_Rocket_C_28. Directly setting bReplicates is the correct procedure for pre-init actors.
+[2021.02.19-15.11.58:045][807]LogActor: Warning: SetReplicates called on non-initialized actor BP_Rocket_C_29. Directly setting bReplicates is the correct procedure for pre-init actors.
+[2021.02.19-15.11.58:078][811]LogActor: Warning: SetReplicates called on non-initialized actor BP_Rocket_C_30. Directly setting bReplicates is the correct procedure for pre-init actors.
+[2021.02.19-15.11.58:078][811]LogActor: Warning: SetReplicates called on non-initialized actor BP_Rocket_C_31. Directly setting bReplicates is the correct procedure for pre-init actors.
+[2021.02.19-15.11.58:210][827]LogActor: Warning: SetReplicates called on non-initialized actor BP_Rocket_C_28. Directly setting bReplicates is the correct procedure for pre-init actors.
+[2021.02.19-15.11.58:211][827]LogActor: Warning: SetReplicates called on non-initialized actor BP_Rocket_C_29. Directly setting bReplicates is the correct procedure for pre-init actors.
+[2021.02.19-15.11.58:212][827]LogActor: Warning: SetReplicates called on non-initialized actor BP_Rocket_C_30. Directly setting bReplicates is the correct procedure for pre-init actors.
+[2021.02.19-15.11.58:212][827]LogActor: Warning: SetReplicates called on non-initialized actor BP_Rocket_C_31. Directly setting bReplicates is the correct procedure for pre-init actors.
+[2021.02.19-15.11.58:779][895]LogOnlineSession: Warning: OSS: No game present to join for session (GameSession)
+[2021.02.19-15.11.58:796][897]LogOnlineSession: Warning: OSS: No game present to join for session (GameSession)
+[2021.02.19-15.11.58:808][898]LogOnlineSession: Warning: OSS: No game present to join for session (GameSession)
+[2021.02.19-15.11.58:941][914]LogOnlineSession: Warning: OSS: No game present to join for session (GameSession)
+[2021.02.19-15.11.59:694][  4]LogOnlineSession: Warning: OSS: No game present to join for session (GameSession)
+[2021.02.19-15.11.59:694][  4]LogOnlineSession: Warning: OSS: No game present to join for session (GameSession)
+[2021.02.19-15.11.59:826][ 20]LogOnlineSession: Warning: OSS: No game present to join for session (GameSession)
+[2021.02.19-15.11.59:909][ 30]LogOnlineSession: Warning: OSS: No game present to join for session (GameSession)
+[2021.02.19-15.11.59:934][ 33]LogOnlineSession: Warning: OSS: No game present to join for session (GameSession)
+[2021.02.19-15.12.01:053][127]LogOnlineSession: Warning: OSS: No game present to join for session (GameSession)
+[2021.02.19-15.12.31:485][540]LogTemp: Warning: Rocket: BP_Rocket_C_5
+[2021.02.19-15.12.31:726][569]LogTemp: Warning: Player: BP_MyPlayer_C_3 Health: 0
+[2021.02.19-15.12.31:726][569]LogNet: Warning: UNetDriver::ProcessRemoteFunction: No owning connection for actor BP_MyPlayer_C_3. Function Server_SyncHealth will not be processed.
+[2021.02.19-15.12.31:726][569]LogTemp: Warning: Player: BP_MyPlayer_C_2 Health: 0
+[2021.02.19-15.12.31:726][569]LogNet: Warning: UNetDriver::ProcessRemoteFunction: No owning connection for actor BP_MyPlayer_C_2. Function Server_SyncHealth will not be processed.
+[2021.02.19-15.12.31:726][569]LogTemp: Warning: Exploding Rocket: BP_Rocket_C_5
+[2021.02.19-15.12.31:850][584]LogTemp: Warning: Player: BP_MyPlayer_C_2 Health: 0
+[2021.02.19-15.12.31:850][584]LogTemp: Warning: Player: BP_MyPlayer_C_1 Health: 0
+[2021.02.19-15.12.31:850][584]LogTemp: Warning: Exploding Rocket: BP_Rocket_C_24
+[2021.02.19-15.12.32:110][615]LogTemp: Warning: Player: BP_MyPlayer_C_0 Health: 0
+[2021.02.19-15.12.32:110][615]LogTemp: Warning: Player: BP_MyPlayer_C_2 Health: 0
+[2021.02.19-15.12.32:110][615]LogNet: Warning: UNetDriver::ProcessRemoteFunction: No owning connection for actor BP_MyPlayer_C_2. Function Server_SyncHealth will not be processed.
+[2021.02.19-15.12.32:110][615]LogTemp: Warning: Exploding Rocket: BP_Rocket_C_27
+[2021.02.19-15.12.32:775][695]LogTemp: Warning: Player: BP_MyPlayer_C_3 Health: 0
+[2021.02.19-15.12.32:775][695]LogNet: Warning: UNetDriver::ProcessRemoteFunction: No owning connection for actor BP_MyPlayer_C_3. Function Server_SyncHealth will not be processed.
+[2021.02.19-15.12.32:775][695]LogTemp: Warning: Player: BP_MyPlayer_C_0 Health: 0
+[2021.02.19-15.12.32:776][695]LogTemp: Warning: Exploding Rocket: BP_Rocket_C_27
+[2021.02.19-15.12.34:054][848]LogTemp: Warning: Rocket: BP_Rocket_C_5
+[2021.02.19-15.12.34:220][868]LogTemp: Warning: Player: BP_MyPlayer_C_3 Health: 0
+[2021.02.19-15.12.34:220][868]LogNet: Warning: UNetDriver::ProcessRemoteFunction: No owning connection for actor BP_MyPlayer_C_3. Function Server_SyncHealth will not be processed.
+[2021.02.19-15.12.34:220][868]LogTemp: Warning: Exploding Rocket: BP_Rocket_C_5
+[2021.02.19-15.12.34:363][885]LogTemp: Warning: Player: BP_MyPlayer_C_2 Health: 0
+[2021.02.19-15.12.34:363][885]LogTemp: Warning: Exploding Rocket: BP_Rocket_C_24
+[2021.02.19-15.12.34:605][914]LogTemp: Warning: Player: BP_MyPlayer_C_0 Health: 0
+[2021.02.19-15.12.34:605][914]LogTemp: Warning: Exploding Rocket: BP_Rocket_C_27
+[2021.02.19-15.12.34:630][917]LogTemp: Warning: Player: BP_MyPlayer_C_3 Health: 0
+[2021.02.19-15.12.34:630][917]LogNet: Warning: UNetDriver::ProcessRemoteFunction: No owning connection for actor BP_MyPlayer_C_3. Function Server_SyncHealth will not be processed.
+[2021.02.19-15.12.34:630][917]LogTemp: Warning: Exploding Rocket: BP_Rocket_C_27
+[2021.02.19-15.13.05:292][ 49]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2021.02.19-15.13.05:292][ 49]LogWorld: BeginTearingDown for /Game/Maps/UEDPIE_3_MY_Map
+[2021.02.19-15.13.05:292][ 49]LogSlate: Window 'Network_Assignment Preview [NetMode: Client 3]  (64-bit/Windows) ' being destroyed
+[2021.02.19-15.13.05:295][ 49]LogWorld: UWorld::CleanupWorld for My_Map, bSessionEnded=true, bCleanupResources=true
+[2021.02.19-15.13.05:295][ 49]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2021.02.19-15.13.05:306][ 49]LogNet: World NetDriver shutdown IpNetDriver_3 [GameNetDriver]
+[2021.02.19-15.13.05:306][ 49]LogNet: DestroyNamedNetDriver IpNetDriver_3 [GameNetDriver]
+[2021.02.19-15.13.05:306][ 49]LogNet: UNetConnection::Close: [UNetConnection] RemoteAddr: 127.0.0.1:17777, Name: IpConnection_2, Driver: GameNetDriver IpNetDriver_3, IsServer: NO, PC: PlayerController_1, Owner: PlayerController_1, UniqueId: NULL:DESKTOP-K41CE6A-9DFEEEBB45EB5EC4142D11B7647CE4A3, Channels: 47, Time: 2021.02.19-15.13.05
+[2021.02.19-15.13.05:306][ 49]LogNet: UChannel::Close: Sending CloseBunch. ChIndex == 0. Name: [UChannel] ChIndex: 0, Closing: 0 [UNetConnection] RemoteAddr: 127.0.0.1:17777, Name: IpConnection_2, Driver: GameNetDriver IpNetDriver_3, IsServer: NO, PC: PlayerController_1, Owner: PlayerController_1, UniqueId: NULL:DESKTOP-K41CE6A-9DFEEEBB45EB5EC4142D11B7647CE4A3
+[2021.02.19-15.13.05:307][ 49]LogExit: GameNetDriver IpNetDriver_3 shut down
+[2021.02.19-15.13.05:308][ 49]LogWorld: BeginTearingDown for /Game/Maps/UEDPIE_2_MY_Map
+[2021.02.19-15.13.05:308][ 49]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2021.02.19-15.13.05:308][ 49]LogSlate: Window 'Network_Assignment Preview [NetMode: Client 2]  (64-bit/Windows) ' being destroyed
+[2021.02.19-15.13.05:310][ 49]LogWorld: UWorld::CleanupWorld for My_Map, bSessionEnded=true, bCleanupResources=true
+[2021.02.19-15.13.05:311][ 49]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2021.02.19-15.13.05:319][ 49]LogNet: World NetDriver shutdown IpNetDriver_2 [GameNetDriver]
+[2021.02.19-15.13.05:319][ 49]LogNet: DestroyNamedNetDriver IpNetDriver_2 [GameNetDriver]
+[2021.02.19-15.13.05:319][ 49]LogNet: UNetConnection::Close: [UNetConnection] RemoteAddr: 127.0.0.1:17777, Name: IpConnection_1, Driver: GameNetDriver IpNetDriver_2, IsServer: NO, PC: PlayerController_1, Owner: PlayerController_1, UniqueId: NULL:DESKTOP-K41CE6A-709B9F044D555FCB08D3F3893A3CA6A4, Channels: 47, Time: 2021.02.19-15.13.05
+[2021.02.19-15.13.05:319][ 49]LogNet: UChannel::Close: Sending CloseBunch. ChIndex == 0. Name: [UChannel] ChIndex: 0, Closing: 0 [UNetConnection] RemoteAddr: 127.0.0.1:17777, Name: IpConnection_1, Driver: GameNetDriver IpNetDriver_2, IsServer: NO, PC: PlayerController_1, Owner: PlayerController_1, UniqueId: NULL:DESKTOP-K41CE6A-709B9F044D555FCB08D3F3893A3CA6A4
+[2021.02.19-15.13.05:319][ 49]LogExit: GameNetDriver IpNetDriver_2 shut down
+[2021.02.19-15.13.05:321][ 49]LogWorld: BeginTearingDown for /Game/Maps/UEDPIE_1_MY_Map
+[2021.02.19-15.13.05:322][ 49]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2021.02.19-15.13.05:322][ 49]LogSlate: Window 'Network_Assignment Preview [NetMode: Client 1]  (64-bit/Windows) ' being destroyed
+[2021.02.19-15.13.05:324][ 49]LogWorld: UWorld::CleanupWorld for My_Map, bSessionEnded=true, bCleanupResources=true
+[2021.02.19-15.13.05:324][ 49]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2021.02.19-15.13.05:331][ 49]LogNet: World NetDriver shutdown IpNetDriver_1 [GameNetDriver]
+[2021.02.19-15.13.05:331][ 49]LogNet: DestroyNamedNetDriver IpNetDriver_1 [GameNetDriver]
+[2021.02.19-15.13.05:331][ 49]LogNet: UNetConnection::Close: [UNetConnection] RemoteAddr: 127.0.0.1:17777, Name: IpConnection_0, Driver: GameNetDriver IpNetDriver_1, IsServer: NO, PC: PlayerController_1, Owner: PlayerController_1, UniqueId: NULL:DESKTOP-K41CE6A-521287D248234FEDD8F08086CA484DD6, Channels: 47, Time: 2021.02.19-15.13.05
+[2021.02.19-15.13.05:331][ 49]LogNet: UChannel::Close: Sending CloseBunch. ChIndex == 0. Name: [UChannel] ChIndex: 0, Closing: 0 [UNetConnection] RemoteAddr: 127.0.0.1:17777, Name: IpConnection_0, Driver: GameNetDriver IpNetDriver_1, IsServer: NO, PC: PlayerController_1, Owner: PlayerController_1, UniqueId: NULL:DESKTOP-K41CE6A-521287D248234FEDD8F08086CA484DD6
+[2021.02.19-15.13.05:332][ 49]LogExit: GameNetDriver IpNetDriver_1 shut down
+[2021.02.19-15.13.05:333][ 49]LogWorld: BeginTearingDown for /Game/Maps/UEDPIE_0_MY_Map
+[2021.02.19-15.13.05:333][ 49]LogOnlineSession: Warning: OSS: No game present to leave for session (GameSession)
+[2021.02.19-15.13.05:333][ 49]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2021.02.19-15.13.05:333][ 49]LogSlate: Window 'Network_Assignment Preview [NetMode: Server]  (64-bit/Windows) ' being destroyed
+[2021.02.19-15.13.05:336][ 49]LogWorld: UWorld::CleanupWorld for My_Map, bSessionEnded=true, bCleanupResources=true
+[2021.02.19-15.13.05:336][ 49]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2021.02.19-15.13.05:345][ 49]LogNet: World NetDriver shutdown IpNetDriver_0 [GameNetDriver]
+[2021.02.19-15.13.05:346][ 49]LogNet: DestroyNamedNetDriver IpNetDriver_0 [GameNetDriver]
+[2021.02.19-15.13.05:346][ 49]LogNet: UNetConnection::Cleanup: Closing open connection. [UNetConnection] RemoteAddr: 127.0.0.1:58489, Name: IpConnection_3, Driver: GameNetDriver IpNetDriver_0, IsServer: YES, PC: PlayerController_1, Owner: PlayerController_1, UniqueId: NULL:DESKTOP-K41CE6A-521287D248234FEDD8F08086CA484DD6
+[2021.02.19-15.13.05:346][ 49]LogNet: UNetConnection::Close: [UNetConnection] RemoteAddr: 127.0.0.1:58489, Name: IpConnection_3, Driver: GameNetDriver IpNetDriver_0, IsServer: YES, PC: PlayerController_1, Owner: PlayerController_1, UniqueId: NULL:DESKTOP-K41CE6A-521287D248234FEDD8F08086CA484DD6, Channels: 47, Time: 2021.02.19-15.13.05
+[2021.02.19-15.13.05:346][ 49]LogNet: UChannel::Close: Sending CloseBunch. ChIndex == 0. Name: [UChannel] ChIndex: 0, Closing: 0 [UNetConnection] RemoteAddr: 127.0.0.1:58489, Name: IpConnection_3, Driver: GameNetDriver IpNetDriver_0, IsServer: YES, PC: PlayerController_1, Owner: PlayerController_1, UniqueId: NULL:DESKTOP-K41CE6A-521287D248234FEDD8F08086CA484DD6
+[2021.02.19-15.13.05:347][ 49]LogNet: UNetConnection::Cleanup: Closing open connection. [UNetConnection] RemoteAddr: 127.0.0.1:58491, Name: IpConnection_5, Driver: GameNetDriver IpNetDriver_0, IsServer: YES, PC: PlayerController_3, Owner: PlayerController_3, UniqueId: NULL:DESKTOP-K41CE6A-9DFEEEBB45EB5EC4142D11B7647CE4A3
+[2021.02.19-15.13.05:347][ 49]LogNet: UNetConnection::Close: [UNetConnection] RemoteAddr: 127.0.0.1:58491, Name: IpConnection_5, Driver: GameNetDriver IpNetDriver_0, IsServer: YES, PC: PlayerController_3, Owner: PlayerController_3, UniqueId: NULL:DESKTOP-K41CE6A-9DFEEEBB45EB5EC4142D11B7647CE4A3, Channels: 47, Time: 2021.02.19-15.13.05
+[2021.02.19-15.13.05:347][ 49]LogNet: UChannel::Close: Sending CloseBunch. ChIndex == 0. Name: [UChannel] ChIndex: 0, Closing: 0 [UNetConnection] RemoteAddr: 127.0.0.1:58491, Name: IpConnection_5, Driver: GameNetDriver IpNetDriver_0, IsServer: YES, PC: PlayerController_3, Owner: PlayerController_3, UniqueId: NULL:DESKTOP-K41CE6A-9DFEEEBB45EB5EC4142D11B7647CE4A3
+[2021.02.19-15.13.05:347][ 49]LogNet: UNetConnection::Cleanup: Closing open connection. [UNetConnection] RemoteAddr: 127.0.0.1:58490, Name: IpConnection_4, Driver: GameNetDriver IpNetDriver_0, IsServer: YES, PC: PlayerController_2, Owner: PlayerController_2, UniqueId: NULL:DESKTOP-K41CE6A-709B9F044D555FCB08D3F3893A3CA6A4
+[2021.02.19-15.13.05:347][ 49]LogNet: UNetConnection::Close: [UNetConnection] RemoteAddr: 127.0.0.1:58490, Name: IpConnection_4, Driver: GameNetDriver IpNetDriver_0, IsServer: YES, PC: PlayerController_2, Owner: PlayerController_2, UniqueId: NULL:DESKTOP-K41CE6A-709B9F044D555FCB08D3F3893A3CA6A4, Channels: 47, Time: 2021.02.19-15.13.05
+[2021.02.19-15.13.05:347][ 49]LogNet: UChannel::Close: Sending CloseBunch. ChIndex == 0. Name: [UChannel] ChIndex: 0, Closing: 0 [UNetConnection] RemoteAddr: 127.0.0.1:58490, Name: IpConnection_4, Driver: GameNetDriver IpNetDriver_0, IsServer: YES, PC: PlayerController_2, Owner: PlayerController_2, UniqueId: NULL:DESKTOP-K41CE6A-709B9F044D555FCB08D3F3893A3CA6A4
+[2021.02.19-15.13.05:347][ 49]LogExit: GameNetDriver IpNetDriver_0 shut down
+[2021.02.19-15.13.05:348][ 49]LogPlayLevel: Display: Shutting down PIE online subsystems
+[2021.02.19-15.13.05:350][ 49]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2021.02.19-15.13.05:353][ 49]LogAudio: Display: Audio Device unregistered from world 'None'.
+[2021.02.19-15.13.05:354][ 49]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called
+[2021.02.19-15.13.05:355][ 49]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called
+[2021.02.19-15.13.05:384][ 49]LogAudio: Display: Audio Device unregistered from world 'None'.
+[2021.02.19-15.13.05:384][ 49]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called
+[2021.02.19-15.13.05:385][ 49]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called
+[2021.02.19-15.13.05:433][ 49]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called
+[2021.02.19-15.13.05:435][ 49]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called
+[2021.02.19-15.13.05:479][ 49]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called
+[2021.02.19-15.13.05:480][ 49]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called
+[2021.02.19-15.13.05:530][ 49]LogUObjectHash: Compacting FUObjectHashTables data took   0.55ms
+[2021.02.19-15.13.05:548][ 50]LogPlayLevel: Display: Destroying online subsystem :Context_4
+[2021.02.19-15.13.05:548][ 50]LogPlayLevel: Display: Destroying online subsystem :Context_3
+[2021.02.19-15.13.05:548][ 50]LogPlayLevel: Display: Destroying online subsystem :Context_2
+[2021.02.19-15.13.05:549][ 50]LogPlayLevel: Display: Destroying online subsystem :Context_1

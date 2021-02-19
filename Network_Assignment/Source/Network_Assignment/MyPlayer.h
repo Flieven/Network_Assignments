@@ -70,6 +70,12 @@ public:
 		void Server_SyncRotation(const FRotator& rotation);
 
 	UFUNCTION(Server, Reliable)
+		void Server_PlayerIsHit(AMyPlayer* player, const float& damage);
+
+	UFUNCTION(NetMulticast, Reliable)
+		void Multicast_PlayerIsHit(AMyPlayer* Player, const float& damage);
+
+	UFUNCTION(Server, Reliable)
 		void Server_SyncHealth(const float& health);
 
 	UFUNCTION(NetMulticast, Reliable)
@@ -99,7 +105,7 @@ public:
 
 	void SpawnRockets();
 
-	void TakeDamage(float amount);
+	void IsHit(float amount);
 
 private:
 

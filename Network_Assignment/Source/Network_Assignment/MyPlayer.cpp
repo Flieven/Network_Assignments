@@ -44,6 +44,8 @@ void AMyPlayer::BeginPlay()
 	MovementComponent->SetUpdatedComponent(CollisionComponent);
 	currentHealth = PlayerSettings->Health;
 
+	UE_LOG(LogTemp, Warning, TEXT("Player: %s Health: %f"), *GetName(), currentHealth);
+
 	CreateDebugWidget();
 	if (DebugMenuInstance != nullptr)
 	{
@@ -167,9 +169,19 @@ void AMyPlayer::Server_SyncRotation_Implementation(const FRotator& rotation)
 	replicatedYaw = rotation.Yaw;
 }
 
+void AMyPlayer::Server_PlayerIsHit_Implementation(AMyPlayer* player, const float& damage)
+{
+	Multicast_PlayerIsHit(player, damage);
+}
+
+void AMyPlayer::Multicast_PlayerIsHit_Implementation(AMyPlayer* player, const float& damage)
+{
+	player->IsHit(damage);
+}
+
 void AMyPlayer::Server_SyncHealth_Implementation(const float& health)
 {
-	BP_OnHealthChanged(health);
+	BP_OnHealthChanged(currentHealth);
 	Multicast_SyncHealth(health);
 }
 
@@ -244,6 +256,11 @@ void AMyPlayer::FireRocket()
 
 	if(!ensure(newRocket != nullptr)) { return; }
 
+	UE_LOG(LogTemp, Warning, TEXT("Rocket: %s from: %s"), *newRocket->GetName(), *GetName());
+	
+	newRocket->bIsActive = true;
+	newRocket->owner = this;
+
 	fireCooldownElapsed = PlayerSettings->FireCooldown;
 	numRockets--;
 	Server_SyncRockets(numRockets);
@@ -281,11 +298,11 @@ void AMyPlayer::SpawnRockets()
 	}
 }
 
-void AMyPlayer::TakeDamage(float amount)
+void AMyPlayer::IsHit(float amount)
 {
 	currentHealth -= amount;
-	BP_OnHealthChanged(currentHealth);
-	Server_SyncHealth(currentHealth);
+	if (IsLocallyControlled()) { Server_SyncHealth(currentHealth); }
+	UE_LOG(LogTemp, Warning, TEXT("Player: %s Health: %f"), *GetName(), currentHealth);
 }
 
 FVector AMyPlayer::GetRocketStartLocation() const

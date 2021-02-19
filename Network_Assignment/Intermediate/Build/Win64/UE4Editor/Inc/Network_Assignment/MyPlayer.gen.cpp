@@ -113,6 +113,24 @@ void EmptyLinkFunctionForGeneratedCodeMyPlayer() {}
 		P_THIS->Server_SyncHealth_Implementation(Z_Param_health);
 		P_NATIVE_END;
 	}
+	DEFINE_FUNCTION(AMyPlayer::execMulticast_PlayerIsHit)
+	{
+		P_GET_OBJECT(AMyPlayer,Z_Param_Player);
+		P_GET_PROPERTY(FFloatProperty,Z_Param_damage);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		P_THIS->Multicast_PlayerIsHit_Implementation(Z_Param_Player,Z_Param_damage);
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(AMyPlayer::execServer_PlayerIsHit)
+	{
+		P_GET_OBJECT(AMyPlayer,Z_Param_player);
+		P_GET_PROPERTY(FFloatProperty,Z_Param_damage);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		P_THIS->Server_PlayerIsHit_Implementation(Z_Param_player,Z_Param_damage);
+		P_NATIVE_END;
+	}
 	DEFINE_FUNCTION(AMyPlayer::execServer_SyncRotation)
 	{
 		P_GET_STRUCT(FRotator,Z_Param_rotation);
@@ -196,6 +214,14 @@ void EmptyLinkFunctionForGeneratedCodeMyPlayer() {}
 		Parms.RocketFacingRotation=RocketFacingRotation;
 		ProcessEvent(FindFunctionChecked(NAME_AMyPlayer_Multicast_FireRocket),&Parms);
 	}
+	static FName NAME_AMyPlayer_Multicast_PlayerIsHit = FName(TEXT("Multicast_PlayerIsHit"));
+	void AMyPlayer::Multicast_PlayerIsHit(AMyPlayer* Player, float const& damage)
+	{
+		MyPlayer_eventMulticast_PlayerIsHit_Parms Parms;
+		Parms.Player=Player;
+		Parms.damage=damage;
+		ProcessEvent(FindFunctionChecked(NAME_AMyPlayer_Multicast_PlayerIsHit),&Parms);
+	}
 	static FName NAME_AMyPlayer_Multicast_SyncHealth = FName(TEXT("Multicast_SyncHealth"));
 	void AMyPlayer::Multicast_SyncHealth(float const& health)
 	{
@@ -225,6 +251,14 @@ void EmptyLinkFunctionForGeneratedCodeMyPlayer() {}
 		MyPlayer_eventServer_OnPickup_Parms Parms;
 		Parms.pickup=pickup;
 		ProcessEvent(FindFunctionChecked(NAME_AMyPlayer_Server_OnPickup),&Parms);
+	}
+	static FName NAME_AMyPlayer_Server_PlayerIsHit = FName(TEXT("Server_PlayerIsHit"));
+	void AMyPlayer::Server_PlayerIsHit(AMyPlayer* player, float const& damage)
+	{
+		MyPlayer_eventServer_PlayerIsHit_Parms Parms;
+		Parms.player=player;
+		Parms.damage=damage;
+		ProcessEvent(FindFunctionChecked(NAME_AMyPlayer_Server_PlayerIsHit),&Parms);
 	}
 	static FName NAME_AMyPlayer_Server_SyncHealth = FName(TEXT("Server_SyncHealth"));
 	void AMyPlayer::Server_SyncHealth(float const& health)
@@ -266,10 +300,12 @@ void EmptyLinkFunctionForGeneratedCodeMyPlayer() {}
 			{ "GetPing", &AMyPlayer::execGetPing },
 			{ "IsBraking", &AMyPlayer::execIsBraking },
 			{ "Multicast_FireRocket", &AMyPlayer::execMulticast_FireRocket },
+			{ "Multicast_PlayerIsHit", &AMyPlayer::execMulticast_PlayerIsHit },
 			{ "Multicast_SyncHealth", &AMyPlayer::execMulticast_SyncHealth },
 			{ "Multicast_SyncRockets", &AMyPlayer::execMulticast_SyncRockets },
 			{ "Server_FireRocket", &AMyPlayer::execServer_FireRocket },
 			{ "Server_OnPickup", &AMyPlayer::execServer_OnPickup },
+			{ "Server_PlayerIsHit", &AMyPlayer::execServer_PlayerIsHit },
 			{ "Server_SyncHealth", &AMyPlayer::execServer_SyncHealth },
 			{ "Server_SyncLocation", &AMyPlayer::execServer_SyncLocation },
 			{ "Server_SyncRockets", &AMyPlayer::execServer_SyncRockets },
@@ -608,6 +644,45 @@ void EmptyLinkFunctionForGeneratedCodeMyPlayer() {}
 		}
 		return ReturnFunction;
 	}
+	struct Z_Construct_UFunction_AMyPlayer_Multicast_PlayerIsHit_Statics
+	{
+		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_Player;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_damage_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_damage;
+		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UE4CodeGen_Private::FFunctionParams FuncParams;
+	};
+	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_AMyPlayer_Multicast_PlayerIsHit_Statics::NewProp_Player = { "Player", nullptr, (EPropertyFlags)0x0010000000000080, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(MyPlayer_eventMulticast_PlayerIsHit_Parms, Player), Z_Construct_UClass_AMyPlayer_NoRegister, METADATA_PARAMS(nullptr, 0) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_AMyPlayer_Multicast_PlayerIsHit_Statics::NewProp_damage_MetaData[] = {
+		{ "NativeConst", "" },
+	};
+#endif
+	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UFunction_AMyPlayer_Multicast_PlayerIsHit_Statics::NewProp_damage = { "damage", nullptr, (EPropertyFlags)0x0010000008000082, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(MyPlayer_eventMulticast_PlayerIsHit_Parms, damage), METADATA_PARAMS(Z_Construct_UFunction_AMyPlayer_Multicast_PlayerIsHit_Statics::NewProp_damage_MetaData, UE_ARRAY_COUNT(Z_Construct_UFunction_AMyPlayer_Multicast_PlayerIsHit_Statics::NewProp_damage_MetaData)) };
+	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_AMyPlayer_Multicast_PlayerIsHit_Statics::PropPointers[] = {
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_AMyPlayer_Multicast_PlayerIsHit_Statics::NewProp_Player,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_AMyPlayer_Multicast_PlayerIsHit_Statics::NewProp_damage,
+	};
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_AMyPlayer_Multicast_PlayerIsHit_Statics::Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "MyPlayer.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_AMyPlayer_Multicast_PlayerIsHit_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AMyPlayer, nullptr, "Multicast_PlayerIsHit", nullptr, nullptr, sizeof(MyPlayer_eventMulticast_PlayerIsHit_Parms), Z_Construct_UFunction_AMyPlayer_Multicast_PlayerIsHit_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_AMyPlayer_Multicast_PlayerIsHit_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00024CC0, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_AMyPlayer_Multicast_PlayerIsHit_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_AMyPlayer_Multicast_PlayerIsHit_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UFunction_AMyPlayer_Multicast_PlayerIsHit()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AMyPlayer_Multicast_PlayerIsHit_Statics::FuncParams);
+		}
+		return ReturnFunction;
+	}
 	struct Z_Construct_UFunction_AMyPlayer_Multicast_SyncHealth_Statics
 	{
 #if WITH_METADATA
@@ -755,6 +830,45 @@ void EmptyLinkFunctionForGeneratedCodeMyPlayer() {}
 		if (!ReturnFunction)
 		{
 			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AMyPlayer_Server_OnPickup_Statics::FuncParams);
+		}
+		return ReturnFunction;
+	}
+	struct Z_Construct_UFunction_AMyPlayer_Server_PlayerIsHit_Statics
+	{
+		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_player;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_damage_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_damage;
+		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UE4CodeGen_Private::FFunctionParams FuncParams;
+	};
+	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_AMyPlayer_Server_PlayerIsHit_Statics::NewProp_player = { "player", nullptr, (EPropertyFlags)0x0010000000000080, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(MyPlayer_eventServer_PlayerIsHit_Parms, player), Z_Construct_UClass_AMyPlayer_NoRegister, METADATA_PARAMS(nullptr, 0) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_AMyPlayer_Server_PlayerIsHit_Statics::NewProp_damage_MetaData[] = {
+		{ "NativeConst", "" },
+	};
+#endif
+	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UFunction_AMyPlayer_Server_PlayerIsHit_Statics::NewProp_damage = { "damage", nullptr, (EPropertyFlags)0x0010000008000082, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(MyPlayer_eventServer_PlayerIsHit_Parms, damage), METADATA_PARAMS(Z_Construct_UFunction_AMyPlayer_Server_PlayerIsHit_Statics::NewProp_damage_MetaData, UE_ARRAY_COUNT(Z_Construct_UFunction_AMyPlayer_Server_PlayerIsHit_Statics::NewProp_damage_MetaData)) };
+	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_AMyPlayer_Server_PlayerIsHit_Statics::PropPointers[] = {
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_AMyPlayer_Server_PlayerIsHit_Statics::NewProp_player,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_AMyPlayer_Server_PlayerIsHit_Statics::NewProp_damage,
+	};
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_AMyPlayer_Server_PlayerIsHit_Statics::Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "MyPlayer.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_AMyPlayer_Server_PlayerIsHit_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AMyPlayer, nullptr, "Server_PlayerIsHit", nullptr, nullptr, sizeof(MyPlayer_eventServer_PlayerIsHit_Parms), Z_Construct_UFunction_AMyPlayer_Server_PlayerIsHit_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_AMyPlayer_Server_PlayerIsHit_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00220CC0, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_AMyPlayer_Server_PlayerIsHit_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_AMyPlayer_Server_PlayerIsHit_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UFunction_AMyPlayer_Server_PlayerIsHit()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AMyPlayer_Server_PlayerIsHit_Statics::FuncParams);
 		}
 		return ReturnFunction;
 	}
@@ -1019,10 +1133,12 @@ void EmptyLinkFunctionForGeneratedCodeMyPlayer() {}
 		{ &Z_Construct_UFunction_AMyPlayer_GetPing, "GetPing" }, // 1306242325
 		{ &Z_Construct_UFunction_AMyPlayer_IsBraking, "IsBraking" }, // 494724785
 		{ &Z_Construct_UFunction_AMyPlayer_Multicast_FireRocket, "Multicast_FireRocket" }, // 2719271920
+		{ &Z_Construct_UFunction_AMyPlayer_Multicast_PlayerIsHit, "Multicast_PlayerIsHit" }, // 806899874
 		{ &Z_Construct_UFunction_AMyPlayer_Multicast_SyncHealth, "Multicast_SyncHealth" }, // 557643936
 		{ &Z_Construct_UFunction_AMyPlayer_Multicast_SyncRockets, "Multicast_SyncRockets" }, // 578060923
 		{ &Z_Construct_UFunction_AMyPlayer_Server_FireRocket, "Server_FireRocket" }, // 114393833
 		{ &Z_Construct_UFunction_AMyPlayer_Server_OnPickup, "Server_OnPickup" }, // 3797793517
+		{ &Z_Construct_UFunction_AMyPlayer_Server_PlayerIsHit, "Server_PlayerIsHit" }, // 2035436866
 		{ &Z_Construct_UFunction_AMyPlayer_Server_SyncHealth, "Server_SyncHealth" }, // 1487911139
 		{ &Z_Construct_UFunction_AMyPlayer_Server_SyncLocation, "Server_SyncLocation" }, // 2170578161
 		{ &Z_Construct_UFunction_AMyPlayer_Server_SyncRockets, "Server_SyncRockets" }, // 3880847750
@@ -1247,7 +1363,7 @@ void EmptyLinkFunctionForGeneratedCodeMyPlayer() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(AMyPlayer, 531784637);
+	IMPLEMENT_CLASS(AMyPlayer, 2392531063);
 	template<> NETWORK_ASSIGNMENT_API UClass* StaticClass<AMyPlayer>()
 	{
 		return AMyPlayer::StaticClass();
